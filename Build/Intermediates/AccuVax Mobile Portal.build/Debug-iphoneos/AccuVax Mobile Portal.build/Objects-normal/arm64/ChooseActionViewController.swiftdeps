@@ -1,0 +1,279 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ChooseActionViewController"
+provides-nominal:
+- "C21AccuVax_Mobile_Portal26ChooseActionViewController"
+provides-member:
+- ["C21AccuVax_Mobile_Portal26ChooseActionViewController", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "inventoryButton"
+- "setInsets"
+- "temperatureButton"
+- "userManagementButton"
+- "viewDidLoad"
+depends-top-level:
+- "AssignmentPrecedence"
+- "ChooseActionViewController"
+- "UIButton"
+- !private "UIEdgeInsetsMake"
+- "UIViewController"
+depends-member:
+- !private ["Ps9AnyObject", "UIEdgeInsetsMake"]
+- !private ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "imageEdgeInsets"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "inventoryButton"]
+- !private ["Ps9AnyObject", "setInsets"]
+- !private ["Ps9AnyObject", "temperatureButton"]
+- !private ["Ps9AnyObject", "userManagementButton"]
+- !private ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["PSo15CALayerDelegate", "imageEdgeInsets"]
+- !private ["Ps7CVarArg", "UIEdgeInsetsMake"]
+- !private ["Ps7CVarArg", "didReceiveMemoryWarning"]
+- !private ["Ps7CVarArg", "imageEdgeInsets"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "inventoryButton"]
+- !private ["Ps7CVarArg", "setInsets"]
+- !private ["Ps7CVarArg", "temperatureButton"]
+- !private ["Ps7CVarArg", "userManagementButton"]
+- !private ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- ["C21AccuVax_Mobile_Portal26ChooseActionViewController", "UIButton"]
+- !private ["C21AccuVax_Mobile_Portal26ChooseActionViewController", "UIEdgeInsetsMake"]
+- ["C21AccuVax_Mobile_Portal26ChooseActionViewController", "deinit"]
+- ["C21AccuVax_Mobile_Portal26ChooseActionViewController", "didReceiveMemoryWarning"]
+- ["C21AccuVax_Mobile_Portal26ChooseActionViewController", "init"]
+- ["C21AccuVax_Mobile_Portal26ChooseActionViewController", "inventoryButton"]
+- ["C21AccuVax_Mobile_Portal26ChooseActionViewController", "setInsets"]
+- ["C21AccuVax_Mobile_Portal26ChooseActionViewController", "temperatureButton"]
+- ["C21AccuVax_Mobile_Portal26ChooseActionViewController", "userManagementButton"]
+- ["C21AccuVax_Mobile_Portal26ChooseActionViewController", "viewDidLoad"]
+- !private ["Ps28CustomDebugStringConvertible", "UIEdgeInsetsMake"]
+- !private ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps28CustomDebugStringConvertible", "imageEdgeInsets"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "inventoryButton"]
+- !private ["Ps28CustomDebugStringConvertible", "setInsets"]
+- !private ["Ps28CustomDebugStringConvertible", "temperatureButton"]
+- !private ["Ps28CustomDebugStringConvertible", "userManagementButton"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "UIEdgeInsetsMake"]
+- !private ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps23CustomStringConvertible", "imageEdgeInsets"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "inventoryButton"]
+- !private ["Ps23CustomStringConvertible", "setInsets"]
+- !private ["Ps23CustomStringConvertible", "temperatureButton"]
+- !private ["Ps23CustomStringConvertible", "userManagementButton"]
+- !private ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "UIEdgeInsetsMake"]
+- !private ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "imageEdgeInsets"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "inventoryButton"]
+- !private ["Ps9Equatable", "setInsets"]
+- !private ["Ps9Equatable", "temperatureButton"]
+- !private ["Ps9Equatable", "userManagementButton"]
+- !private ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "UIEdgeInsetsMake"]
+- !private ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "imageEdgeInsets"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "inventoryButton"]
+- !private ["Ps8Hashable", "setInsets"]
+- !private ["Ps8Hashable", "temperatureButton"]
+- !private ["Ps8Hashable", "userManagementButton"]
+- !private ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["PSo8NSCoding", "UIEdgeInsetsMake"]
+- !private ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "imageEdgeInsets"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "inventoryButton"]
+- !private ["PSo8NSCoding", "setInsets"]
+- !private ["PSo8NSCoding", "temperatureButton"]
+- !private ["PSo8NSCoding", "userManagementButton"]
+- !private ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "UIEdgeInsetsMake"]
+- !private ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "inventoryButton"]
+- !private ["PSo26NSExtensionRequestHandling", "setInsets"]
+- !private ["PSo26NSExtensionRequestHandling", "temperatureButton"]
+- !private ["PSo26NSExtensionRequestHandling", "userManagementButton"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "UIButton"]
+- !private ["CSo8NSObject", "UIEdgeInsetsMake"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- !private ["CSo8NSObject", "imageEdgeInsets"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "inventoryButton"]
+- ["CSo8NSObject", "setInsets"]
+- ["CSo8NSObject", "temperatureButton"]
+- ["CSo8NSObject", "userManagementButton"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "UIEdgeInsetsMake"]
+- !private ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "imageEdgeInsets"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "inventoryButton"]
+- !private ["PSo16NSObjectProtocol", "setInsets"]
+- !private ["PSo16NSObjectProtocol", "temperatureButton"]
+- !private ["PSo16NSObjectProtocol", "userManagementButton"]
+- !private ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo29UIAccessibilityIdentification", "imageEdgeInsets"]
+- !private ["PSo12UIAppearance", "imageEdgeInsets"]
+- !private ["PSo21UIAppearanceContainer", "UIEdgeInsetsMake"]
+- !private ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "imageEdgeInsets"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "inventoryButton"]
+- !private ["PSo21UIAppearanceContainer", "setInsets"]
+- !private ["PSo21UIAppearanceContainer", "temperatureButton"]
+- !private ["PSo21UIAppearanceContainer", "userManagementButton"]
+- !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo8UIButton", "imageEdgeInsets"]
+- !private ["PSo18UIContentContainer", "UIEdgeInsetsMake"]
+- !private ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "inventoryButton"]
+- !private ["PSo18UIContentContainer", "setInsets"]
+- !private ["PSo18UIContentContainer", "temperatureButton"]
+- !private ["PSo18UIContentContainer", "userManagementButton"]
+- !private ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["CSo9UIControl", "imageEdgeInsets"]
+- !private ["PSo17UICoordinateSpace", "imageEdgeInsets"]
+- !private ["PSo13UIDynamicItem", "imageEdgeInsets"]
+- !private ["PSo18UIFocusEnvironment", "UIEdgeInsetsMake"]
+- !private ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "imageEdgeInsets"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "inventoryButton"]
+- !private ["PSo18UIFocusEnvironment", "setInsets"]
+- !private ["PSo18UIFocusEnvironment", "temperatureButton"]
+- !private ["PSo18UIFocusEnvironment", "userManagementButton"]
+- !private ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "imageEdgeInsets"]
+- ["CSo11UIResponder", "UIButton"]
+- !private ["CSo11UIResponder", "UIEdgeInsetsMake"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- !private ["CSo11UIResponder", "imageEdgeInsets"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "inventoryButton"]
+- ["CSo11UIResponder", "setInsets"]
+- ["CSo11UIResponder", "temperatureButton"]
+- ["CSo11UIResponder", "userManagementButton"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "UIEdgeInsetsMake"]
+- !private ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
+- !private ["PSo30UIResponderStandardEditActions", "imageEdgeInsets"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "inventoryButton"]
+- !private ["PSo30UIResponderStandardEditActions", "setInsets"]
+- !private ["PSo30UIResponderStandardEditActions", "temperatureButton"]
+- !private ["PSo30UIResponderStandardEditActions", "userManagementButton"]
+- !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "UIEdgeInsetsMake"]
+- !private ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "inventoryButton"]
+- !private ["PSo16UIStateRestoring", "setInsets"]
+- !private ["PSo16UIStateRestoring", "temperatureButton"]
+- !private ["PSo16UIStateRestoring", "userManagementButton"]
+- !private ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "UIEdgeInsetsMake"]
+- !private ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "imageEdgeInsets"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "inventoryButton"]
+- !private ["PSo18UITraitEnvironment", "setInsets"]
+- !private ["PSo18UITraitEnvironment", "temperatureButton"]
+- !private ["PSo18UITraitEnvironment", "userManagementButton"]
+- !private ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "imageEdgeInsets"]
+- ["CSo16UIViewController", "UIButton"]
+- !private ["CSo16UIViewController", "UIEdgeInsetsMake"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "inventoryButton"]
+- ["CSo16UIViewController", "setInsets"]
+- ["CSo16UIViewController", "temperatureButton"]
+- ["CSo16UIViewController", "userManagementButton"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "imageEdgeInsets"]
+- !private ["Ps9_Hashable", "UIEdgeInsetsMake"]
+- !private ["Ps9_Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps9_Hashable", "imageEdgeInsets"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "inventoryButton"]
+- !private ["Ps9_Hashable", "setInsets"]
+- !private ["Ps9_Hashable", "temperatureButton"]
+- !private ["Ps9_Hashable", "userManagementButton"]
+- !private ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- "C21AccuVax_Mobile_Portal26ChooseActionViewController"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo8UIButton"
+- "PSo18UIContentContainer"
+- !private "CSo9UIControl"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- "Ps9_Hashable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "662a30673b776ada36c226bdc512adfa"

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -162,7 +163,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyL-cj-Goe">
-                                            <rect key="frame" x="8" y="25" width="42" height="23"/>
+                                            <rect key="frame" x="8" y="15" width="42" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -170,7 +171,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="zyL-cj-Goe" firstAttribute="leading" secondItem="Fxg-0b-F34" secondAttribute="leadingMargin" id="Hp6-UW-HNc"/>
-                                        <constraint firstItem="zyL-cj-Goe" firstAttribute="top" secondItem="Fxg-0b-F34" secondAttribute="topMargin" constant="17" id="Oe0-FO-KT9"/>
+                                        <constraint firstItem="zyL-cj-Goe" firstAttribute="top" secondItem="Fxg-0b-F34" secondAttribute="topMargin" constant="7" id="Oe0-FO-KT9"/>
                                         <constraint firstItem="zyL-cj-Goe" firstAttribute="bottom" secondItem="Fxg-0b-F34" secondAttribute="bottomMargin" id="y6B-M9-76Z"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -186,21 +187,16 @@
                                 <action selector="backButtonTapped:" destination="RaC-1M-fX7" id="qCc-HV-Dcp"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="5uw-gu-mc3">
-                            <connections>
-                                <action selector="nextButtonTapped:" destination="RaC-1M-fX7" id="X8h-5O-FIL"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXl-ST-qMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2693.5999999999999" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose Action View Controller-->
         <scene sceneID="uBu-L0-2Dz">
             <objects>
-                <viewController storyboardIdentifier="rando" id="VGB-KO-yEf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rando" id="VGB-KO-yEf" customClass="ChooseActionViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OGI-LS-M7i"/>
                         <viewControllerLayoutGuide type="bottom" id="3tn-rK-G7L"/>
@@ -208,12 +204,72 @@
                     <view key="view" contentMode="scaleToFill" id="T4D-cY-pQM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhk-Du-nBr">
+                                <rect key="frame" x="131.5" y="111" width="112" height="112"/>
+                                <color key="backgroundColor" red="0.20639169216156006" green="0.74770468473434448" blue="0.99972158670425415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vhk-Du-nBr" secondAttribute="height" multiplier="1:1" id="QDw-a1-wlo"/>
+                                    <constraint firstAttribute="width" constant="112" id="y9k-86-gRI"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="002-user"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="56"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flQ-Xs-0Zc">
+                                <rect key="frame" x="248" y="343" width="112" height="112"/>
+                                <color key="backgroundColor" red="0.2063916922" green="0.74770468469999996" blue="0.9997215867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="flQ-Xs-0Zc" secondAttribute="height" multiplier="1:1" id="4kr-4c-3iS"/>
+                                    <constraint firstAttribute="width" constant="112" id="i1n-Xw-WAd"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="003-thermometer"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="56"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBG-qH-egw">
+                                <rect key="frame" x="15" y="343" width="112" height="112"/>
+                                <color key="backgroundColor" red="0.2063916922" green="0.74770468469999996" blue="0.9997215867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aBG-qH-egw" secondAttribute="height" multiplier="1:1" id="2ir-tU-qjA"/>
+                                    <constraint firstAttribute="width" constant="112" id="eeR-OW-Vf0"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="001-updated-security-for-protection-on-internet"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="56"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="flQ-Xs-0Zc" secondAttribute="trailing" constant="15" id="1ha-bC-lOJ"/>
+                            <constraint firstItem="Vhk-Du-nBr" firstAttribute="centerX" secondItem="T4D-cY-pQM" secondAttribute="centerX" id="KA0-b5-0Av"/>
+                            <constraint firstItem="Vhk-Du-nBr" firstAttribute="top" secondItem="T4D-cY-pQM" secondAttribute="top" constant="111" id="PuU-Lx-zQJ"/>
+                            <constraint firstAttribute="bottom" secondItem="aBG-qH-egw" secondAttribute="bottom" constant="212" id="asX-V8-fU7"/>
+                            <constraint firstItem="3tn-rK-G7L" firstAttribute="top" secondItem="flQ-Xs-0Zc" secondAttribute="bottom" constant="212" id="ehy-uT-sis"/>
+                            <constraint firstItem="aBG-qH-egw" firstAttribute="leading" secondItem="T4D-cY-pQM" secondAttribute="leading" constant="15" id="hPW-bG-zHd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inventoryButton" destination="aBG-qH-egw" id="H9r-Gj-7qJ"/>
+                        <outlet property="temperatureButton" destination="flQ-Xs-0Zc" id="2nX-cb-4gl"/>
+                        <outlet property="userManagementButton" destination="Vhk-Du-nBr" id="sQ3-Lq-2yx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Js-tM-eJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3382" y="139"/>
+            <point key="canvasLocation" x="3512.8000000000002" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bs6-n9-kIr">
@@ -234,4 +290,9 @@
             <point key="canvasLocation" x="1854" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="001-updated-security-for-protection-on-internet" width="512" height="512"/>
+        <image name="002-user" width="512" height="512"/>
+        <image name="003-thermometer" width="512" height="512"/>
+    </resources>
 </document>

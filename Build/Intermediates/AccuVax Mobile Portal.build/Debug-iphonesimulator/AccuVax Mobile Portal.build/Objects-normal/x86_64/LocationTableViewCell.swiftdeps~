@@ -7,10 +7,12 @@ provides-member:
 - ["C21AccuVax_Mobile_Portal21LocationTableViewCell", ""]
 provides-dynamic-lookup:
 - "awakeFromNib"
+- "locationLabel"
 - "setSelected"
 depends-top-level:
 - "Bool"
 - "LocationTableViewCell"
+- "UILabel"
 - "UITableViewCell"
 depends-member:
 - !private ["Ps9AnyObject", "awakeFromNib"]
@@ -42,17 +44,21 @@ depends-member:
 - !private ["Ps8Hashable", "setSelected"]
 - ["Ps8Hashable", ""]
 - ["C21AccuVax_Mobile_Portal21LocationTableViewCell", "Bool"]
+- ["C21AccuVax_Mobile_Portal21LocationTableViewCell", "UILabel"]
 - ["C21AccuVax_Mobile_Portal21LocationTableViewCell", "awakeFromNib"]
 - ["C21AccuVax_Mobile_Portal21LocationTableViewCell", "deinit"]
 - ["C21AccuVax_Mobile_Portal21LocationTableViewCell", "init"]
+- ["C21AccuVax_Mobile_Portal21LocationTableViewCell", "locationLabel"]
 - ["C21AccuVax_Mobile_Portal21LocationTableViewCell", "setSelected"]
 - !private ["PSo8NSCoding", "awakeFromNib"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "setSelected"]
 - ["PSo8NSCoding", ""]
 - ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "UILabel"]
 - ["CSo8NSObject", "awakeFromNib"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "locationLabel"]
 - ["CSo8NSObject", "setSelected"]
 - !private ["PSo16NSObjectProtocol", "awakeFromNib"]
 - !private ["PSo16NSObjectProtocol", "init"]
@@ -91,16 +97,20 @@ depends-member:
 - !private ["PSo27UIGestureRecognizerDelegate", "setSelected"]
 - ["PSo27UIGestureRecognizerDelegate", ""]
 - ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "UILabel"]
 - ["CSo11UIResponder", "awakeFromNib"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "locationLabel"]
 - ["CSo11UIResponder", "setSelected"]
 - !private ["PSo30UIResponderStandardEditActions", "awakeFromNib"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
 - !private ["PSo30UIResponderStandardEditActions", "setSelected"]
 - ["PSo30UIResponderStandardEditActions", ""]
 - ["CSo15UITableViewCell", "Bool"]
+- ["CSo15UITableViewCell", "UILabel"]
 - ["CSo15UITableViewCell", "awakeFromNib"]
 - ["CSo15UITableViewCell", "init"]
+- ["CSo15UITableViewCell", "locationLabel"]
 - ["CSo15UITableViewCell", "setSelected"]
 - ["CSo15UITableViewCell", ""]
 - !private ["PSo18UITraitEnvironment", "awakeFromNib"]
@@ -108,8 +118,10 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "setSelected"]
 - ["PSo18UITraitEnvironment", ""]
 - ["CSo6UIView", "Bool"]
+- ["CSo6UIView", "UILabel"]
 - ["CSo6UIView", "awakeFromNib"]
 - ["CSo6UIView", "init"]
+- ["CSo6UIView", "locationLabel"]
 - ["CSo6UIView", "setSelected"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "awakeFromNib"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
@@ -164,4 +176,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-interface-hash: "5d4a60b34037dec20877ae3a7b90d883"
+interface-hash: "d3da9772c08f99284f13cf051e322b1d"

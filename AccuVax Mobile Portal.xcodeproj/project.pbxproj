@@ -12,6 +12,8 @@
 		D81AC9781F1E029E00938D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81AC9761F1E029E00938D7D /* Main.storyboard */; };
 		D81AC97A1F1E029E00938D7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81AC9791F1E029E00938D7D /* Assets.xcassets */; };
 		D81AC97D1F1E029E00938D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81AC97B1F1E029E00938D7D /* LaunchScreen.storyboard */; };
+		D88BA3D41F1FF3F100E29526 /* ChooseActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88BA3D31F1FF3F100E29526 /* ChooseActionViewController.swift */; };
+		D88BA3D61F1FF80C00E29526 /* UIViewCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88BA3D51F1FF80C00E29526 /* UIViewCustomization.swift */; };
 		D8FED0EA1F1E8AE50085B00C /* SelectMachineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FED0E91F1E8AE50085B00C /* SelectMachineTableViewController.swift */; };
 		D8FED0EF1F1E90730085B00C /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FED0EE1F1E90730085B00C /* LocationTableViewCell.swift */; };
 		D8FED0F11F1E920C0085B00C /* KioskGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FED0F01F1E920C0085B00C /* KioskGroupTableViewCell.swift */; };
@@ -26,6 +28,8 @@
 		D81AC9791F1E029E00938D7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D81AC97C1F1E029E00938D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D81AC97E1F1E029E00938D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D88BA3D31F1FF3F100E29526 /* ChooseActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseActionViewController.swift; sourceTree = "<group>"; };
+		D88BA3D51F1FF80C00E29526 /* UIViewCustomization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewCustomization.swift; sourceTree = "<group>"; };
 		D8FED0E91F1E8AE50085B00C /* SelectMachineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectMachineTableViewController.swift; sourceTree = "<group>"; };
 		D8FED0EE1F1E90730085B00C /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		D8FED0F01F1E920C0085B00C /* KioskGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KioskGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 				D81AC9721F1E029E00938D7D /* AppDelegate.swift */,
 				D81AC9791F1E029E00938D7D /* Assets.xcassets */,
 				D81AC97E1F1E029E00938D7D /* Info.plist */,
+				D88BA3D51F1FF80C00E29526 /* UIViewCustomization.swift */,
 			);
 			path = "AccuVax Mobile Portal";
 			sourceTree = "<group>";
@@ -77,6 +82,7 @@
 			children = (
 				D81AC9741F1E029E00938D7D /* LoginViewController.swift */,
 				D8FED0E91F1E8AE50085B00C /* SelectMachineTableViewController.swift */,
+				D88BA3D31F1FF3F100E29526 /* ChooseActionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -173,9 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88BA3D61F1FF80C00E29526 /* UIViewCustomization.swift in Sources */,
 				D81AC9751F1E029E00938D7D /* LoginViewController.swift in Sources */,
 				D8FED0EA1F1E8AE50085B00C /* SelectMachineTableViewController.swift in Sources */,
 				D8FED0EF1F1E90730085B00C /* LocationTableViewCell.swift in Sources */,
+				D88BA3D41F1FF3F100E29526 /* ChooseActionViewController.swift in Sources */,
 				D8FED0F31F1E923F0085B00C /* KioskTableViewCell.swift in Sources */,
 				D81AC9731F1E029E00938D7D /* AppDelegate.swift in Sources */,
 				D8FED0F11F1E920C0085B00C /* KioskGroupTableViewCell.swift in Sources */,

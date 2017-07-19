@@ -97,15 +97,17 @@ class SelectMachineTableViewController: UITableViewController {
         self.show(newVC, sender: self)
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let selectedIndex = tableView.indexPathForSelectedRow {
-            let cell = self.tableView.cellForRow(at: selectedIndex)
-                                cell?.setSelected(false, animated: true)
-            cell?.accessoryType = .none
-
+        switch tag {
+        case 1:
+            newSelf()
+        case 2:
+            newSelf()
+        case 3:
+            let storyBoard = UIStoryboard(name: "Main", bundle: .main)
+            let newVC = storyBoard.instantiateViewController(withIdentifier: "rando")
+            self.showDetailViewController(newVC, sender: self)
+        default: break
         }
-            
-        
-        self.tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
     }
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if let selectedIndex = tableView.indexPathForSelectedRow {
@@ -121,22 +123,6 @@ class SelectMachineTableViewController: UITableViewController {
             self.dismiss(animated: true, completion: nil)
         } else {
         self.navigationController?.popViewController(animated: true)
-        }
-    }
-
-    @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
-        if self.tableView.indexPathForSelectedRow != nil {
-                switch tag {
-                case 1:
-                    newSelf()
-                case 2:
-                    newSelf()
-                case 3:
-                    let storyBoard = UIStoryboard(name: "Main", bundle: .main)
-                    let newVC = storyBoard.instantiateViewController(withIdentifier: "rando")
-                    self.show(newVC, sender: self)
-                default: break
-            }
         }
     }
 

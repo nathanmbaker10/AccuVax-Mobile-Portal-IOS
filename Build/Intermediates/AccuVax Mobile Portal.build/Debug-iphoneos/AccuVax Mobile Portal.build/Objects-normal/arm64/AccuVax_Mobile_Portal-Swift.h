@@ -134,6 +134,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import Foundation;
+@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -153,8 +154,23 @@ SWIFT_CLASS("_TtC21AccuVax_Mobile_Portal11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UILabel;
+@class UIButton;
+@class NSBundle;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC21AccuVax_Mobile_Portal26ChooseActionViewController")
+@interface ChooseActionViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified userManagementButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified temperatureButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified inventoryButton;
+- (void)viewDidLoad;
+- (void)setInsets;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UILabel;
 
 SWIFT_CLASS("_TtC21AccuVax_Mobile_Portal23KioskGroupTableViewCell")
 @interface KioskGroupTableViewCell : UITableViewCell
@@ -186,8 +202,6 @@ SWIFT_CLASS("_TtC21AccuVax_Mobile_Portal21LocationTableViewCell")
 @end
 
 @class UITextField;
-@class UIButton;
-@class NSBundle;
 
 SWIFT_CLASS("_TtC21AccuVax_Mobile_Portal19LoginViewController")
 @interface LoginViewController : UIViewController
@@ -222,9 +236,16 @@ SWIFT_CLASS("_TtC21AccuVax_Mobile_Portal32SelectMachineTableViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)newSelf;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (NSIndexPath * _Nullable)tableView:(UITableView * _Nonnull)tableView willSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (IBAction)backButtonTapped:(id _Nonnull)sender;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface UIView (SWIFT_EXTENSION(AccuVax_Mobile_Portal))
+@property (nonatomic) CGFloat cornerRadius;
 @end
 
 #pragma clang diagnostic pop

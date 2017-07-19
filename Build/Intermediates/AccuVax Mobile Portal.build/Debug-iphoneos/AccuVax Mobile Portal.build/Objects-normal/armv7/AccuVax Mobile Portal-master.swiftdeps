@@ -1,0 +1,10 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "56eaa097cb8b4a591fbc8e25b43612ed"
+build_time: [553756314, 319378000]
+inputs:
+  "/Users/Nathan/Desktop/Make School Academy Sumer 2017 Work/AccuVax Mobile Portal/AccuVax Mobile Portal/LoginViewController.swift": [553738016, 0]
+  "/Users/Nathan/Desktop/Make School Academy Sumer 2017 Work/AccuVax Mobile Portal/AccuVax Mobile Portal/SelectMachineTableViewController.swift": [553738092, 0]
+  "/Users/Nathan/Desktop/Make School Academy Sumer 2017 Work/AccuVax Mobile Portal/AccuVax Mobile Portal/LocationTableViewCell.swift": [553736463, 0]
+  "/Users/Nathan/Desktop/Make School Academy Sumer 2017 Work/AccuVax Mobile Portal/AccuVax Mobile Portal/KioskTableViewCell.swift": [553736463, 0]
+  "/Users/Nathan/Desktop/Make School Academy Sumer 2017 Work/AccuVax Mobile Portal/AccuVax Mobile Portal/AppDelegate.swift": [553682846, 0]
+  "/Users/Nathan/Desktop/Make School Academy Sumer 2017 Work/AccuVax Mobile Portal/AccuVax Mobile Portal/KioskGroupTableViewCell.swift": [553736463, 0]

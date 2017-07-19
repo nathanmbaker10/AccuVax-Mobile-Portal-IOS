@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>application-identifier</key>
+	<string>92C2Z4SY7V.com.nathanbaker.trumed.AccuVax-Mobile-Portal</string>
+	<key>com.apple.developer.team-identifier</key>
+	<string>92C2Z4SY7V</string>
+	<key>get-task-allow</key>
+	<true/>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>92C2Z4SY7V.com.nathanbaker.trumed.AccuVax-Mobile-Portal</string>
+	</array>
+</dict>
+</plist>

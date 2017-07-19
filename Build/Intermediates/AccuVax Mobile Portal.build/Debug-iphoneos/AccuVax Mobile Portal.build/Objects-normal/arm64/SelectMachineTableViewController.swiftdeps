@@ -1,0 +1,675 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SelectMachineTableViewController"
+provides-nominal:
+- "C21AccuVax_Mobile_Portal32SelectMachineTableViewController"
+provides-member:
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "kioskGroups"
+- "kiosks"
+- "locations"
+- "newSelf"
+- "numberOfSections"
+- "tableView"
+- "tag"
+- "viewDidLoad"
+depends-top-level:
+- !private "+"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "IndexPath"
+- "Int"
+- !private "KioskGroupTableViewCell"
+- !private "KioskTableViewCell"
+- !private "LocationTableViewCell"
+- "SelectMachineTableViewController"
+- "String"
+- !private "StringLiteralType"
+- !private "UIStoryboard"
+- "UITableView"
+- "UITableViewCell"
+- "UITableViewController"
+- !private "~="
+depends-member:
+- ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "UIStoryboard"]
+- !private ["Ps9AnyObject", "dequeueReusableCell"]
+- !private ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "instantiateViewController"]
+- !private ["Ps9AnyObject", "kioskGroupLabel"]
+- !private ["Ps9AnyObject", "kioskLabel"]
+- !private ["Ps9AnyObject", "leftBarButtonItem"]
+- !private ["Ps9AnyObject", "locationLabel"]
+- !private ["Ps9AnyObject", "main"]
+- !private ["Ps9AnyObject", "navigationItem"]
+- !private ["Ps9AnyObject", "newSelf"]
+- !private ["Ps9AnyObject", "show"]
+- !private ["Ps9AnyObject", "tag"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "title"]
+- !private ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- ["Sa", "init"]
+- ["Ps23BidirectionalCollection", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["CSo6Bundle", "main"]
+- !private ["PSo15CALayerDelegate", "dequeueReusableCell"]
+- !private ["PSo15CALayerDelegate", "kioskGroupLabel"]
+- !private ["PSo15CALayerDelegate", "kioskLabel"]
+- !private ["PSo15CALayerDelegate", "locationLabel"]
+- !private ["PSo15CALayerDelegate", "text"]
+- ["Ps7CVarArg", "String"]
+- !private ["Ps7CVarArg", "UIStoryboard"]
+- !private ["Ps7CVarArg", "dequeueReusableCell"]
+- !private ["Ps7CVarArg", "didReceiveMemoryWarning"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "instantiateViewController"]
+- !private ["Ps7CVarArg", "kioskGroupLabel"]
+- !private ["Ps7CVarArg", "kioskLabel"]
+- !private ["Ps7CVarArg", "leftBarButtonItem"]
+- !private ["Ps7CVarArg", "locationLabel"]
+- !private ["Ps7CVarArg", "main"]
+- !private ["Ps7CVarArg", "navigationItem"]
+- !private ["Ps7CVarArg", "newSelf"]
+- !private ["Ps7CVarArg", "show"]
+- !private ["Ps7CVarArg", "tag"]
+- !private ["Ps7CVarArg", "text"]
+- !private ["Ps7CVarArg", "title"]
+- !private ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- ["Ps10Collection", "init"]
+- !private ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "UIStoryboard"]
+- !private ["Ps28CustomDebugStringConvertible", "dequeueReusableCell"]
+- !private ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "instantiateViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "kioskGroupLabel"]
+- !private ["Ps28CustomDebugStringConvertible", "kioskLabel"]
+- !private ["Ps28CustomDebugStringConvertible", "leftBarButtonItem"]
+- !private ["Ps28CustomDebugStringConvertible", "locationLabel"]
+- !private ["Ps28CustomDebugStringConvertible", "main"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
+- !private ["Ps28CustomDebugStringConvertible", "newSelf"]
+- !private ["Ps28CustomDebugStringConvertible", "show"]
+- !private ["Ps28CustomDebugStringConvertible", "tag"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "title"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "main"]
+- ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "UIStoryboard"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "dequeueReusableCell"]
+- !private ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "instantiateViewController"]
+- !private ["Ps23CustomStringConvertible", "kioskGroupLabel"]
+- !private ["Ps23CustomStringConvertible", "kioskLabel"]
+- !private ["Ps23CustomStringConvertible", "leftBarButtonItem"]
+- !private ["Ps23CustomStringConvertible", "locationLabel"]
+- !private ["Ps23CustomStringConvertible", "main"]
+- !private ["Ps23CustomStringConvertible", "navigationItem"]
+- !private ["Ps23CustomStringConvertible", "newSelf"]
+- !private ["Ps23CustomStringConvertible", "show"]
+- !private ["Ps23CustomStringConvertible", "tag"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "title"]
+- !private ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "UIStoryboard"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "dequeueReusableCell"]
+- !private ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "instantiateViewController"]
+- !private ["Ps9Equatable", "kioskGroupLabel"]
+- !private ["Ps9Equatable", "kioskLabel"]
+- !private ["Ps9Equatable", "leftBarButtonItem"]
+- !private ["Ps9Equatable", "locationLabel"]
+- !private ["Ps9Equatable", "main"]
+- !private ["Ps9Equatable", "navigationItem"]
+- !private ["Ps9Equatable", "newSelf"]
+- !private ["Ps9Equatable", "show"]
+- !private ["Ps9Equatable", "tag"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "title"]
+- !private ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- ["Ps25ExpressibleByArrayLiteral", "init"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps23ExpressibleByNilLiteral", "main"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "UIStoryboard"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "dequeueReusableCell"]
+- !private ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "instantiateViewController"]
+- !private ["Ps8Hashable", "kioskGroupLabel"]
+- !private ["Ps8Hashable", "kioskLabel"]
+- !private ["Ps8Hashable", "leftBarButtonItem"]
+- !private ["Ps8Hashable", "locationLabel"]
+- !private ["Ps8Hashable", "main"]
+- !private ["Ps8Hashable", "navigationItem"]
+- !private ["Ps8Hashable", "newSelf"]
+- !private ["Ps8Hashable", "show"]
+- !private ["Ps8Hashable", "tag"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "title"]
+- !private ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["C21AccuVax_Mobile_Portal23KioskGroupTableViewCell", "kioskGroupLabel"]
+- !private ["C21AccuVax_Mobile_Portal18KioskTableViewCell", "kioskLabel"]
+- !private ["C21AccuVax_Mobile_Portal21LocationTableViewCell", "locationLabel"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- ["Ps17MutableCollection", "init"]
+- ["PSo8NSCoding", "String"]
+- !private ["PSo8NSCoding", "UIStoryboard"]
+- !private ["PSo8NSCoding", "dequeueReusableCell"]
+- !private ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "kioskGroupLabel"]
+- !private ["PSo8NSCoding", "kioskLabel"]
+- !private ["PSo8NSCoding", "leftBarButtonItem"]
+- !private ["PSo8NSCoding", "locationLabel"]
+- !private ["PSo8NSCoding", "navigationItem"]
+- !private ["PSo8NSCoding", "newSelf"]
+- !private ["PSo8NSCoding", "show"]
+- !private ["PSo8NSCoding", "tag"]
+- !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "title"]
+- !private ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- ["PSo26NSExtensionRequestHandling", "String"]
+- !private ["PSo26NSExtensionRequestHandling", "UIStoryboard"]
+- !private ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
+- !private ["PSo26NSExtensionRequestHandling", "newSelf"]
+- !private ["PSo26NSExtensionRequestHandling", "show"]
+- !private ["PSo26NSExtensionRequestHandling", "tag"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "IndexPath"]
+- ["CSo8NSObject", "Int"]
+- !private ["CSo8NSObject", "KioskGroupTableViewCell"]
+- !private ["CSo8NSObject", "KioskTableViewCell"]
+- !private ["CSo8NSObject", "LocationTableViewCell"]
+- !private ["CSo8NSObject", "SelectMachineTableViewController"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "UIStoryboard"]
+- ["CSo8NSObject", "UITableView"]
+- ["CSo8NSObject", "UITableViewCell"]
+- !private ["CSo8NSObject", "dequeueReusableCell"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "instantiateViewController"]
+- !private ["CSo8NSObject", "kioskGroupLabel"]
+- ["CSo8NSObject", "kioskGroups"]
+- !private ["CSo8NSObject", "kioskLabel"]
+- ["CSo8NSObject", "kiosks"]
+- !private ["CSo8NSObject", "leftBarButtonItem"]
+- !private ["CSo8NSObject", "locationLabel"]
+- ["CSo8NSObject", "locations"]
+- !private ["CSo8NSObject", "main"]
+- !private ["CSo8NSObject", "navigationItem"]
+- ["CSo8NSObject", "newSelf"]
+- ["CSo8NSObject", "numberOfSections"]
+- !private ["CSo8NSObject", "show"]
+- ["CSo8NSObject", "tableView"]
+- ["CSo8NSObject", "tag"]
+- !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "title"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "UIStoryboard"]
+- !private ["PSo16NSObjectProtocol", "dequeueReusableCell"]
+- !private ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "instantiateViewController"]
+- !private ["PSo16NSObjectProtocol", "kioskGroupLabel"]
+- !private ["PSo16NSObjectProtocol", "kioskLabel"]
+- !private ["PSo16NSObjectProtocol", "leftBarButtonItem"]
+- !private ["PSo16NSObjectProtocol", "locationLabel"]
+- !private ["PSo16NSObjectProtocol", "main"]
+- !private ["PSo16NSObjectProtocol", "navigationItem"]
+- !private ["PSo16NSObjectProtocol", "newSelf"]
+- !private ["PSo16NSObjectProtocol", "show"]
+- !private ["PSo16NSObjectProtocol", "tag"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "title"]
+- !private ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["Sq", "main"]
+- ["Ps22RandomAccessCollection", "init"]
+- ["Ps26RangeReplaceableCollection", "init"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "IndexPath"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "Int"]
+- !private ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "KioskGroupTableViewCell"]
+- !private ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "KioskTableViewCell"]
+- !private ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "LocationTableViewCell"]
+- !private ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "SelectMachineTableViewController"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "String"]
+- !private ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "UIStoryboard"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "UITableView"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "UITableViewCell"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "deinit"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "didReceiveMemoryWarning"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "init"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "kioskGroups"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "kiosks"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "locations"]
+- !private ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "navigationItem"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "newSelf"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "numberOfSections"]
+- !private ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "show"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "tableView"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "tag"]
+- ["C21AccuVax_Mobile_Portal32SelectMachineTableViewController", "viewDidLoad"]
+- ["Ps8Sequence", "init"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCell"]
+- !private ["PSo29UIAccessibilityIdentification", "kioskGroupLabel"]
+- !private ["PSo29UIAccessibilityIdentification", "kioskLabel"]
+- !private ["PSo29UIAccessibilityIdentification", "locationLabel"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo29UIAccessibilityIdentification", "title"]
+- !private ["PSo12UIAppearance", "dequeueReusableCell"]
+- !private ["PSo12UIAppearance", "kioskGroupLabel"]
+- !private ["PSo12UIAppearance", "kioskLabel"]
+- !private ["PSo12UIAppearance", "locationLabel"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo12UIAppearance", "title"]
+- ["PSo21UIAppearanceContainer", "String"]
+- !private ["PSo21UIAppearanceContainer", "UIStoryboard"]
+- !private ["PSo21UIAppearanceContainer", "dequeueReusableCell"]
+- !private ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "kioskGroupLabel"]
+- !private ["PSo21UIAppearanceContainer", "kioskLabel"]
+- !private ["PSo21UIAppearanceContainer", "locationLabel"]
+- !private ["PSo21UIAppearanceContainer", "navigationItem"]
+- !private ["PSo21UIAppearanceContainer", "newSelf"]
+- !private ["PSo21UIAppearanceContainer", "show"]
+- !private ["PSo21UIAppearanceContainer", "tag"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo15UIBarButtonItem", "title"]
+- !private ["CSo9UIBarItem", "title"]
+- ["PSo18UIContentContainer", "String"]
+- !private ["PSo18UIContentContainer", "UIStoryboard"]
+- !private ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "navigationItem"]
+- !private ["PSo18UIContentContainer", "newSelf"]
+- !private ["PSo18UIContentContainer", "show"]
+- !private ["PSo18UIContentContainer", "tag"]
+- !private ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["PSo17UICoordinateSpace", "dequeueReusableCell"]
+- !private ["PSo17UICoordinateSpace", "kioskGroupLabel"]
+- !private ["PSo17UICoordinateSpace", "kioskLabel"]
+- !private ["PSo17UICoordinateSpace", "locationLabel"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "dequeueReusableCell"]
+- !private ["PSo13UIDynamicItem", "kioskGroupLabel"]
+- !private ["PSo13UIDynamicItem", "kioskLabel"]
+- !private ["PSo13UIDynamicItem", "locationLabel"]
+- !private ["PSo13UIDynamicItem", "text"]
+- ["PSo18UIFocusEnvironment", "String"]
+- !private ["PSo18UIFocusEnvironment", "UIStoryboard"]
+- !private ["PSo18UIFocusEnvironment", "dequeueReusableCell"]
+- !private ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "kioskGroupLabel"]
+- !private ["PSo18UIFocusEnvironment", "kioskLabel"]
+- !private ["PSo18UIFocusEnvironment", "locationLabel"]
+- !private ["PSo18UIFocusEnvironment", "navigationItem"]
+- !private ["PSo18UIFocusEnvironment", "newSelf"]
+- !private ["PSo18UIFocusEnvironment", "show"]
+- !private ["PSo18UIFocusEnvironment", "tag"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "dequeueReusableCell"]
+- !private ["PSo11UIFocusItem", "kioskGroupLabel"]
+- !private ["PSo11UIFocusItem", "kioskLabel"]
+- !private ["PSo11UIFocusItem", "locationLabel"]
+- !private ["PSo11UIFocusItem", "text"]
+- !private ["PSo27UIGestureRecognizerDelegate", "kioskGroupLabel"]
+- !private ["PSo27UIGestureRecognizerDelegate", "kioskLabel"]
+- !private ["PSo27UIGestureRecognizerDelegate", "locationLabel"]
+- !private ["CSo7UILabel", "text"]
+- !private ["CSo16UINavigationItem", "leftBarButtonItem"]
+- !private ["CSo16UINavigationItem", "title"]
+- ["CSo11UIResponder", "IndexPath"]
+- ["CSo11UIResponder", "Int"]
+- !private ["CSo11UIResponder", "KioskGroupTableViewCell"]
+- !private ["CSo11UIResponder", "KioskTableViewCell"]
+- !private ["CSo11UIResponder", "LocationTableViewCell"]
+- !private ["CSo11UIResponder", "SelectMachineTableViewController"]
+- ["CSo11UIResponder", "String"]
+- !private ["CSo11UIResponder", "UIStoryboard"]
+- ["CSo11UIResponder", "UITableView"]
+- ["CSo11UIResponder", "UITableViewCell"]
+- !private ["CSo11UIResponder", "dequeueReusableCell"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "kioskGroupLabel"]
+- ["CSo11UIResponder", "kioskGroups"]
+- !private ["CSo11UIResponder", "kioskLabel"]
+- ["CSo11UIResponder", "kiosks"]
+- !private ["CSo11UIResponder", "locationLabel"]
+- ["CSo11UIResponder", "locations"]
+- !private ["CSo11UIResponder", "navigationItem"]
+- ["CSo11UIResponder", "newSelf"]
+- ["CSo11UIResponder", "numberOfSections"]
+- !private ["CSo11UIResponder", "show"]
+- ["CSo11UIResponder", "tableView"]
+- ["CSo11UIResponder", "tag"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", "String"]
+- !private ["PSo30UIResponderStandardEditActions", "UIStoryboard"]
+- !private ["PSo30UIResponderStandardEditActions", "dequeueReusableCell"]
+- !private ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "kioskGroupLabel"]
+- !private ["PSo30UIResponderStandardEditActions", "kioskLabel"]
+- !private ["PSo30UIResponderStandardEditActions", "locationLabel"]
+- !private ["PSo30UIResponderStandardEditActions", "navigationItem"]
+- !private ["PSo30UIResponderStandardEditActions", "newSelf"]
+- !private ["PSo30UIResponderStandardEditActions", "show"]
+- !private ["PSo30UIResponderStandardEditActions", "tag"]
+- !private ["PSo30UIResponderStandardEditActions", "text"]
+- !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["CSo12UIScrollView", "dequeueReusableCell"]
+- ["PSo20UIScrollViewDelegate", "String"]
+- !private ["PSo20UIScrollViewDelegate", "UIStoryboard"]
+- !private ["PSo20UIScrollViewDelegate", "didReceiveMemoryWarning"]
+- !private ["PSo20UIScrollViewDelegate", "init"]
+- !private ["PSo20UIScrollViewDelegate", "navigationItem"]
+- !private ["PSo20UIScrollViewDelegate", "newSelf"]
+- !private ["PSo20UIScrollViewDelegate", "show"]
+- !private ["PSo20UIScrollViewDelegate", "tag"]
+- !private ["PSo20UIScrollViewDelegate", "viewDidLoad"]
+- ["PSo20UIScrollViewDelegate", ""]
+- ["PSo16UIStateRestoring", "String"]
+- !private ["PSo16UIStateRestoring", "UIStoryboard"]
+- !private ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "navigationItem"]
+- !private ["PSo16UIStateRestoring", "newSelf"]
+- !private ["PSo16UIStateRestoring", "show"]
+- !private ["PSo16UIStateRestoring", "tag"]
+- !private ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo12UIStoryboard", "init"]
+- !private ["CSo12UIStoryboard", "instantiateViewController"]
+- !private ["CSo11UITableView", "dequeueReusableCell"]
+- !private ["CSo15UITableViewCell", "kioskGroupLabel"]
+- !private ["CSo15UITableViewCell", "kioskLabel"]
+- !private ["CSo15UITableViewCell", "locationLabel"]
+- ["CSo21UITableViewController", "IndexPath"]
+- ["CSo21UITableViewController", "Int"]
+- !private ["CSo21UITableViewController", "KioskGroupTableViewCell"]
+- !private ["CSo21UITableViewController", "KioskTableViewCell"]
+- !private ["CSo21UITableViewController", "LocationTableViewCell"]
+- !private ["CSo21UITableViewController", "SelectMachineTableViewController"]
+- ["CSo21UITableViewController", "String"]
+- !private ["CSo21UITableViewController", "UIStoryboard"]
+- ["CSo21UITableViewController", "UITableView"]
+- ["CSo21UITableViewController", "UITableViewCell"]
+- ["CSo21UITableViewController", "didReceiveMemoryWarning"]
+- ["CSo21UITableViewController", "init"]
+- ["CSo21UITableViewController", "kioskGroups"]
+- ["CSo21UITableViewController", "kiosks"]
+- ["CSo21UITableViewController", "locations"]
+- !private ["CSo21UITableViewController", "navigationItem"]
+- ["CSo21UITableViewController", "newSelf"]
+- ["CSo21UITableViewController", "numberOfSections"]
+- !private ["CSo21UITableViewController", "show"]
+- ["CSo21UITableViewController", "tableView"]
+- ["CSo21UITableViewController", "tag"]
+- ["CSo21UITableViewController", "viewDidLoad"]
+- ["CSo21UITableViewController", ""]
+- ["PSo21UITableViewDataSource", "String"]
+- !private ["PSo21UITableViewDataSource", "UIStoryboard"]
+- !private ["PSo21UITableViewDataSource", "didReceiveMemoryWarning"]
+- !private ["PSo21UITableViewDataSource", "init"]
+- !private ["PSo21UITableViewDataSource", "navigationItem"]
+- !private ["PSo21UITableViewDataSource", "newSelf"]
+- !private ["PSo21UITableViewDataSource", "show"]
+- !private ["PSo21UITableViewDataSource", "tag"]
+- !private ["PSo21UITableViewDataSource", "viewDidLoad"]
+- ["PSo21UITableViewDataSource", ""]
+- ["PSo19UITableViewDelegate", "String"]
+- !private ["PSo19UITableViewDelegate", "UIStoryboard"]
+- !private ["PSo19UITableViewDelegate", "didReceiveMemoryWarning"]
+- !private ["PSo19UITableViewDelegate", "init"]
+- !private ["PSo19UITableViewDelegate", "navigationItem"]
+- !private ["PSo19UITableViewDelegate", "newSelf"]
+- !private ["PSo19UITableViewDelegate", "show"]
+- !private ["PSo19UITableViewDelegate", "tag"]
+- !private ["PSo19UITableViewDelegate", "viewDidLoad"]
+- ["PSo19UITableViewDelegate", ""]
+- ["PSo18UITraitEnvironment", "String"]
+- !private ["PSo18UITraitEnvironment", "UIStoryboard"]
+- !private ["PSo18UITraitEnvironment", "dequeueReusableCell"]
+- !private ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "kioskGroupLabel"]
+- !private ["PSo18UITraitEnvironment", "kioskLabel"]
+- !private ["PSo18UITraitEnvironment", "locationLabel"]
+- !private ["PSo18UITraitEnvironment", "navigationItem"]
+- !private ["PSo18UITraitEnvironment", "newSelf"]
+- !private ["PSo18UITraitEnvironment", "show"]
+- !private ["PSo18UITraitEnvironment", "tag"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "dequeueReusableCell"]
+- !private ["CSo6UIView", "kioskGroupLabel"]
+- !private ["CSo6UIView", "kioskLabel"]
+- !private ["CSo6UIView", "locationLabel"]
+- !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "IndexPath"]
+- ["CSo16UIViewController", "Int"]
+- !private ["CSo16UIViewController", "KioskGroupTableViewCell"]
+- !private ["CSo16UIViewController", "KioskTableViewCell"]
+- !private ["CSo16UIViewController", "LocationTableViewCell"]
+- !private ["CSo16UIViewController", "SelectMachineTableViewController"]
+- ["CSo16UIViewController", "String"]
+- !private ["CSo16UIViewController", "UIStoryboard"]
+- ["CSo16UIViewController", "UITableView"]
+- ["CSo16UIViewController", "UITableViewCell"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "kioskGroups"]
+- ["CSo16UIViewController", "kiosks"]
+- ["CSo16UIViewController", "locations"]
+- !private ["CSo16UIViewController", "navigationItem"]
+- ["CSo16UIViewController", "newSelf"]
+- ["CSo16UIViewController", "numberOfSections"]
+- !private ["CSo16UIViewController", "show"]
+- ["CSo16UIViewController", "tableView"]
+- ["CSo16UIViewController", "tag"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["Ps14_ArrayProtocol", "init"]
+- ["Ps23_BidirectionalIndexable", "init"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "dequeueReusableCell"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "kioskGroupLabel"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "kioskLabel"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "locationLabel"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
+- ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps9_Hashable", "String"]
+- !private ["Ps9_Hashable", "UIStoryboard"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "dequeueReusableCell"]
+- !private ["Ps9_Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "instantiateViewController"]
+- !private ["Ps9_Hashable", "kioskGroupLabel"]
+- !private ["Ps9_Hashable", "kioskLabel"]
+- !private ["Ps9_Hashable", "leftBarButtonItem"]
+- !private ["Ps9_Hashable", "locationLabel"]
+- !private ["Ps9_Hashable", "main"]
+- !private ["Ps9_Hashable", "navigationItem"]
+- !private ["Ps9_Hashable", "newSelf"]
+- !private ["Ps9_Hashable", "show"]
+- !private ["Ps9_Hashable", "tag"]
+- !private ["Ps9_Hashable", "text"]
+- !private ["Ps9_Hashable", "title"]
+- !private ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- ["Ps10_Indexable", "init"]
+- ["Ps14_IndexableBase", "init"]
+- ["Ps17_MutableIndexable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "main"]
+- ["Ps22_RandomAccessIndexable", "init"]
+- ["Ps26_RangeReplaceableIndexable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sa"
+- "Ps23BidirectionalCollection"
+- !private "Sb"
+- !private "CSo6Bundle"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- "Ps10Collection"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps23ExpressibleByNilLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- !private "C21AccuVax_Mobile_Portal23KioskGroupTableViewCell"
+- !private "C21AccuVax_Mobile_Portal18KioskTableViewCell"
+- !private "C21AccuVax_Mobile_Portal21LocationTableViewCell"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- "Ps17MutableCollection"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "Sq"
+- "Ps22RandomAccessCollection"
+- "Ps26RangeReplaceableCollection"
+- "C21AccuVax_Mobile_Portal32SelectMachineTableViewController"
+- "Ps8Sequence"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo15UIBarButtonItem"
+- !private "CSo9UIBarItem"
+- "PSo18UIContentContainer"
+- !private "PSo30UIContentSizeCategoryAdjusting"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "PSo27UIGestureRecognizerDelegate"
+- !private "CSo7UILabel"
+- !private "CSo16UINavigationItem"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- !private "CSo12UIScrollView"
+- "PSo20UIScrollViewDelegate"
+- "PSo16UIStateRestoring"
+- !private "CSo12UIStoryboard"
+- !private "CSo11UITableView"
+- !private "CSo15UITableViewCell"
+- "CSo21UITableViewController"
+- "PSo21UITableViewDataSource"
+- "PSo19UITableViewDelegate"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- "Ps14_ArrayProtocol"
+- "Ps23_BidirectionalIndexable"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- "Ps24_DestructorSafeContainer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- "Ps10_Indexable"
+- "Ps14_IndexableBase"
+- "Ps17_MutableIndexable"
+- "Ps21_ObjectiveCBridgeable"
+- "Ps22_RandomAccessIndexable"
+- "Ps26_RangeReplaceableIndexable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "1460bf711c18afe1ca7f734f8fc5600e"

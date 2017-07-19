@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		D81AC9731F1E029E00938D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81AC9721F1E029E00938D7D /* AppDelegate.swift */; };
-		D81AC9751F1E029E00938D7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81AC9741F1E029E00938D7D /* ViewController.swift */; };
+		D81AC9751F1E029E00938D7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81AC9741F1E029E00938D7D /* LoginViewController.swift */; };
 		D81AC9781F1E029E00938D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81AC9761F1E029E00938D7D /* Main.storyboard */; };
 		D81AC97A1F1E029E00938D7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81AC9791F1E029E00938D7D /* Assets.xcassets */; };
 		D81AC97D1F1E029E00938D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81AC97B1F1E029E00938D7D /* LaunchScreen.storyboard */; };
+		D8FED0EA1F1E8AE50085B00C /* SelectMachineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FED0E91F1E8AE50085B00C /* SelectMachineTableViewController.swift */; };
+		D8FED0EF1F1E90730085B00C /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FED0EE1F1E90730085B00C /* LocationTableViewCell.swift */; };
+		D8FED0F11F1E920C0085B00C /* KioskGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FED0F01F1E920C0085B00C /* KioskGroupTableViewCell.swift */; };
+		D8FED0F31F1E923F0085B00C /* KioskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FED0F21F1E923F0085B00C /* KioskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D81AC96F1F1E029E00938D7D /* AccuVax Mobile Portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuVax Mobile Portal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81AC9721F1E029E00938D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D81AC9741F1E029E00938D7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D81AC9741F1E029E00938D7D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D81AC9771F1E029E00938D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D81AC9791F1E029E00938D7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D81AC97C1F1E029E00938D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D81AC97E1F1E029E00938D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8FED0E91F1E8AE50085B00C /* SelectMachineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectMachineTableViewController.swift; sourceTree = "<group>"; };
+		D8FED0EE1F1E90730085B00C /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		D8FED0F01F1E920C0085B00C /* KioskGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KioskGroupTableViewCell.swift; sourceTree = "<group>"; };
+		D8FED0F21F1E923F0085B00C /* KioskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KioskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		D81AC9711F1E029E00938D7D /* AccuVax Mobile Portal */ = {
 			isa = PBXGroup;
 			children = (
+				D8FED0EC1F1E8F740085B00C /* Table View Cells */,
+				D8FED0EB1F1E8B1A0085B00C /* ViewControllers */,
+				D8FED0ED1F1E8FE80085B00C /* Storyboards */,
 				D81AC9721F1E029E00938D7D /* AppDelegate.swift */,
-				D81AC9741F1E029E00938D7D /* ViewController.swift */,
-				D81AC9761F1E029E00938D7D /* Main.storyboard */,
 				D81AC9791F1E029E00938D7D /* Assets.xcassets */,
-				D81AC97B1F1E029E00938D7D /* LaunchScreen.storyboard */,
 				D81AC97E1F1E029E00938D7D /* Info.plist */,
 			);
 			path = "AccuVax Mobile Portal";
+			sourceTree = "<group>";
+		};
+		D8FED0EB1F1E8B1A0085B00C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D81AC9741F1E029E00938D7D /* LoginViewController.swift */,
+				D8FED0E91F1E8AE50085B00C /* SelectMachineTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D8FED0EC1F1E8F740085B00C /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D8FED0EE1F1E90730085B00C /* LocationTableViewCell.swift */,
+				D8FED0F01F1E920C0085B00C /* KioskGroupTableViewCell.swift */,
+				D8FED0F21F1E923F0085B00C /* KioskTableViewCell.swift */,
+			);
+			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		D8FED0ED1F1E8FE80085B00C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D81AC9761F1E029E00938D7D /* Main.storyboard */,
+				D81AC97B1F1E029E00938D7D /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D81AC9751F1E029E00938D7D /* ViewController.swift in Sources */,
+				D81AC9751F1E029E00938D7D /* LoginViewController.swift in Sources */,
+				D8FED0EA1F1E8AE50085B00C /* SelectMachineTableViewController.swift in Sources */,
+				D8FED0EF1F1E90730085B00C /* LocationTableViewCell.swift in Sources */,
+				D8FED0F31F1E923F0085B00C /* KioskTableViewCell.swift in Sources */,
 				D81AC9731F1E029E00938D7D /* AppDelegate.swift in Sources */,
+				D8FED0F11F1E920C0085B00C /* KioskGroupTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +303,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 92C2Z4SY7V;
 				INFOPLIST_FILE = "AccuVax Mobile Portal/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanbaker.trumed.AccuVax-Mobile-Portal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +317,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 92C2Z4SY7V;
 				INFOPLIST_FILE = "AccuVax Mobile Portal/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nathanbaker.trumed.AccuVax-Mobile-Portal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +344,7 @@
 				D81AC9831F1E029E00938D7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JpE-Mv-Qfq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Temp Page View Controller-->
+        <scene sceneID="a9a-qv-VSb">
+            <objects>
+                <pageViewController storyboardIdentifier="temperaturePageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="JpE-Mv-Qfq" customClass="TempPageViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bwm-Gk-Kdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4304" y="120"/>
+        </scene>
+        <!--Temp View Controller-->
+        <scene sceneID="1L6-X1-Yfb">
+            <objects>
+                <viewController storyboardIdentifier="childVC" id="nyv-2x-cZJ" customClass="TempViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="owN-B1-dAz"/>
+                        <viewControllerLayoutGuide type="bottom" id="PBy-iU-34C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QiA-FO-md5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.90187675480654073" blue="0.40777567377135171" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVM-JW-cCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5140" y="119"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8Cg-cx-zTT">
+            <objects>
+                <viewController id="y5Y-6Z-YR8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H3O-Fl-iIu"/>
+                        <viewControllerLayoutGuide type="bottom" id="zvT-Hn-Qaa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4oy-pO-IYL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.15808693472405277" blue="0.19054066422661919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eht-Bd-4wV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5140" y="789"/>
+        </scene>
+    </scenes>
+</document>

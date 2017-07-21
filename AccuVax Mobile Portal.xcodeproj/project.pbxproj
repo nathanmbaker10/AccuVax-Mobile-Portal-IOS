@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		564039651F21459A000FE160 /* SF-Pro-Display in Resources */ = {isa = PBXBuildFile; fileRef = 564039641F21459A000FE160 /* SF-Pro-Display */; };
+		564039681F216B49000FE160 /* Temperature.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564039661F216B49000FE160 /* Temperature.storyboard */; };
+		5640396C1F217528000FE160 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5640396B1F217528000FE160 /* TempViewController.swift */; };
+		564039701F2285BB000FE160 /* TempPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5640396F1F2285BB000FE160 /* TempPageViewController.swift */; };
+		83D548CA3BC9E5123EFE081B /* Pods_AccuVax_Mobile_Portal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF1DE27E32B7F5BC3BB2FF4 /* Pods_AccuVax_Mobile_Portal.framework */; };
 		D81AC9731F1E029E00938D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81AC9721F1E029E00938D7D /* AppDelegate.swift */; };
 		D81AC9751F1E029E00938D7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81AC9741F1E029E00938D7D /* LoginViewController.swift */; };
 		D81AC9781F1E029E00938D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81AC9761F1E029E00938D7D /* Main.storyboard */; };
@@ -21,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0641AFFF96EC336B5E6C6475 /* Pods-AccuVax Mobile Portal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuVax Mobile Portal.release.xcconfig"; path = "Pods/Target Support Files/Pods-AccuVax Mobile Portal/Pods-AccuVax Mobile Portal.release.xcconfig"; sourceTree = "<group>"; };
+		564039641F21459A000FE160 /* SF-Pro-Display */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SF-Pro-Display"; path = "/Library/Fonts/SF-Pro-Display"; sourceTree = "<absolute>"; };
+		564039671F216B49000FE160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Temperature.storyboard; sourceTree = "<group>"; };
+		5640396B1F217528000FE160 /* TempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+		5640396F1F2285BB000FE160 /* TempPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempPageViewController.swift; sourceTree = "<group>"; };
+		94833959A4EF93BD68FD5D65 /* Pods-AccuVax Mobile Portal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuVax Mobile Portal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AccuVax Mobile Portal/Pods-AccuVax Mobile Portal.debug.xcconfig"; sourceTree = "<group>"; };
+		AEF1DE27E32B7F5BC3BB2FF4 /* Pods_AccuVax_Mobile_Portal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccuVax_Mobile_Portal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81AC96F1F1E029E00938D7D /* AccuVax Mobile Portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuVax Mobile Portal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81AC9721F1E029E00938D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D81AC9741F1E029E00938D7D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -41,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D548CA3BC9E5123EFE081B /* Pods_AccuVax_Mobile_Portal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9435D63578BA954C24A0DE17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94833959A4EF93BD68FD5D65 /* Pods-AccuVax Mobile Portal.debug.xcconfig */,
+				0641AFFF96EC336B5E6C6475 /* Pods-AccuVax Mobile Portal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB4BCD5924C3FD4C59BA3281 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEF1DE27E32B7F5BC3BB2FF4 /* Pods_AccuVax_Mobile_Portal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D81AC9661F1E029E00938D7D = {
 			isa = PBXGroup;
 			children = (
 				D81AC9711F1E029E00938D7D /* AccuVax Mobile Portal */,
 				D81AC9701F1E029E00938D7D /* Products */,
+				9435D63578BA954C24A0DE17 /* Pods */,
+				BB4BCD5924C3FD4C59BA3281 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +102,7 @@
 				D8FED0EB1F1E8B1A0085B00C /* ViewControllers */,
 				D8FED0ED1F1E8FE80085B00C /* Storyboards */,
 				D81AC9721F1E029E00938D7D /* AppDelegate.swift */,
+				564039641F21459A000FE160 /* SF-Pro-Display */,
 				D81AC9791F1E029E00938D7D /* Assets.xcassets */,
 				D81AC97E1F1E029E00938D7D /* Info.plist */,
 				D88BA3D51F1FF80C00E29526 /* UIViewCustomization.swift */,
@@ -83,6 +116,8 @@
 				D81AC9741F1E029E00938D7D /* LoginViewController.swift */,
 				D8FED0E91F1E8AE50085B00C /* SelectMachineTableViewController.swift */,
 				D88BA3D31F1FF3F100E29526 /* ChooseActionViewController.swift */,
+				5640396B1F217528000FE160 /* TempViewController.swift */,
+				5640396F1F2285BB000FE160 /* TempPageViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -101,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				D81AC9761F1E029E00938D7D /* Main.storyboard */,
+				564039661F216B49000FE160 /* Temperature.storyboard */,
 				D81AC97B1F1E029E00938D7D /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
@@ -113,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D81AC9811F1E029E00938D7D /* Build configuration list for PBXNativeTarget "AccuVax Mobile Portal" */;
 			buildPhases = (
+				90DDA837A3836055D660DA8E /* [CP] Check Pods Manifest.lock */,
 				D81AC96B1F1E029E00938D7D /* Sources */,
 				D81AC96C1F1E029E00938D7D /* Frameworks */,
 				D81AC96D1F1E029E00938D7D /* Resources */,
+				AF7113582C2D528F0D601CB6 /* [CP] Embed Pods Frameworks */,
+				1C979BA4A87272FA6D2896E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,6 +205,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564039651F21459A000FE160 /* SF-Pro-Display in Resources */,
+				564039681F216B49000FE160 /* Temperature.storyboard in Resources */,
 				D81AC97D1F1E029E00938D7D /* LaunchScreen.storyboard in Resources */,
 				D81AC97A1F1E029E00938D7D /* Assets.xcassets in Resources */,
 				D81AC9781F1E029E00938D7D /* Main.storyboard in Resources */,
@@ -173,6 +214,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C979BA4A87272FA6D2896E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AccuVax Mobile Portal/Pods-AccuVax Mobile Portal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90DDA837A3836055D660DA8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AF7113582C2D528F0D601CB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AccuVax Mobile Portal/Pods-AccuVax Mobile Portal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D81AC96B1F1E029E00938D7D /* Sources */ = {
@@ -184,7 +273,9 @@
 				D8FED0EA1F1E8AE50085B00C /* SelectMachineTableViewController.swift in Sources */,
 				D8FED0EF1F1E90730085B00C /* LocationTableViewCell.swift in Sources */,
 				D88BA3D41F1FF3F100E29526 /* ChooseActionViewController.swift in Sources */,
+				564039701F2285BB000FE160 /* TempPageViewController.swift in Sources */,
 				D8FED0F31F1E923F0085B00C /* KioskTableViewCell.swift in Sources */,
+				5640396C1F217528000FE160 /* TempViewController.swift in Sources */,
 				D81AC9731F1E029E00938D7D /* AppDelegate.swift in Sources */,
 				D8FED0F11F1E920C0085B00C /* KioskGroupTableViewCell.swift in Sources */,
 			);
@@ -193,6 +284,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		564039661F216B49000FE160 /* Temperature.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				564039671F216B49000FE160 /* Base */,
+			);
+			name = Temperature.storyboard;
+			sourceTree = "<group>";
+		};
 		D81AC9761F1E029E00938D7D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -307,9 +406,11 @@
 		};
 		D81AC9821F1E029E00938D7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94833959A4EF93BD68FD5D65 /* Pods-AccuVax Mobile Portal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 92C2Z4SY7V;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "AccuVax Mobile Portal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -321,9 +422,11 @@
 		};
 		D81AC9831F1E029E00938D7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0641AFFF96EC336B5E6C6475 /* Pods-AccuVax Mobile Portal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 92C2Z4SY7V;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "AccuVax Mobile Portal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

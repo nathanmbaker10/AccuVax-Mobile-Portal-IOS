@@ -1,0 +1,6 @@
+framework module Pods_AccuVax_Mobile_Portal {
+  umbrella header "Pods-AccuVax Mobile Portal-umbrella.h"
+
+  export *
+  module * { export * }
+}

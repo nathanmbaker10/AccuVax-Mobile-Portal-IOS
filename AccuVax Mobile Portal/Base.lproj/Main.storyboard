@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VGB-KO-yEf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Black.otf">
+            <string>SFProDisplay-Black</string>
+        </array>
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -111,7 +119,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pi-QO-sZf" id="FwA-Vh-AKC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvF-En-cCH">
@@ -135,7 +143,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CHI-vz-vvY" id="hPw-a5-X1j">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o75-lY-F54">
@@ -159,7 +167,7 @@
                                 <rect key="frame" x="0.0" y="133" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rSx-r7-wpV" id="Fxg-0b-F34">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyL-cj-Goe">
@@ -205,8 +213,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="u6m-4c-uTy">
+                                <rect key="frame" x="62" y="343" width="251" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBG-qH-egw">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
+                                        <color key="backgroundColor" red="0.2063916922" green="0.74770468469999996" blue="0.9997215867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="aBG-qH-egw" secondAttribute="height" multiplier="1:1" id="2ir-tU-qjA"/>
+                                            <constraint firstAttribute="width" constant="112" id="eeR-OW-Vf0"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="001-updated-security-for-protection-on-internet"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="56"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flQ-Xs-0Zc">
+                                        <rect key="frame" x="139" y="0.0" width="112" height="112"/>
+                                        <color key="backgroundColor" red="0.2063916922" green="0.74770468469999996" blue="0.9997215867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="flQ-Xs-0Zc" secondAttribute="height" multiplier="1:1" id="4kr-4c-3iS"/>
+                                            <constraint firstAttribute="width" constant="112" id="i1n-Xw-WAd"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="003-thermometer"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="56"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="L1T-xc-Vj3" kind="show" id="vuj-GB-vjE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhk-Du-nBr">
-                                <rect key="frame" x="131.5" y="111" width="112" height="112"/>
+                                <rect key="frame" x="131" y="223" width="112" height="112"/>
                                 <color key="backgroundColor" red="0.20639169216156006" green="0.74770468473434448" blue="0.99972158670425415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Vhk-Du-nBr" secondAttribute="height" multiplier="1:1" id="QDw-a1-wlo"/>
@@ -220,45 +266,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flQ-Xs-0Zc">
-                                <rect key="frame" x="248" y="343" width="112" height="112"/>
-                                <color key="backgroundColor" red="0.2063916922" green="0.74770468469999996" blue="0.9997215867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="flQ-Xs-0Zc" secondAttribute="height" multiplier="1:1" id="4kr-4c-3iS"/>
-                                    <constraint firstAttribute="width" constant="112" id="i1n-Xw-WAd"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="003-thermometer"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Machine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF3-P6-9Ga">
+                                <rect key="frame" x="16" y="28" width="343" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Black" family="SF Pro Display" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Machine Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJf-PM-Iy8">
+                                <rect key="frame" x="16" y="64" width="343" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Black" family="SF Pro Display" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="823-pS-I3g">
+                                <rect key="frame" x="150" y="100" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.29696758432415193" blue="0.36067071540968842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="15"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.99991601705551147" green="1" blue="0.99987190961837769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="56"/>
+                                        <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBG-qH-egw">
-                                <rect key="frame" x="15" y="343" width="112" height="112"/>
-                                <color key="backgroundColor" red="0.2063916922" green="0.74770468469999996" blue="0.9997215867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="aBG-qH-egw" secondAttribute="height" multiplier="1:1" id="2ir-tU-qjA"/>
-                                    <constraint firstAttribute="width" constant="112" id="eeR-OW-Vf0"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="001-updated-security-for-protection-on-internet"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="56"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="VGB-KO-yEf" eventType="touchUpInside" id="4rN-Vq-q2u"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="flQ-Xs-0Zc" secondAttribute="trailing" constant="15" id="1ha-bC-lOJ"/>
+                            <constraint firstItem="u6m-4c-uTy" firstAttribute="top" secondItem="Vhk-Du-nBr" secondAttribute="bottom" constant="8" id="9lZ-nM-2QP"/>
+                            <constraint firstItem="u6m-4c-uTy" firstAttribute="centerX" secondItem="T4D-cY-pQM" secondAttribute="centerX" id="DW8-fm-cbK"/>
                             <constraint firstItem="Vhk-Du-nBr" firstAttribute="centerX" secondItem="T4D-cY-pQM" secondAttribute="centerX" id="KA0-b5-0Av"/>
-                            <constraint firstItem="Vhk-Du-nBr" firstAttribute="top" secondItem="T4D-cY-pQM" secondAttribute="top" constant="111" id="PuU-Lx-zQJ"/>
-                            <constraint firstAttribute="bottom" secondItem="aBG-qH-egw" secondAttribute="bottom" constant="212" id="asX-V8-fU7"/>
-                            <constraint firstItem="3tn-rK-G7L" firstAttribute="top" secondItem="flQ-Xs-0Zc" secondAttribute="bottom" constant="212" id="ehy-uT-sis"/>
-                            <constraint firstItem="aBG-qH-egw" firstAttribute="leading" secondItem="T4D-cY-pQM" secondAttribute="leading" constant="15" id="hPW-bG-zHd"/>
+                            <constraint firstItem="Vhk-Du-nBr" firstAttribute="top" secondItem="OGI-LS-M7i" secondAttribute="bottom" constant="203" id="LtY-ji-APG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -276,7 +321,7 @@
             <objects>
                 <navigationController storyboardIdentifier="selectKioskNavController" automaticallyAdjustsScrollViewInsets="NO" id="TID-Qx-kRB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8HR-bg-xOK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8HR-bg-xOK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -288,6 +333,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bl-cx-1TK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1854" y="139"/>
+        </scene>
+        <!--Temperature-->
+        <scene sceneID="BQj-O2-reS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Temperature" id="L1T-xc-Vj3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NNm-vI-TLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4304" y="120"/>
         </scene>
     </scenes>
     <resources>

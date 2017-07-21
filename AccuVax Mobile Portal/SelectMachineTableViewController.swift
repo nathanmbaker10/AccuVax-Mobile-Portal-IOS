@@ -104,7 +104,8 @@ class SelectMachineTableViewController: UITableViewController {
             newSelf()
         case 3:
             let storyBoard = UIStoryboard(name: "Main", bundle: .main)
-            let newVC = storyBoard.instantiateViewController(withIdentifier: "rando")
+            let newVC = storyBoard.instantiateViewController(withIdentifier: "rando") as! ChooseActionViewController
+            newVC.formerViewController = self
             self.showDetailViewController(newVC, sender: self)
         default: break
         }

@@ -12,6 +12,7 @@ class ChooseActionViewController: UIViewController {
     @IBOutlet weak var userManagementButton: UIButton!
     @IBOutlet weak var temperatureButton: UIButton!
     @IBOutlet weak var inventoryButton: UIButton!
+    var formerViewController: UIViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
         setInsets()
@@ -20,11 +21,14 @@ class ChooseActionViewController: UIViewController {
     func setInsets() {
         let inventoryInsets = UIEdgeInsetsMake(10, 10, 10, 10)
         let usermanagementInsets = UIEdgeInsetsMake(20, 20, 20, 20)
-        let tempInsets = UIEdgeInsetsMake(25, 25, 25, 25)
-        
         userManagementButton.imageEdgeInsets = usermanagementInsets
         temperatureButton.imageEdgeInsets = inventoryInsets
         inventoryButton.imageEdgeInsets = inventoryInsets
+    }
+    @IBAction func signOutButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true) {
+            self.formerViewController.navigationController?.dismiss(animated: true, completion: nil)
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

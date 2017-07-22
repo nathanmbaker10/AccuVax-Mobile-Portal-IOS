@@ -12,7 +12,7 @@
         <!--Temp Page View Controller-->
         <scene sceneID="a9a-qv-VSb">
             <objects>
-                <pageViewController storyboardIdentifier="temperaturePageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="JpE-Mv-Qfq" customClass="TempPageViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="temperaturePageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="JpE-Mv-Qfq" customClass="TempPageViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwm-Gk-Kdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4304" y="120"/>
@@ -20,7 +20,7 @@
         <!--Temp View Controller-->
         <scene sceneID="1L6-X1-Yfb">
             <objects>
-                <viewController storyboardIdentifier="childVC" id="nyv-2x-cZJ" customClass="TempViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tempVC" id="nyv-2x-cZJ" customClass="TempViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="owN-B1-dAz"/>
                         <viewControllerLayoutGuide type="bottom" id="PBy-iU-34C"/>
@@ -28,30 +28,12 @@
                     <view key="view" contentMode="scaleToFill" id="QiA-FO-md5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.90187675480654073" blue="0.40777567377135171" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99991601705551147" green="1" blue="0.99987190961837769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVM-JW-cCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5140" y="119"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="8Cg-cx-zTT">
-            <objects>
-                <viewController id="y5Y-6Z-YR8" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="H3O-Fl-iIu"/>
-                        <viewControllerLayoutGuide type="bottom" id="zvT-Hn-Qaa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4oy-pO-IYL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.15808693472405277" blue="0.19054066422661919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eht-Bd-4wV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5140" y="789"/>
         </scene>
     </scenes>
 </document>

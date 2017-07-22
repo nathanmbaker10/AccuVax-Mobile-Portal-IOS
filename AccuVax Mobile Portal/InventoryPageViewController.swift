@@ -1,5 +1,5 @@
 //
-//  TempPageViewController.swift
+//  InventoryPageViewController.swift
 //  AccuVax Mobile Portal
 //
 //  Created by Nathan Baker on 7/21/17.
@@ -8,12 +8,13 @@
 
 import UIKit
 
-class TempPageViewController: UIPageViewController {
+class InventoryPageViewController: UIPageViewController {
     var index = 0
-    var childArray: [TempViewController] {
-        let result = [newChild(), newChild()]
-        for vc in result {
-            vc.tag = result.index(of: vc)
+    var didChange: Bool = false
+    var childArray: [VaccineViewController] {
+        let result = [newChild("Green"), newChild("Red"), newChild("Blue"), newChild("Orange")]
+        for vc in result{
+            vc.tag = result.index(of: vc)!
         }
         return result
     }
@@ -24,20 +25,16 @@ class TempPageViewController: UIPageViewController {
         if let first = childArray.first {
             setViewControllers([first], direction: .forward, animated: true, completion: nil)
         }
-        
         // Do any additional setup after loading the view.
     }
-    func styleIndicator() {
-        self.view.backgroundColor = UIColor.white
-//        let pageControl = UIPageControl.appearance(whenContainedInInstancesOf: self)
+    func newChild(_ color: String) -> VaccineViewController {
+        return UIStoryboard(name: "Inventory", bundle: .main).instantiateViewController(withIdentifier: color) as! VaccineViewController
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func newChild() -> TempViewController {
-        return UIStoryboard(name: "Temperature", bundle: .main).instantiateViewController(withIdentifier: "tempVC") as! TempViewController
-    }
+    
 
     /*
     // MARK: - Navigation
@@ -50,25 +47,33 @@ class TempPageViewController: UIPageViewController {
     */
 
 }
-extension TempPageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+extension InventoryPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let currentVC = viewController as? TempViewController else { return nil }
-        if currentVC.tag == 0 {
+        guard let currentVaccineVC = viewController as? VaccineViewController else {
+            print("Failed the force downcast")
+            return nil
+        }
+        if currentVaccineVC.tag == 0 {
             return nil
         } else {
-            return childArray[currentVC.tag - 1]
+            return childArray[currentVaccineVC.tag - 1]
         }
     }
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let currentVC = viewController as? TempViewController else { return nil }
-        if currentVC.tag == 1 {
+        guard let currentVaccineVC = viewController as? VaccineViewController else {
+            print("Failed the force downcast")
+            return nil
+        }
+        if currentVaccineVC.tag == 3 {
             return nil
         } else {
-            return childArray[currentVC.tag + 1]
+            return childArray[currentVaccineVC.tag + 1]
         }
     }
+    
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return childArray.count
+        return 4
     }
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0

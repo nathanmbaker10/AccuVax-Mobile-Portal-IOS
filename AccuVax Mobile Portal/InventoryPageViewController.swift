@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class InventoryPageViewController: UIPageViewController {
     var index = 0
     var didChange: Bool = false
+    var vaccineDict = [VaccineBrandName : Vaccine]()
     var childArray: [VaccineViewController] {
-        let result = [newChild("Green"), newChild("Red"), newChild("Blue"), newChild("Orange")]
-        for vc in result{
-            vc.tag = result.index(of: vc)!
+        var result = [VaccineViewController]()
+        var currentTag = 0
+        for vaccine in vaccineDict.values {
+            let newVC = newChild()
+            newVC.vaccine = vaccine
+            newVC.tag = currentTag
+            result.append(newVC)
+            currentTag += 1
         }
         return result
     }
@@ -22,19 +30,59 @@ class InventoryPageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
-        if let first = childArray.first {
-            setViewControllers([first], direction: .forward, animated: true, completion: nil)
-        }
+        loadVaccines()
         // Do any additional setup after loading the view.
     }
-    func newChild(_ color: String) -> VaccineViewController {
-        return UIStoryboard(name: "Inventory", bundle: .main).instantiateViewController(withIdentifier: color) as! VaccineViewController
+    func newChild() -> VaccineViewController {
+        return UIStoryboard(name: "Inventory", bundle: .main).instantiateViewController(withIdentifier: "realVC") as! VaccineViewController
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func loadVaccines() {
+        var json: JSON?
+        let user: String = "temptest"
+        let password: String = "temptestpassword"
+        var headers: HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "X-ACCUVAX-CONNECT-SENDING-FACILITY" : "cntablet"
+        ]
+        if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
+            headers[authorizationHeader.key] = authorizationHeader.value
+        }
+        
+        
+        Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/inventories.json", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
+            if let error = responseData.error {
+                let errorAlert = UIAlertController(title: "Error", message: "There was an error connecting to the server or machine", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default) {_ in
+                    self.dismiss(animated: true, completion: nil)
+                }
+                errorAlert.addAction(ok)
+                self.present(errorAlert, animated: true, completion: nil)
+            }
+            if let dict = responseData.result.value as? [String: Any] {
+                json = JSON(dict)
+                let lotsJSON = json?["inventories"].arrayValue
+                for lotJSON in lotsJSON! {
+                    let lot = Lot(inventoryJSON: lotJSON)
+                    let currentVacName = VaccineBrandName(rawValue: lot.brand_name)
+                    if let vaccine = self.vaccineDict[currentVacName!] {
+                        vaccine.lots?.append(lot)
+                        vaccine.totalDosesRemaining += lot.dosesRemaining
+                        vaccine.totalCount += lot.count
+                    } else {
+                        self.vaccineDict[currentVacName!] = Vaccine(brandName: currentVacName!, initialLot: lot)
+                    }
+                }
+                if let first = self.childArray.first {
+                    self.setViewControllers([first], direction: .forward, animated: true, completion: nil)
+                }
+            }
+        }
+
+    }
 
     /*
     // MARK: - Navigation
@@ -65,7 +113,7 @@ extension InventoryPageViewController: UIPageViewControllerDataSource {
             print("Failed the force downcast")
             return nil
         }
-        if currentVaccineVC.tag == 3 {
+        if currentVaccineVC.tag == self.childArray.count - 1 {
             return nil
         } else {
             return childArray[currentVaccineVC.tag + 1]
@@ -73,7 +121,7 @@ extension InventoryPageViewController: UIPageViewControllerDataSource {
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return 4
+        return childArray.count
     }
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0

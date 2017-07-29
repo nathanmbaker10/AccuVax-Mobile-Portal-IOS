@@ -313,6 +313,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentMachineLabel" destination="tF3-P6-9Ga" id="o0V-z0-JCu"/>
                         <outlet property="inventoryButton" destination="aBG-qH-egw" id="H9r-Gj-7qJ"/>
                         <outlet property="temperatureButton" destination="flQ-Xs-0Zc" id="2nX-cb-4gl"/>
                         <outlet property="userManagementButton" destination="Vhk-Du-nBr" id="sQ3-Lq-2yx"/>

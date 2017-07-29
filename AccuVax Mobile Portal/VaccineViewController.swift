@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class VaccineViewController: UIViewController {
-
+    @IBOutlet weak var lotCountLabel: UILabel!
+    @IBOutlet weak var totalCountLabel: UILabel!
+    @IBOutlet weak var vaccineBrandNameLabel: UILabel!
+    @IBOutlet weak var vaccineNameLabel: UILabel!
+    var vaccine: Vaccine?
     var tag = -1
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        insertInfo()
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +27,14 @@ class VaccineViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func insertInfo() {
+        if let vac = self.vaccine {
+            self.totalCountLabel.text = String(describing: vac.totalCount)
+            self.vaccineBrandNameLabel.text = vac.brandName
+            self.vaccineNameLabel.text = vac.name
+            self.lotCountLabel.text = String(describing: vac.lots?.count)
+        }
+    }
 
     /*
     // MARK: - Navigation

@@ -6,4 +6,6 @@ target 'AccuVax Mobile Portal' do
   use_frameworks!
 
   # Pods for AccuVax Mobile Portal
+  pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON', '~> 3.1'
 end

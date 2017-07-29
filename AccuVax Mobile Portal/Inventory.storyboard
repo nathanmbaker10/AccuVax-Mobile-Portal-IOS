@@ -20,7 +20,7 @@
         <!--Vaccine View Controller-->
         <scene sceneID="vaX-0f-Ttp">
             <objects>
-                <viewController storyboardIdentifier="Green" id="ZEJ-2t-Kue" customClass="VaccineViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="realVC" id="ZEJ-2t-Kue" customClass="VaccineViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2gm-vJ-HMM"/>
                         <viewControllerLayoutGuide type="bottom" id="qPT-fK-xOo"/>
@@ -28,12 +28,63 @@
                     <view key="view" contentMode="scaleToFill" id="YO5-LO-66G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.40352708432015605" green="1" blue="0.15341910538103287" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vaccine Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fo3-GO-R5T">
+                                <rect key="frame" x="132" y="53" width="110" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="uG8-PT-lbH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vaccine Braind Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-GZ-Z9D">
+                                <rect key="frame" x="105" y="113" width="164" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="IGz-Zk-9PS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIJ-Wf-gqf">
+                                <rect key="frame" x="169" y="212" width="38" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="QOb-c3-4jq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lot Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgN-gt-xgY">
+                                <rect key="frame" x="150" y="323" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99991601705551147" green="1" blue="0.99987190961837769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fo3-GO-R5T" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="4pF-he-FYe"/>
+                            <constraint firstItem="Ld1-GZ-Z9D" firstAttribute="top" secondItem="fo3-GO-R5T" secondAttribute="bottom" constant="39" id="Fjg-Yq-kYt"/>
+                            <constraint firstItem="HIJ-Wf-gqf" firstAttribute="top" secondItem="Ld1-GZ-Z9D" secondAttribute="bottom" constant="78" id="GEp-WW-6B0"/>
+                            <constraint firstItem="HIJ-Wf-gqf" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="L78-ht-k6w"/>
+                            <constraint firstItem="fo3-GO-R5T" firstAttribute="top" secondItem="2gm-vJ-HMM" secondAttribute="bottom" constant="33" id="NqA-6h-YD0"/>
+                            <constraint firstItem="hgN-gt-xgY" firstAttribute="centerY" secondItem="YO5-LO-66G" secondAttribute="centerY" id="iOJ-9f-i0Q"/>
+                            <constraint firstItem="hgN-gt-xgY" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="o0c-e7-l6a"/>
+                            <constraint firstItem="Ld1-GZ-Z9D" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="xeF-dY-X45"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lotCountLabel" destination="hgN-gt-xgY" id="fVg-T6-UTd"/>
+                        <outlet property="totalCountLabel" destination="HIJ-Wf-gqf" id="612-nK-CP2"/>
+                        <outlet property="vaccineBrandNameLabel" destination="Ld1-GZ-Z9D" id="xt5-Wy-Hjw"/>
+                        <outlet property="vaccineNameLabel" destination="fo3-GO-R5T" id="kEc-El-ACo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izg-bs-yeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="62"/>
+            <point key="canvasLocation" x="757.60000000000002" y="-9.4452773613193415"/>
         </scene>
         <!--Vaccine View Controller-->
         <scene sceneID="b3f-re-iig">

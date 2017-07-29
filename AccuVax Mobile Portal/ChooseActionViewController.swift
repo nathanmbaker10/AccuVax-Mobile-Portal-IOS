@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class ChooseActionViewController: UIViewController {
+    @IBOutlet weak var currentMachineLabel: UILabel!
     @IBOutlet weak var userManagementButton: UIButton!
     @IBOutlet weak var temperatureButton: UIButton!
     @IBOutlet weak var inventoryButton: UIButton!
@@ -16,6 +19,7 @@ class ChooseActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setInsets()
+        testAPI()
         // Do any additional setup after loading the view.
     }
     func setInsets() {
@@ -35,7 +39,28 @@ class ChooseActionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func testAPI() {
+        var json: JSON?
+        let user: String = "temptest"
+        let password: String = "temptestpassword"
+        var headers: HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "X-ACCUVAX-CONNECT-SENDING-FACILITY" : "cntablet"
+        ]
+        if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
+            headers[authorizationHeader.key] = authorizationHeader.value
+        }
 
+
+        Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/temperatures.json?scope=day", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
+            if let dict = responseData.result.value as? [String: Any] {
+                json = JSON(dict)
+                let testText = json?["accuvaxes"][0]["accuvax_name"].stringValue
+                self.currentMachineLabel.text = testText
+            }
+        }
+
+    }
     /*
     // MARK: - Navigation
 

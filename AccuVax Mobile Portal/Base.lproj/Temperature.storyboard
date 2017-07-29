@@ -28,12 +28,39 @@
                     <view key="view" contentMode="scaleToFill" id="QiA-FO-md5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmV-ZO-wVB">
+                                <rect key="frame" x="157.5" y="49" width="60" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="9bf-nD-S0d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHh-0v-K3F">
+                                <rect key="frame" x="170.5" y="318.5" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="nyv-2x-cZJ" eventType="touchUpInside" id="Tny-tn-rrA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.99991601705551147" green="1" blue="0.99987190961837769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rHh-0v-K3F" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="6FV-dS-36E"/>
+                            <constraint firstItem="rHh-0v-K3F" firstAttribute="centerY" secondItem="QiA-FO-md5" secondAttribute="centerY" id="8Dl-7H-CAH"/>
+                            <constraint firstItem="rHh-0v-K3F" firstAttribute="top" secondItem="KmV-ZO-wVB" secondAttribute="bottom" constant="248.5" id="KmK-wi-DW3"/>
+                            <constraint firstItem="KmV-ZO-wVB" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="L7K-uV-wXb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="storageSystemLable" destination="KmV-ZO-wVB" id="x1J-in-ALa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVM-JW-cCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5140" y="119"/>
+            <point key="canvasLocation" x="5014" y="119"/>
         </scene>
     </scenes>
 </document>

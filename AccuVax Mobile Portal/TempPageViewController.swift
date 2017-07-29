@@ -14,6 +14,7 @@ class TempPageViewController: UIPageViewController {
         let result = [newChild(), newChild()]
         for vc in result {
             vc.tag = result.index(of: vc)
+            vc.parentVC = self
         }
         return result
     }

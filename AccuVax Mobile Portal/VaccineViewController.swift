@@ -29,10 +29,10 @@ class VaccineViewController: UIViewController {
     }
     func insertInfo() {
         if let vac = self.vaccine {
-            self.totalCountLabel.text = String(describing: vac.totalCount)
+            self.totalCountLabel.text = "Doses Remaining: " + String(describing: vac.totalDosesRemaining)
             self.vaccineBrandNameLabel.text = vac.brandName
             self.vaccineNameLabel.text = vac.name
-            self.lotCountLabel.text = String(describing: vac.lots?.count)
+            self.lotCountLabel.text = vac.lots![0].lotCode
         }
     }
 

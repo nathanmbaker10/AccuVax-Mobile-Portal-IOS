@@ -231,7 +231,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="6Gl-rf-fWR" kind="show" id="cVG-Em-Y6b"/>
+                                            <action selector="inventoryButtonPressed:" destination="VGB-KO-yEf" eventType="touchUpInside" id="hdR-We-MeI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flQ-Xs-0Zc">
@@ -249,7 +249,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="L1T-xc-Vj3" kind="show" id="vuj-GB-vjE"/>
+                                            <segue destination="L1T-xc-Vj3" kind="presentation" id="YhN-02-Tkg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -269,7 +269,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="chc-jP-g4Y" kind="show" id="Uet-Qu-AHh"/>
+                                    <action selector="userManagementButtonPressed:" destination="VGB-KO-yEf" eventType="touchUpInside" id="OWl-jV-BCk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Machine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF3-P6-9Ga">
@@ -317,6 +317,8 @@
                         <outlet property="inventoryButton" destination="aBG-qH-egw" id="H9r-Gj-7qJ"/>
                         <outlet property="temperatureButton" destination="flQ-Xs-0Zc" id="2nX-cb-4gl"/>
                         <outlet property="userManagementButton" destination="Vhk-Du-nBr" id="sQ3-Lq-2yx"/>
+                        <segue destination="chc-jP-g4Y" kind="presentation" identifier="goToUserManagement" id="DDw-v8-4jK"/>
+                        <segue destination="6Gl-rf-fWR" kind="presentation" identifier="goToInventory" id="S84-fe-X0f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Js-tM-eJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -355,7 +357,7 @@
                 <viewControllerPlaceholder storyboardName="Temperature" id="L1T-xc-Vj3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNm-vI-TLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4304" y="120"/>
+            <point key="canvasLocation" x="4318" y="139"/>
         </scene>
         <!--Inventory-->
         <scene sceneID="5pa-mP-1VB">

@@ -54,8 +54,8 @@ class InventoryPageViewController: UIPageViewController {
         
         
         Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/inventories.json", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
-            if let error = responseData.error {
-                let errorAlert = UIAlertController(title: "Error", message: "There was an error connecting to the server or machine", preferredStyle: .alert)
+            if responseData.error != nil {
+                let errorAlert = UIAlertController(title: "Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "OK", style: .default) {_ in
                     self.dismiss(animated: true, completion: nil)
                 }

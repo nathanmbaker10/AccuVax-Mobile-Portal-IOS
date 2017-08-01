@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,38 +30,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmV-ZO-wVB">
-                                <rect key="frame" x="157.5" y="49" width="60" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Storage System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmV-ZO-wVB">
+                                <rect key="frame" x="116" y="84" width="143" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="9bf-nD-S0d"/>
+                                    <constraint firstAttribute="width" constant="143" id="9bf-nD-S0d"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHh-0v-K3F">
-                                <rect key="frame" x="170.5" y="318.5" width="34" height="30"/>
-                                <state key="normal" title="back"/>
-                                <connections>
-                                    <action selector="backButtonTapped:" destination="nyv-2x-cZJ" eventType="touchUpInside" id="Tny-tn-rrA"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="current Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYX-mB-W7W">
+                                <rect key="frame" x="136" y="164" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day History Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqk-tk-Yk1">
+                                <rect key="frame" x="117" y="240" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Week History Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAA-Vp-tmf">
+                                <rect key="frame" x="111" y="323" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99991601705551147" green="1" blue="0.99987190961837769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rHh-0v-K3F" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="6FV-dS-36E"/>
-                            <constraint firstItem="rHh-0v-K3F" firstAttribute="centerY" secondItem="QiA-FO-md5" secondAttribute="centerY" id="8Dl-7H-CAH"/>
-                            <constraint firstItem="rHh-0v-K3F" firstAttribute="top" secondItem="KmV-ZO-wVB" secondAttribute="bottom" constant="248.5" id="KmK-wi-DW3"/>
                             <constraint firstItem="KmV-ZO-wVB" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="L7K-uV-wXb"/>
+                            <constraint firstItem="wqk-tk-Yk1" firstAttribute="top" secondItem="QiA-FO-md5" secondAttribute="topMargin" constant="240" id="UZe-Mv-g2i"/>
+                            <constraint firstItem="nAA-Vp-tmf" firstAttribute="centerY" secondItem="QiA-FO-md5" secondAttribute="centerY" id="aKR-d2-U95"/>
+                            <constraint firstItem="nAA-Vp-tmf" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="g4R-KX-pb7"/>
+                            <constraint firstItem="NYX-mB-W7W" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="kho-Ms-z8f"/>
+                            <constraint firstItem="wqk-tk-Yk1" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="mEM-f0-I5m"/>
+                            <constraint firstItem="KmV-ZO-wVB" firstAttribute="top" secondItem="owN-B1-dAz" secondAttribute="bottom" constant="64" id="ni3-JG-pon"/>
+                            <constraint firstItem="NYX-mB-W7W" firstAttribute="top" secondItem="QiA-FO-md5" secondAttribute="topMargin" constant="164" id="oyG-ah-f8l"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentTempLabel" destination="NYX-mB-W7W" id="DH0-sX-6d0"/>
+                        <outlet property="dayHistoryCountLable" destination="wqk-tk-Yk1" id="pPY-Wc-pbK"/>
                         <outlet property="storageSystemLable" destination="KmV-ZO-wVB" id="x1J-in-ALa"/>
+                        <outlet property="weekHistoryCountLabel" destination="nAA-Vp-tmf" id="U1N-bm-5mA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVM-JW-cCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5014" y="119"/>
+            <point key="canvasLocation" x="5013.6000000000004" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>

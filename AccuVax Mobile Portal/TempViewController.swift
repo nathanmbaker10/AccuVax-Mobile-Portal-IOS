@@ -9,9 +9,16 @@
 import UIKit
 
 class TempViewController: UIViewController {
+    @IBOutlet weak var weekHistoryCountLabel: UILabel!
     @IBOutlet weak var storageSystemLable: UILabel!
+    @IBOutlet weak var currentTempLabel: UILabel!
+    @IBOutlet weak var dayHistoryCountLable: UILabel!
     var tag: Int!
     var parentVC: UIPageViewController?
+    var current: Temperature! = nil
+    var dayHistory: [Temperature] = []
+    var weekHistory: [Temperature] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadInfo()
@@ -26,6 +33,12 @@ class TempViewController: UIViewController {
         default:
             storageSystemLable.text = "nada"
         }
+//        if let temp = current.temp {
+//            
+//        }
+        currentTempLabel.text = "Current Temp: " + String(describing: current.temp) + " C"
+        dayHistoryCountLable.text = "Day History Count: " + String(describing: dayHistory.count)
+        weekHistoryCountLabel.text = "Week History Count: " + String(describing: weekHistory.count)
     }
 
     override func didReceiveMemoryWarning() {

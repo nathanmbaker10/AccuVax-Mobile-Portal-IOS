@@ -14,6 +14,11 @@
 		564039701F2285BB000FE160 /* TempPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5640396F1F2285BB000FE160 /* TempPageViewController.swift */; };
 		56405C9F1F27E52B00788697 /* Lot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56405C9E1F27E52B00788697 /* Lot.swift */; };
 		56405CA11F27FD0B00788697 /* Vaccine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56405CA01F27FD0B00788697 /* Vaccine.swift */; };
+		5643129A1F2F9FEF001FA62F /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564312991F2F9FEF001FA62F /* Temperature.swift */; };
+		5643129C1F310ED0001FA62F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643129B1F310ED0001FA62F /* Location.swift */; };
+		5643129E1F3111CB001FA62F /* Accuvax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643129D1F3111CB001FA62F /* Accuvax.swift */; };
+		564312A01F311543001FA62F /* AccuvaxGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643129F1F311543001FA62F /* AccuvaxGroup.swift */; };
+		564312A31F312364001FA62F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564312A11F312364001FA62F /* Main.storyboard */; };
 		56AC94EF1F22AB4300FFB3C7 /* InventoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC94EE1F22AB4300FFB3C7 /* InventoryPageViewController.swift */; };
 		56AC94F11F22AC6E00FFB3C7 /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AC94F01F22AC6E00FFB3C7 /* Inventory.storyboard */; };
 		56AC94F31F22AC8600FFB3C7 /* UserManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AC94F21F22AC8600FFB3C7 /* UserManagement.storyboard */; };
@@ -21,7 +26,6 @@
 		83D548CA3BC9E5123EFE081B /* Pods_AccuVax_Mobile_Portal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF1DE27E32B7F5BC3BB2FF4 /* Pods_AccuVax_Mobile_Portal.framework */; };
 		D81AC9731F1E029E00938D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81AC9721F1E029E00938D7D /* AppDelegate.swift */; };
 		D81AC9751F1E029E00938D7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81AC9741F1E029E00938D7D /* LoginViewController.swift */; };
-		D81AC9781F1E029E00938D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81AC9761F1E029E00938D7D /* Main.storyboard */; };
 		D81AC97A1F1E029E00938D7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81AC9791F1E029E00938D7D /* Assets.xcassets */; };
 		D81AC97D1F1E029E00938D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81AC97B1F1E029E00938D7D /* LaunchScreen.storyboard */; };
 		D88BA3D41F1FF3F100E29526 /* ChooseActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88BA3D31F1FF3F100E29526 /* ChooseActionViewController.swift */; };
@@ -41,6 +45,11 @@
 		5640396F1F2285BB000FE160 /* TempPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempPageViewController.swift; sourceTree = "<group>"; };
 		56405C9E1F27E52B00788697 /* Lot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lot.swift; sourceTree = "<group>"; };
 		56405CA01F27FD0B00788697 /* Vaccine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vaccine.swift; sourceTree = "<group>"; };
+		564312991F2F9FEF001FA62F /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		5643129B1F310ED0001FA62F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		5643129D1F3111CB001FA62F /* Accuvax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accuvax.swift; sourceTree = "<group>"; };
+		5643129F1F311543001FA62F /* AccuvaxGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccuvaxGroup.swift; sourceTree = "<group>"; };
+		564312A21F312364001FA62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56AC94EE1F22AB4300FFB3C7 /* InventoryPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPageViewController.swift; sourceTree = "<group>"; };
 		56AC94F01F22AC6E00FFB3C7 /* Inventory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Inventory.storyboard; sourceTree = "<group>"; };
 		56AC94F21F22AC8600FFB3C7 /* UserManagement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserManagement.storyboard; sourceTree = "<group>"; };
@@ -50,7 +59,6 @@
 		D81AC96F1F1E029E00938D7D /* AccuVax Mobile Portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuVax Mobile Portal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81AC9721F1E029E00938D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D81AC9741F1E029E00938D7D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D81AC9771F1E029E00938D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D81AC9791F1E029E00938D7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D81AC97C1F1E029E00938D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D81AC97E1F1E029E00938D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +88,10 @@
 				56405C9E1F27E52B00788697 /* Lot.swift */,
 				56405CA01F27FD0B00788697 /* Vaccine.swift */,
 				5613972E1F2A6BDC0040FF2E /* VaccineEnum.swift */,
+				564312991F2F9FEF001FA62F /* Temperature.swift */,
+				5643129B1F310ED0001FA62F /* Location.swift */,
+				5643129D1F3111CB001FA62F /* Accuvax.swift */,
+				5643129F1F311543001FA62F /* AccuvaxGroup.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -178,7 +190,7 @@
 		D8FED0ED1F1E8FE80085B00C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				D81AC9761F1E029E00938D7D /* Main.storyboard */,
+				564312A11F312364001FA62F /* Main.storyboard */,
 				564039661F216B49000FE160 /* Temperature.storyboard */,
 				D81AC97B1F1E029E00938D7D /* LaunchScreen.storyboard */,
 				56AC94F01F22AC6E00FFB3C7 /* Inventory.storyboard */,
@@ -250,12 +262,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564312A31F312364001FA62F /* Main.storyboard in Resources */,
 				564039651F21459A000FE160 /* SF-Pro-Display in Resources */,
 				564039681F216B49000FE160 /* Temperature.storyboard in Resources */,
 				D81AC97D1F1E029E00938D7D /* LaunchScreen.storyboard in Resources */,
 				D81AC97A1F1E029E00938D7D /* Assets.xcassets in Resources */,
 				56AC94F31F22AC8600FFB3C7 /* UserManagement.storyboard in Resources */,
-				D81AC9781F1E029E00938D7D /* Main.storyboard in Resources */,
 				56AC94F11F22AC6E00FFB3C7 /* Inventory.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,14 +332,18 @@
 				56405C9F1F27E52B00788697 /* Lot.swift in Sources */,
 				D88BA3D61F1FF80C00E29526 /* UIViewCustomization.swift in Sources */,
 				D81AC9751F1E029E00938D7D /* LoginViewController.swift in Sources */,
+				5643129C1F310ED0001FA62F /* Location.swift in Sources */,
 				D8FED0EA1F1E8AE50085B00C /* SelectMachineTableViewController.swift in Sources */,
+				5643129E1F3111CB001FA62F /* Accuvax.swift in Sources */,
 				D8FED0EF1F1E90730085B00C /* LocationTableViewCell.swift in Sources */,
 				D88BA3D41F1FF3F100E29526 /* ChooseActionViewController.swift in Sources */,
 				56AC94F51F22AD3B00FFB3C7 /* VaccineViewController.swift in Sources */,
 				564039701F2285BB000FE160 /* TempPageViewController.swift in Sources */,
+				5643129A1F2F9FEF001FA62F /* Temperature.swift in Sources */,
 				5613972F1F2A6BDC0040FF2E /* VaccineEnum.swift in Sources */,
 				D8FED0F31F1E923F0085B00C /* KioskTableViewCell.swift in Sources */,
 				5640396C1F217528000FE160 /* TempViewController.swift in Sources */,
+				564312A01F311543001FA62F /* AccuvaxGroup.swift in Sources */,
 				D81AC9731F1E029E00938D7D /* AppDelegate.swift in Sources */,
 				D8FED0F11F1E920C0085B00C /* KioskGroupTableViewCell.swift in Sources */,
 			);
@@ -344,10 +360,10 @@
 			name = Temperature.storyboard;
 			sourceTree = "<group>";
 		};
-		D81AC9761F1E029E00938D7D /* Main.storyboard */ = {
+		564312A11F312364001FA62F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D81AC9771F1E029E00938D7D /* Base */,
+				564312A21F312364001FA62F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

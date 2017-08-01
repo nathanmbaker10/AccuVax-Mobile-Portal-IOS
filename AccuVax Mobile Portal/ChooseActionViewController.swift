@@ -38,6 +38,15 @@ class ChooseActionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func userManagementButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "goToUserManagement", sender: self)
+    }
+    @IBAction func inventoryButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "goToInventory", sender: self)
+        
+    }
+
+    
     
     func testAPI() {
         var json: JSON?

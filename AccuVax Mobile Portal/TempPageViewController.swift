@@ -7,26 +7,28 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class TempPageViewController: UIPageViewController {
     var index = 0
-    var childArray: [TempViewController] {
-        let result = [newChild(), newChild()]
+//    var childOne: TempViewController?
+//    var childTwo: TempViewController?
+    lazy var childArray: [TempViewController] = { [unowned self] in
+        
+        let result = [self.newChild(), self.newChild()]
         for vc in result {
             vc.tag = result.index(of: vc)
             vc.parentVC = self
         }
         return result
-    }
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataSource = self
-        if let first = childArray.first {
-            setViewControllers([first], direction: .forward, animated: true, completion: nil)
-        }
-        
         // Do any additional setup after loading the view.
+        dataSource = self
+        loadTemperatures()
     }
     func styleIndicator() {
         self.view.backgroundColor = UIColor.white
@@ -39,7 +41,69 @@ class TempPageViewController: UIPageViewController {
     func newChild() -> TempViewController {
         return UIStoryboard(name: "Temperature", bundle: .main).instantiateViewController(withIdentifier: "tempVC") as! TempViewController
     }
+    
+    func loadTemperatures() {
+        var json: JSON?
+        let user: String = "temptest"
+        let password: String = "temptestpassword"
+        var headers: HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "X-ACCUVAX-CONNECT-SENDING-FACILITY" : "cntablet"
+        ]
+        if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
+            headers[authorizationHeader.key] = authorizationHeader.value
+        }
+        var scopeLoopCount = 0
+        for scope in ["day", "week"] {
+            Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/temperatures.json?scope=\(scope)", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
+                if responseData.error != nil {
+                    let errorAlert = UIAlertController(title: "Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "OK", style: .default) {_ in
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                    errorAlert.addAction(ok)
+                    self.present(errorAlert, animated: true, completion: nil)
+                }
+                if let dict = responseData.result.value as? [String: Any] {
+                    json = JSON(dict)
+                    let current = json?["accuvaxes"][0]
+                    let historyArray = current?["history"].arrayValue
+                    for index in self.childArray.indices {
+                        switch self.childArray[index].tag {
+                        case 0:
+                            self.childArray[index].current = Temperature(currentJSON: current!, type: .cold)
+                            for historyJSON in historyArray! {
+                                if scopeLoopCount == 0 {
+                                    self.childArray[index].dayHistory.append(Temperature(historyJSON: historyJSON, type: .cold)!)
+                                } else {
+                                    self.childArray[index].weekHistory.append(Temperature(historyJSON: historyJSON, type: .cold)!)
+                                }
+                            }
+                        case 1:
+                            self.childArray[index].current = Temperature(currentJSON: current!, type: .frozen)
+                            for historyJSON in historyArray! {
+                                if scopeLoopCount == 0 {
+                                    self.childArray[index].dayHistory.append(Temperature(historyJSON: historyJSON, type: .frozen)!)
+                                } else {
+                                    self.childArray[index].weekHistory.append(Temperature(historyJSON: historyJSON, type: .frozen)!)
+                                }
+                            }
+                        default:
+                            break
+                        }
+                    }
+                    scopeLoopCount += 1
+                    if let first = self.childArray.first {
+                        if scopeLoopCount == 2 {
+                            self.setViewControllers([first], direction: .forward, animated: true, completion: nil)
+                        }
+                    }
+                }
+            }
+        }
 
+    }
+    
     /*
     // MARK: - Navigation
 

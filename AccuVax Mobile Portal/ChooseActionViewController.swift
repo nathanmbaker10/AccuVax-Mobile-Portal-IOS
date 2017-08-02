@@ -11,6 +11,7 @@ import SwiftyJSON
 import Alamofire
 
 class ChooseActionViewController: UIViewController {
+    @IBOutlet weak var currentMachineLocation: UILabel!
     @IBOutlet weak var currentMachineLabel: UILabel!
     @IBOutlet weak var userManagementButton: UIButton!
     @IBOutlet weak var temperatureButton: UIButton!
@@ -19,7 +20,10 @@ class ChooseActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setInsets()
-        testAPI()
+//        testAPI()
+        
+        currentMachineLabel.text = (Accuvax.current?.name)!
+        currentMachineLocation.text = (Accuvax.current?.location)!
         // Do any additional setup after loading the view.
     }
     func setInsets() {
@@ -43,6 +47,15 @@ class ChooseActionViewController: UIViewController {
     }
     @IBAction func inventoryButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "goToInventory", sender: self)
+        
+    }
+    @IBAction func temperatureButtonPressed(_ sender: Any) {
+        let pageVC = UIStoryboard(name: "Temperature", bundle: .main).instantiateViewController(withIdentifier: "temperaturePageVC") as! TempPageViewController
+        
+        pageVC.loadTemperatures()
+        
+        self.present(pageVC, animated: true, completion: nil)
+        
         
     }
 

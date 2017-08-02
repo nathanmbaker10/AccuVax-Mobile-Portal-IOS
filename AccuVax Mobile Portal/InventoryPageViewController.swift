@@ -42,18 +42,18 @@ class InventoryPageViewController: UIPageViewController {
     }
     func loadVaccines() {
         var json: JSON?
-        let user: String = "temptest"
-        let password: String = "temptestpassword"
+        let user: String = Accuvax.email!
+        let password: String = Accuvax.password!
         var headers: HTTPHeaders = [
             "Content-Type" : "application/json",
-            "X-ACCUVAX-CONNECT-SENDING-FACILITY" : "cntablet"
+            "X-ACCUVAX-CONNECT-SENDING-FACILITY" : Accuvax.current!.sendingFacility!
         ]
         if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
             headers[authorizationHeader.key] = authorizationHeader.value
         }
         
         
-        Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/inventories.json", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
+        Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/inventories.json?accuvax_name=\(Accuvax.current!.name)", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
             if responseData.error != nil {
                 let errorAlert = UIAlertController(title: "Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "OK", style: .default) {_ in

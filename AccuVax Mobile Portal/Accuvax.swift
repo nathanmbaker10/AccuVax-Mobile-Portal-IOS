@@ -11,17 +11,21 @@ import SwiftyJSON
 
 struct Accuvax {
     static var current: Accuvax?
+    static var email: String?
+    static var password: String?
+    let location: String
     let name: String
     let id: Int
     let serialNumber: String
     var sendingFacility: String? = nil
     
-    init(accuvaxJSON: JSON, sendingFacility: String?) {
+    init(accuvaxJSON: JSON, sendingFacility: String?, location: String) {
         if let sendingFacility = sendingFacility {
             self.sendingFacility = sendingFacility
         }
         self.name = accuvaxJSON["name"].stringValue
         self.id = accuvaxJSON["id"].intValue
         self.serialNumber = accuvaxJSON["serialnumber"].stringValue
+        self.location = location
     }
 }

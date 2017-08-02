@@ -20,7 +20,7 @@ struct Location {
         self.id = locationJSON["id"].intValue
         let accuvaxGroupsJSON = locationJSON["accuvax_groups"].arrayValue
         for accuvaxGroupJSON in accuvaxGroupsJSON {
-            self.accuvaxGroups.append(AccuvaxGroup(accuvaxGroupJSON: accuvaxGroupJSON))
+            self.accuvaxGroups.append(AccuvaxGroup(accuvaxGroupJSON: accuvaxGroupJSON, location: self.name))
         }
     }
 }

@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class SelectMachineTableViewController: UITableViewController {
     var tag: Int = 1
-    var locations = [String]()
-    var kioskGroups = [String]()
-    var kiosks = [String]()
-    
-    
+    var currentArray = [Any]() {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         switch tag {
@@ -44,26 +46,14 @@ class SelectMachineTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tabeView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        switch tag {
-        case 1:
-//            return locations.count
-            return 10
-        case 2:
-//            return kioskGroups.count
-            return 10
-        case 3:
-//            return kiosks.count
-            return 10
-        default:
-            return 10
-        }
+        return currentArray.count
     }
 
     
@@ -71,15 +61,15 @@ class SelectMachineTableViewController: UITableViewController {
         switch tag {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as? LocationTableViewCell
-            cell?.locationLabel.text = "Location"
+            cell?.locationLabel.text = (currentArray[indexPath.row] as! Location).name
             return cell!
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kioskGroupCell", for: indexPath) as? KioskGroupTableViewCell
-            cell?.kioskGroupLabel.text = "Kiosk Group"
+            cell?.kioskGroupLabel.text = (currentArray[indexPath.row] as! AccuvaxGroup).name
             return cell!
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kioskCell", for: indexPath) as? KioskTableViewCell
-            cell?.kioskLabel.text = "Machine"
+            cell?.kioskLabel.text = (currentArray[indexPath.row] as! Accuvax).name
             return cell!
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as? LocationTableViewCell
@@ -99,10 +89,19 @@ class SelectMachineTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch tag {
         case 1:
-            newSelf()
+            let storyBoard = UIStoryboard(name: "Main", bundle: .main)
+            let newVC = storyBoard.instantiateViewController(withIdentifier: "tableView") as! SelectMachineTableViewController
+            newVC.tag = self.tag + 1
+            newVC.currentArray = (self.currentArray[indexPath.row] as! Location).accuvaxGroups
+            self.show(newVC, sender: self)
         case 2:
-            newSelf()
+            let storyBoard = UIStoryboard(name: "Main", bundle: .main)
+            let newVC = storyBoard.instantiateViewController(withIdentifier: "tableView") as! SelectMachineTableViewController
+            newVC.tag = self.tag + 1
+            newVC.currentArray = (self.currentArray[indexPath.row] as! AccuvaxGroup).accuvaxes
+            self.show(newVC, sender: self)
         case 3:
+            Accuvax.current = currentArray[indexPath.row] as! Accuvax
             let storyBoard = UIStoryboard(name: "Main", bundle: .main)
             let newVC = storyBoard.instantiateViewController(withIdentifier: "rando") as! ChooseActionViewController
             newVC.formerViewController = self

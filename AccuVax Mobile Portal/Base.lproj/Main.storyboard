@@ -64,7 +64,7 @@
                                                 <rect key="frame" x="98.5" y="0.0" width="244.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -188,6 +188,10 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RaC-1M-fX7" id="J44-s2-bbD"/>
+                            <outlet property="delegate" destination="RaC-1M-fX7" id="EKx-iU-9Pd"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Locations" id="Ubw-jf-nwM" userLabel="f">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="eav-l1-xIr">
@@ -249,7 +253,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="L1T-xc-Vj3" kind="presentation" id="YhN-02-Tkg"/>
+                                            <action selector="temperatureButtonPressed:" destination="VGB-KO-yEf" eventType="touchUpInside" id="WQe-vg-iV3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -314,6 +318,7 @@
                     </view>
                     <connections>
                         <outlet property="currentMachineLabel" destination="tF3-P6-9Ga" id="o0V-z0-JCu"/>
+                        <outlet property="currentMachineLocation" destination="lJf-PM-Iy8" id="ZMU-Yk-oKt"/>
                         <outlet property="inventoryButton" destination="aBG-qH-egw" id="H9r-Gj-7qJ"/>
                         <outlet property="temperatureButton" destination="flQ-Xs-0Zc" id="2nX-cb-4gl"/>
                         <outlet property="userManagementButton" destination="Vhk-Du-nBr" id="sQ3-Lq-2yx"/>

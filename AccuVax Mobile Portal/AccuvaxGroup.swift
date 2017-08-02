@@ -14,9 +14,10 @@ struct AccuvaxGroup {
     let id: Int
     var accuvaxes: [Accuvax] = []
     var sendingFacilities: [String]? = []
+    let location: String
     
-    
-    init(accuvaxGroupJSON: JSON) {
+    init(accuvaxGroupJSON: JSON, location: String) {
+        self.location = location
         self.name = accuvaxGroupJSON["name"].stringValue
         self.id = accuvaxGroupJSON["id"].intValue
         let facilitiesArr = accuvaxGroupJSON["sending_facilities"].arrayValue
@@ -25,7 +26,11 @@ struct AccuvaxGroup {
         }
         let accuvaxesJSON = accuvaxGroupJSON["accuvaxes"].arrayValue
         for accuvaxJSON in accuvaxesJSON {
-            self.accuvaxes.append(Accuvax(accuvaxJSON: accuvaxJSON, sendingFacility: sendingFacilities?[0]))
+            if sendingFacilities?.count != 0 {
+                self.accuvaxes.append(Accuvax(accuvaxJSON: accuvaxJSON, sendingFacility: sendingFacilities?[0], location: location))
+            } else {
+                self.accuvaxes.append(Accuvax(accuvaxJSON: accuvaxJSON, sendingFacility: nil, location: location))
+            }
         }
         
     }

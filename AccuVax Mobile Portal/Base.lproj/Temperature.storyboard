@@ -57,17 +57,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hC-l6-ots">
+                                <rect key="frame" x="170" y="410" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="nyv-2x-cZJ" eventType="touchUpInside" id="sGO-m9-7rJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99991601705551147" green="1" blue="0.99987190961837769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KmV-ZO-wVB" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="L7K-uV-wXb"/>
                             <constraint firstItem="wqk-tk-Yk1" firstAttribute="top" secondItem="QiA-FO-md5" secondAttribute="topMargin" constant="240" id="UZe-Mv-g2i"/>
+                            <constraint firstItem="5hC-l6-ots" firstAttribute="top" secondItem="nAA-Vp-tmf" secondAttribute="bottom" constant="66" id="XkB-I0-Si9"/>
                             <constraint firstItem="nAA-Vp-tmf" firstAttribute="centerY" secondItem="QiA-FO-md5" secondAttribute="centerY" id="aKR-d2-U95"/>
+                            <constraint firstItem="PBy-iU-34C" firstAttribute="top" secondItem="5hC-l6-ots" secondAttribute="bottom" constant="227" id="b9U-A0-VYu"/>
                             <constraint firstItem="nAA-Vp-tmf" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="g4R-KX-pb7"/>
                             <constraint firstItem="NYX-mB-W7W" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="kho-Ms-z8f"/>
                             <constraint firstItem="wqk-tk-Yk1" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="mEM-f0-I5m"/>
                             <constraint firstItem="KmV-ZO-wVB" firstAttribute="top" secondItem="owN-B1-dAz" secondAttribute="bottom" constant="64" id="ni3-JG-pon"/>
                             <constraint firstItem="NYX-mB-W7W" firstAttribute="top" secondItem="QiA-FO-md5" secondAttribute="topMargin" constant="164" id="oyG-ah-f8l"/>
+                            <constraint firstItem="5hC-l6-ots" firstAttribute="centerX" secondItem="QiA-FO-md5" secondAttribute="centerX" id="wfZ-1b-AdI"/>
                         </constraints>
                     </view>
                     <connections>

@@ -28,6 +28,7 @@ class TempPageViewController: UIPageViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         dataSource = self
+        view.backgroundColor = UIColor.white
 //        loadTemperatures()
     }
     func styleIndicator() {
@@ -42,13 +43,13 @@ class TempPageViewController: UIPageViewController {
         return UIStoryboard(name: "Temperature", bundle: .main).instantiateViewController(withIdentifier: "tempVC") as! TempViewController
     }
     
-    func loadTemperatures() {
+    func loadTemperatures(sendingFacility: String) {
         var json: JSON?
         let user: String = Accuvax.email!
         let password: String = Accuvax.password!
         var headers: HTTPHeaders = [
             "Content-Type" : "application/json",
-            "X-ACCUVAX-CONNECT-SENDING-FACILITY" : Accuvax.current!.sendingFacility!
+            "X-ACCUVAX-CONNECT-SENDING-FACILITY" : sendingFacility
         ]
         if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
             headers[authorizationHeader.key] = authorizationHeader.value
@@ -57,7 +58,7 @@ class TempPageViewController: UIPageViewController {
         for scope in ["day", "week"] {
             Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/temperatures.json?scope=\(scope)&accuvax_name=\(Accuvax.current!.name)", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
                 if responseData.error != nil {
-                    let errorAlert = UIAlertController(title: "Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
+                    let errorAlert = UIAlertController(title: "Server Connection Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
                     let ok = UIAlertAction(title: "OK", style: .default) {_ in
                         self.dismiss(animated: true, completion: nil)
                     }

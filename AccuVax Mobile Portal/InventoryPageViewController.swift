@@ -12,11 +12,11 @@ import SwiftyJSON
 
 class InventoryPageViewController: UIPageViewController {
     var index = 0
-    var didChange: Bool = false
     var vaccineDict = [VaccineBrandName : Vaccine]()
     var childArray: [VaccineViewController] {
         var result = [VaccineViewController]()
         var currentTag = 0
+        
         for vaccine in vaccineDict.values {
             let newVC = newChild()
             newVC.vaccine = vaccine
@@ -30,7 +30,8 @@ class InventoryPageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
-        loadVaccines()
+        self.setViewControllers([childArray[index]], direction: .forward, animated: true, completion: nil)
+//        loadVaccines()
         // Do any additional setup after loading the view.
     }
     func newChild() -> VaccineViewController {
@@ -40,22 +41,23 @@ class InventoryPageViewController: UIPageViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func loadVaccines() {
+    /*
+    func loadVaccines(sendingFacility: String) {
         var json: JSON?
         let user: String = Accuvax.email!
         let password: String = Accuvax.password!
         var headers: HTTPHeaders = [
             "Content-Type" : "application/json",
-            "X-ACCUVAX-CONNECT-SENDING-FACILITY" : Accuvax.current!.sendingFacility!
+            "X-ACCUVAX-CONNECT-SENDING-FACILITY" : sendingFacility
         ]
         if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
             headers[authorizationHeader.key] = authorizationHeader.value
         }
         
-        
+      
         Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/inventories.json?accuvax_name=\(Accuvax.current!.name)", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
             if responseData.error != nil {
-                let errorAlert = UIAlertController(title: "Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
+                let errorAlert = UIAlertController(title: "Server Connection Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "OK", style: .default) {_ in
                     self.dismiss(animated: true, completion: nil)
                 }
@@ -83,6 +85,7 @@ class InventoryPageViewController: UIPageViewController {
         }
 
     }
+    */
 
     /*
     // MARK: - Navigation
@@ -124,7 +127,8 @@ extension InventoryPageViewController: UIPageViewControllerDataSource {
         return childArray.count
     }
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 0
+        return index
+        
     }
     
 }

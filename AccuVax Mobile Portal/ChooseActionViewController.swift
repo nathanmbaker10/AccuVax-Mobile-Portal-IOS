@@ -46,42 +46,32 @@ class ChooseActionViewController: UIViewController {
         self.performSegue(withIdentifier: "goToUserManagement", sender: self)
     }
     @IBAction func inventoryButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "goToInventory", sender: self)
+        let navVC = UIStoryboard(name: "Inventory", bundle: .main).instantiateViewController(withIdentifier: "inventoryNavController") as! UINavigationController
         
+        if let sendingFacility = Accuvax.current?.sendingFacility {
+            self.present(navVC, animated: true, completion: nil)
+        } else {
+            let errorAlert = UIAlertController(title: "Machine Monitoring not Enabled", message: "Your machine isn't confiugured to be monitored on this mobile platform. If you would like to be able to view Accuvax information on your IOS device, ask your administrator to configure a sending facility.", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default)
+            errorAlert.addAction(ok)
+            self.present(errorAlert, animated: true, completion: nil)
+        }
+
     }
     @IBAction func temperatureButtonPressed(_ sender: Any) {
         let pageVC = UIStoryboard(name: "Temperature", bundle: .main).instantiateViewController(withIdentifier: "temperaturePageVC") as! TempPageViewController
         
-        pageVC.loadTemperatures()
-        
-        self.present(pageVC, animated: true, completion: nil)
-        
-        
-    }
-
-    
-    
-    func testAPI() {
-        var json: JSON?
-        let user: String = "temptest"
-        let password: String = "temptestpassword"
-        var headers: HTTPHeaders = [
-            "Content-Type" : "application/json",
-            "X-ACCUVAX-CONNECT-SENDING-FACILITY" : "cntablet"
-        ]
-        if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
-            headers[authorizationHeader.key] = authorizationHeader.value
-        }
-
-
-        Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/temperatures.json?scope=day", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
-            if let dict = responseData.result.value as? [String: Any] {
-                json = JSON(dict)
-                let testText = json?["accuvaxes"][0]["accuvax_name"].stringValue
-                self.currentMachineLabel.text = testText
+        if let sendingFacility = Accuvax.current?.sendingFacility {
+            pageVC.loadTemperatures(sendingFacility: sendingFacility)
+            self.present(pageVC, animated: true, completion: nil)
+        } else {
+            let errorAlert = UIAlertController(title: "Machine Monitoring not Enabled", message: "Your machine isn't confiugured to be monitored on this mobile platform. If you would like to be able to view Accuvax information on your IOS device, ask your administrator to configure a sending facility.", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default)
+            errorAlert.addAction(ok)
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) {_ in
+                self.present(errorAlert, animated: true, completion: nil)
             }
         }
-
     }
     /*
     // MARK: - Navigation

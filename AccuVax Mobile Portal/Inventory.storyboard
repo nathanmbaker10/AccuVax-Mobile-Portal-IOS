@@ -1,26 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Dn-Ah-5WQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rP4-GH-NAa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Inventory Page View Controller-->
+        <!--Vaccines-->
+        <scene sceneID="UBK-K5-D4F">
+            <objects>
+                <tableViewController id="nHj-fO-Ims" customClass="InventoryTableViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eli-r2-0Rc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="vaccineTableViewCell" id="mvg-u1-w8m" customClass="VaccineTableViewCell" customModule="AccuVax_Mobile_Portal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mvg-u1-w8m" id="aKW-Ge-8tF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vaccine Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3p-hk-hvR">
+                                            <rect key="frame" x="8" y="11.5" width="110" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="j3p-hk-hvR" firstAttribute="centerY" secondItem="aKW-Ge-8tF" secondAttribute="centerY" id="GVa-5k-cnV"/>
+                                        <constraint firstItem="j3p-hk-hvR" firstAttribute="leading" secondItem="aKW-Ge-8tF" secondAttribute="leadingMargin" id="lqd-Uz-yrE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="vaccineNameLabel" destination="j3p-hk-hvR" id="Twu-G2-utx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nHj-fO-Ims" id="7hk-vD-F4R"/>
+                            <outlet property="delegate" destination="nHj-fO-Ims" id="ctg-XO-DYx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Vaccines" id="hU8-b3-7VV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rjs-QN-DaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42.399999999999999" y="130.88455772113943"/>
+        </scene>
+        <!--Title-->
         <scene sceneID="OWD-Su-whd">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="5Dn-Ah-5WQ" customClass="InventoryPageViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="inventoryPageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="5Dn-Ah-5WQ" customClass="InventoryPageViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Title" id="IiX-eP-OKD"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNb-1j-6yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-106" y="131"/>
+            <point key="canvasLocation" x="832.79999999999995" y="130.88455772113943"/>
         </scene>
-        <!--Vaccine View Controller-->
+        <!--Nathan-->
         <scene sceneID="vaX-0f-Ttp">
             <objects>
-                <viewController storyboardIdentifier="realVC" id="ZEJ-2t-Kue" customClass="VaccineViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="realVC" title="Nathan" id="ZEJ-2t-Kue" customClass="VaccineViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2gm-vJ-HMM"/>
                         <viewControllerLayoutGuide type="bottom" id="qPT-fK-xOo"/>
@@ -29,15 +76,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vaccine Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fo3-GO-R5T">
-                                <rect key="frame" x="132" y="53" width="110" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="uG8-PT-lbH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vaccine Braind Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-GZ-Z9D">
                                 <rect key="frame" x="105" y="113" width="164" height="21"/>
                                 <constraints>
@@ -47,8 +85,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lot Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgN-gt-xgY">
-                                <rect key="frame" x="88" y="323" width="198" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lot Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgN-gt-xgY">
+                                <rect key="frame" x="149.5" y="323" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -62,29 +100,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-Dn-tnS">
+                                <rect key="frame" x="170" y="428" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="ZEJ-2t-Kue" eventType="touchUpInside" id="6tP-9Z-I5R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99991601705551147" green="1" blue="0.99987190961837769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fo3-GO-R5T" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="4pF-he-FYe"/>
-                            <constraint firstItem="Ld1-GZ-Z9D" firstAttribute="top" secondItem="fo3-GO-R5T" secondAttribute="bottom" constant="39" id="Fjg-Yq-kYt"/>
+                            <constraint firstItem="qPT-fK-xOo" firstAttribute="top" secondItem="GiF-Dn-tnS" secondAttribute="bottom" constant="209" id="0wd-sB-3yb"/>
+                            <constraint firstItem="HIJ-Wf-gqf" firstAttribute="top" secondItem="YO5-LO-66G" secondAttribute="topMargin" constant="212" id="BCr-qH-DfX"/>
                             <constraint firstItem="HIJ-Wf-gqf" firstAttribute="top" secondItem="Ld1-GZ-Z9D" secondAttribute="bottom" constant="78" id="GEp-WW-6B0"/>
+                            <constraint firstItem="GiF-Dn-tnS" firstAttribute="top" secondItem="hgN-gt-xgY" secondAttribute="bottom" constant="84" id="KjI-N9-ycW"/>
                             <constraint firstItem="HIJ-Wf-gqf" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="L78-ht-k6w"/>
-                            <constraint firstItem="fo3-GO-R5T" firstAttribute="top" secondItem="2gm-vJ-HMM" secondAttribute="bottom" constant="33" id="NqA-6h-YD0"/>
+                            <constraint firstItem="GiF-Dn-tnS" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="VLA-S1-wLO"/>
                             <constraint firstItem="hgN-gt-xgY" firstAttribute="centerY" secondItem="YO5-LO-66G" secondAttribute="centerY" id="iOJ-9f-i0Q"/>
                             <constraint firstItem="hgN-gt-xgY" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="o0c-e7-l6a"/>
                             <constraint firstItem="Ld1-GZ-Z9D" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="xeF-dY-X45"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="vXu-IY-7UQ"/>
                     <connections>
                         <outlet property="lotCountLabel" destination="hgN-gt-xgY" id="fVg-T6-UTd"/>
                         <outlet property="totalCountLabel" destination="HIJ-Wf-gqf" id="612-nK-CP2"/>
                         <outlet property="vaccineBrandNameLabel" destination="Ld1-GZ-Z9D" id="xt5-Wy-Hjw"/>
-                        <outlet property="vaccineNameLabel" destination="fo3-GO-R5T" id="kEc-El-ACo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izg-bs-yeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776.79999999999995" y="130.88455772113943"/>
+            <point key="canvasLocation" x="1716" y="130.88455772113943"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LV7-Vh-d4G">
+            <objects>
+                <navigationController storyboardIdentifier="inventoryNavController" automaticallyAdjustsScrollViewInsets="NO" id="rP4-GH-NAa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LgD-Q7-3gQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nHj-fO-Ims" kind="relationship" relationship="rootViewController" id="0Nj-nf-76y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efb-bN-Qdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-898.39999999999998" y="130.88455772113943"/>
         </scene>
     </scenes>
 </document>

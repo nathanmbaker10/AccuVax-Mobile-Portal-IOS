@@ -21,8 +21,8 @@ class LoginViewController: UIViewController {
         view.addGestureRecognizer(tap)
         usernameTextField.delegate = self
         passwordTextField.delegate = self
-        usernameTextField.returnKeyType = .next
-        passwordTextField.returnKeyType = .done
+        usernameTextField.text = ""
+        passwordTextField.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,17 +31,22 @@ class LoginViewController: UIViewController {
     }
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         if usernameTextField.text?.characters.count == 0 || passwordTextField.text?.characters.count == 0 {
-            return
+            let noEntryAlert = UIAlertController(title: "Empty Field", message: "You must enter an email and password", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default)
+            noEntryAlert.addAction(ok)
+            self.present(noEntryAlert, animated: true, completion: nil)
+        } else {
+            loadShit(user: usernameTextField.text!, password: passwordTextField.text!)
         }
-        loadShit(user: usernameTextField.text!, password: passwordTextField.text!)
-        
     }
     func nextViewController(initialArray: [Any]) {
         let storyBoard = UIStoryboard(name: "Main", bundle: .main)
         let newVC = storyBoard.instantiateViewController(withIdentifier: "selectKioskNavController") as! UINavigationController
         let childOne = newVC.childViewControllers[0] as! SelectMachineTableViewController
         childOne.currentArray = initialArray
-        present(newVC, animated: true, completion: nil)
+        present(newVC, animated: true) {
+            self.passwordTextField.text = nil
+        }
     }
     func dismissKeyboard() {
         self.view.endEditing(true)
@@ -58,6 +63,14 @@ class LoginViewController: UIViewController {
             headers[authorizationHeader.key] = authorizationHeader.value
         }
         Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/locations.json", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
+            if responseData.error != nil {
+                let errorAlert = UIAlertController(title: "Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default) {_ in
+                    self.dismiss(animated: true, completion: nil)
+                }
+                errorAlert.addAction(ok)
+                self.present(errorAlert, animated: true, completion: nil)
+            }
             if let dict = responseData.result.value as? [String: Any] {
                 json = JSON(dict)
                 if json["error"][0].stringValue == "Unauthorized session" {
@@ -86,7 +99,14 @@ extension LoginViewController: UITextFieldDelegate {
             return false
             
         case 2:
-            self.loadShit(user: usernameTextField.text!, password: passwordTextField.text!)
+            if usernameTextField.text?.characters.count == 0 || passwordTextField.text?.characters.count == 0 {
+                let noEntryAlert = UIAlertController(title: "Empty Field", message: "You must enter an email and password", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default)
+                noEntryAlert.addAction(ok)
+                self.present(noEntryAlert, animated: true, completion: nil)
+            } else {
+                loadShit(user: usernameTextField.text!, password: passwordTextField.text!)
+            }
             return false
         default:
             usernameTextField.becomeFirstResponder()

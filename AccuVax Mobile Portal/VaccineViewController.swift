@@ -14,13 +14,16 @@ class VaccineViewController: UIViewController {
     @IBOutlet weak var lotCountLabel: UILabel!
     @IBOutlet weak var totalCountLabel: UILabel!
     @IBOutlet weak var vaccineBrandNameLabel: UILabel!
-    @IBOutlet weak var vaccineNameLabel: UILabel!
     var vaccine: Vaccine?
     var tag = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        insertInfo()
+//        insertInfo()
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        insertInfo()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,10 +33,15 @@ class VaccineViewController: UIViewController {
     func insertInfo() {
         if let vac = self.vaccine {
             self.totalCountLabel.text = "Doses Remaining: " + String(describing: vac.totalDosesRemaining)
-            self.vaccineBrandNameLabel.text = vac.brandName
-            self.vaccineNameLabel.text = vac.name
-            self.lotCountLabel.text = vac.lots![0].lotCode
+            self.vaccineBrandNameLabel.text = vac.name
+            self.parent?.navigationItem.title = vac.brandName
+            if let lots = vac.lots {
+                self.lotCountLabel.text = "Lot Count: " + String(describing: lots.count)
+            }
         }
+    }
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.parent?.dismiss(animated: true, completion: nil)
     }
 
     /*

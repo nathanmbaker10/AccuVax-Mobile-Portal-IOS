@@ -19,6 +19,8 @@
 		5643129E1F3111CB001FA62F /* Accuvax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643129D1F3111CB001FA62F /* Accuvax.swift */; };
 		564312A01F311543001FA62F /* AccuvaxGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643129F1F311543001FA62F /* AccuvaxGroup.swift */; };
 		564312A31F312364001FA62F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564312A11F312364001FA62F /* Main.storyboard */; };
+		569493AE1F32840600BCEE28 /* InventoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569493AD1F32840600BCEE28 /* InventoryTableViewController.swift */; };
+		569493B01F32865800BCEE28 /* VaccineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569493AF1F32865800BCEE28 /* VaccineTableViewCell.swift */; };
 		56AC94EF1F22AB4300FFB3C7 /* InventoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC94EE1F22AB4300FFB3C7 /* InventoryPageViewController.swift */; };
 		56AC94F11F22AC6E00FFB3C7 /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AC94F01F22AC6E00FFB3C7 /* Inventory.storyboard */; };
 		56AC94F31F22AC8600FFB3C7 /* UserManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AC94F21F22AC8600FFB3C7 /* UserManagement.storyboard */; };
@@ -50,6 +52,8 @@
 		5643129D1F3111CB001FA62F /* Accuvax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accuvax.swift; sourceTree = "<group>"; };
 		5643129F1F311543001FA62F /* AccuvaxGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccuvaxGroup.swift; sourceTree = "<group>"; };
 		564312A21F312364001FA62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		569493AD1F32840600BCEE28 /* InventoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTableViewController.swift; sourceTree = "<group>"; };
+		569493AF1F32865800BCEE28 /* VaccineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaccineTableViewCell.swift; sourceTree = "<group>"; };
 		56AC94EE1F22AB4300FFB3C7 /* InventoryPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPageViewController.swift; sourceTree = "<group>"; };
 		56AC94F01F22AC6E00FFB3C7 /* Inventory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Inventory.storyboard; sourceTree = "<group>"; };
 		56AC94F21F22AC8600FFB3C7 /* UserManagement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserManagement.storyboard; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				D88BA3D31F1FF3F100E29526 /* ChooseActionViewController.swift */,
 				5640396B1F217528000FE160 /* TempViewController.swift */,
 				56AC94F41F22AD3B00FFB3C7 /* VaccineViewController.swift */,
+				569493AD1F32840600BCEE28 /* InventoryTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				D8FED0EE1F1E90730085B00C /* LocationTableViewCell.swift */,
 				D8FED0F01F1E920C0085B00C /* KioskGroupTableViewCell.swift */,
 				D8FED0F21F1E923F0085B00C /* KioskTableViewCell.swift */,
+				569493AF1F32865800BCEE28 /* VaccineTableViewCell.swift */,
 			);
 			name = "Table View Cells";
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 				D88BA3D61F1FF80C00E29526 /* UIViewCustomization.swift in Sources */,
 				D81AC9751F1E029E00938D7D /* LoginViewController.swift in Sources */,
 				5643129C1F310ED0001FA62F /* Location.swift in Sources */,
+				569493AE1F32840600BCEE28 /* InventoryTableViewController.swift in Sources */,
 				D8FED0EA1F1E8AE50085B00C /* SelectMachineTableViewController.swift in Sources */,
 				5643129E1F3111CB001FA62F /* Accuvax.swift in Sources */,
 				D8FED0EF1F1E90730085B00C /* LocationTableViewCell.swift in Sources */,
@@ -346,6 +353,7 @@
 				564312A01F311543001FA62F /* AccuvaxGroup.swift in Sources */,
 				D81AC9731F1E029E00938D7D /* AppDelegate.swift in Sources */,
 				D8FED0F11F1E920C0085B00C /* KioskGroupTableViewCell.swift in Sources */,
+				569493B01F32865800BCEE28 /* VaccineTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

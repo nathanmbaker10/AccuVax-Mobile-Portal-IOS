@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DBB3EAB10995666A3E30E7D219B57FBD"
+               BlueprintIdentifier = "F725ED167AF9BE2FFA71D4D36ABFA6B2"
                BuildableName = "Pods_AccuVax_Mobile_Portal.framework"
                BlueprintName = "Pods-AccuVax Mobile Portal"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DBB3EAB10995666A3E30E7D219B57FBD"
+            BlueprintIdentifier = "F725ED167AF9BE2FFA71D4D36ABFA6B2"
             BuildableName = "Pods_AccuVax_Mobile_Portal.framework"
             BlueprintName = "Pods-AccuVax Mobile Portal"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -8,4 +8,5 @@ target 'AccuVax Mobile Portal' do
   # Pods for AccuVax Mobile Portal
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON', '~> 3.1'
+  pod 'Charts', '~> 3.0'
 end

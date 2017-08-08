@@ -12,13 +12,14 @@ import Alamofire
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
-
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+               // Do any additional setup after loading the view, typically from a nib.
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
+        usernameTextField.attributedPlaceholder = NSAttributedString(string: "Enter Email", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Enter Password", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         usernameTextField.text = ""
@@ -97,7 +98,6 @@ extension LoginViewController: UITextFieldDelegate {
         case 1:
             passwordTextField.becomeFirstResponder()
             return false
-            
         case 2:
             if usernameTextField.text?.characters.count == 0 || passwordTextField.text?.characters.count == 0 {
                 let noEntryAlert = UIAlertController(title: "Empty Field", message: "You must enter an email and password", preferredStyle: .alert)
@@ -114,4 +114,27 @@ extension LoginViewController: UITextFieldDelegate {
             
         }
     }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        var tf: UITextField! = nil
+        switch textField.tag {
+        case 1:
+            tf = self.usernameTextField
+        case 2:
+            tf = self.passwordTextField
+        default:
+            return true
+        }
+        
+        
+        for sv in tf.subviews {
+            if sv is UIButton {
+                let b = sv as! UIButton
+                if let im = b.image(for: .highlighted) {
+                    b.isHighlighted = true
+                }
+            }
+        }
+    return true
+    }
+    
 }

@@ -28,7 +28,7 @@ class TempPageViewController: UIPageViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         dataSource = self
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
 //        loadTemperatures()
     }
     func styleIndicator() {
@@ -73,12 +73,18 @@ class TempPageViewController: UIPageViewController {
                         switch self.childArray[index].tag {
                         case 0:
                             self.childArray[index].current = Temperature(currentJSON: current!, type: .cold)
+                            
                             for historyJSON in historyArray! {
                                 if scopeLoopCount == 0 {
                                     self.childArray[index].dayHistory.append(Temperature(historyJSON: historyJSON, type: .cold)!)
                                 } else {
                                     self.childArray[index].weekHistory.append(Temperature(historyJSON: historyJSON, type: .cold)!)
                                 }
+                            }
+                            if scopeLoopCount == 0 {
+                                self.childArray[index].dayHistory.append(self.childArray[index].current)
+                            } else {
+                                self.childArray[index].weekHistory.append(self.childArray[index].current)
                             }
                         case 1:
                             self.childArray[index].current = Temperature(currentJSON: current!, type: .frozen)
@@ -89,6 +95,11 @@ class TempPageViewController: UIPageViewController {
                                     self.childArray[index].weekHistory.append(Temperature(historyJSON: historyJSON, type: .frozen)!)
                                 }
                             }
+                            if scopeLoopCount == 0 {
+                                self.childArray[index].dayHistory.append(self.childArray[index].current)
+                            } else {
+                                self.childArray[index].weekHistory.append(self.childArray[index].current)
+                            }
                         default:
                             break
                         }
@@ -96,7 +107,7 @@ class TempPageViewController: UIPageViewController {
                     scopeLoopCount += 1
                     if let first = self.childArray.first {
                         if scopeLoopCount == 2 {
-                            self.setViewControllers([first], direction: .forward, animated: true, completion: nil)
+                            self.setViewControllers([first], direction: .forward, animated: false, completion: nil)
                         }
                     }
                 }

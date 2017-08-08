@@ -23,7 +23,6 @@
 		569493B01F32865800BCEE28 /* VaccineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569493AF1F32865800BCEE28 /* VaccineTableViewCell.swift */; };
 		56AC94EF1F22AB4300FFB3C7 /* InventoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC94EE1F22AB4300FFB3C7 /* InventoryPageViewController.swift */; };
 		56AC94F11F22AC6E00FFB3C7 /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AC94F01F22AC6E00FFB3C7 /* Inventory.storyboard */; };
-		56AC94F31F22AC8600FFB3C7 /* UserManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AC94F21F22AC8600FFB3C7 /* UserManagement.storyboard */; };
 		56AC94F51F22AD3B00FFB3C7 /* VaccineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC94F41F22AD3B00FFB3C7 /* VaccineViewController.swift */; };
 		83D548CA3BC9E5123EFE081B /* Pods_AccuVax_Mobile_Portal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF1DE27E32B7F5BC3BB2FF4 /* Pods_AccuVax_Mobile_Portal.framework */; };
 		D81AC9731F1E029E00938D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81AC9721F1E029E00938D7D /* AppDelegate.swift */; };
@@ -56,7 +55,6 @@
 		569493AF1F32865800BCEE28 /* VaccineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaccineTableViewCell.swift; sourceTree = "<group>"; };
 		56AC94EE1F22AB4300FFB3C7 /* InventoryPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPageViewController.swift; sourceTree = "<group>"; };
 		56AC94F01F22AC6E00FFB3C7 /* Inventory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Inventory.storyboard; sourceTree = "<group>"; };
-		56AC94F21F22AC8600FFB3C7 /* UserManagement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserManagement.storyboard; sourceTree = "<group>"; };
 		56AC94F41F22AD3B00FFB3C7 /* VaccineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaccineViewController.swift; sourceTree = "<group>"; };
 		94833959A4EF93BD68FD5D65 /* Pods-AccuVax Mobile Portal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuVax Mobile Portal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AccuVax Mobile Portal/Pods-AccuVax Mobile Portal.debug.xcconfig"; sourceTree = "<group>"; };
 		AEF1DE27E32B7F5BC3BB2FF4 /* Pods_AccuVax_Mobile_Portal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccuVax_Mobile_Portal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,7 +198,6 @@
 				564039661F216B49000FE160 /* Temperature.storyboard */,
 				D81AC97B1F1E029E00938D7D /* LaunchScreen.storyboard */,
 				56AC94F01F22AC6E00FFB3C7 /* Inventory.storyboard */,
-				56AC94F21F22AC8600FFB3C7 /* UserManagement.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -273,7 +270,6 @@
 				564039681F216B49000FE160 /* Temperature.storyboard in Resources */,
 				D81AC97D1F1E029E00938D7D /* LaunchScreen.storyboard in Resources */,
 				D81AC97A1F1E029E00938D7D /* Assets.xcassets in Resources */,
-				56AC94F31F22AC8600FFB3C7 /* UserManagement.storyboard in Resources */,
 				56AC94F11F22AC6E00FFB3C7 /* Inventory.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

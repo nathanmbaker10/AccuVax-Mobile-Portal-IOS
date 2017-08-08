@@ -13,7 +13,6 @@ import Alamofire
 class ChooseActionViewController: UIViewController {
     @IBOutlet weak var currentMachineLocation: UILabel!
     @IBOutlet weak var currentMachineLabel: UILabel!
-    @IBOutlet weak var userManagementButton: UIButton!
     @IBOutlet weak var temperatureButton: UIButton!
     @IBOutlet weak var inventoryButton: UIButton!
     var formerViewController: UIViewController!
@@ -27,9 +26,7 @@ class ChooseActionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func setInsets() {
-        let inventoryInsets = UIEdgeInsetsMake(10, 10, 10, 10)
-        let usermanagementInsets = UIEdgeInsetsMake(20, 20, 20, 20)
-        userManagementButton.imageEdgeInsets = usermanagementInsets
+        let inventoryInsets = UIEdgeInsetsMake(20, 20, 20, 20)
         temperatureButton.imageEdgeInsets = inventoryInsets
         inventoryButton.imageEdgeInsets = inventoryInsets
     }

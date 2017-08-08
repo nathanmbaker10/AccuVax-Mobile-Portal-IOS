@@ -59,7 +59,7 @@ class InventoryTableViewController: UITableViewController {
                     let lot = Lot(inventoryJSON: lotJSON)
                     let currentVacName = VaccineBrandName(rawValue: lot.brand_name)
                     if let vaccine = self.vaccineDict[currentVacName!] {
-                        vaccine.lots?.append(lot)
+                        vaccine.lots.append(lot)
                         vaccine.totalDosesRemaining += lot.dosesRemaining
                         vaccine.totalCount += lot.count
                     } else {

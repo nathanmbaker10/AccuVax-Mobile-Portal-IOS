@@ -42,7 +42,7 @@ enum VaccineBrandName: String {
     case Menactra
     case Menveo
     case Trumenba
-    case Bexsero
+    case Bexsero = "Bexsero®"
     case Pneumovax23 = "Pneumovax 23"
     case Prevnar13 = "Prevnar 13"
     case Ipol
@@ -57,5 +57,6 @@ enum VaccineBrandName: String {
     case Vivotif
     case ACAM2000
     case YFVax = "YF Vax"
+    case Unknown
 
 }

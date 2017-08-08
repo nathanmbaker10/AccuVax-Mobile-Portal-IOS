@@ -15,21 +15,21 @@ class Vaccine {
     let brandName: String
     var totalCount: Int
     var totalDosesRemaining: Int
-    var lots: [Lot]? = []
+    var lots: [Lot] = []
     
     init?(root: JSON, name: String) {
         self.name = name
         let inventories = root["inventories"].arrayValue
         for dict in inventories {
             if dict["vaccine_name"].stringValue == self.name {
-                lots?.append(Lot(inventoryJSON: dict))
+                lots.append(Lot(inventoryJSON: dict))
             }
         }
-        if lots?.count != 0 {
-            self.brandName = lots![0].brand_name
+        if lots.count != 0 {
+            self.brandName = lots[0].brand_name
             totalCount = 0
             totalDosesRemaining = 0
-            for lot in lots! {
+            for lot in lots {
                 totalCount += lot.count
                 totalDosesRemaining += lot.dosesRemaining
             }
@@ -42,6 +42,6 @@ class Vaccine {
         self.name = initialLot.name
         self.totalCount = initialLot.count
         self.totalDosesRemaining = initialLot.dosesRemaining
-        self.lots?.append(initialLot)
+        self.lots.append(initialLot)
     }
 }

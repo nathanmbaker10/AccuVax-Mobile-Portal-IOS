@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560A86901F3A4BEA000A69CE /* LotExpandableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A868F1F3A4BEA000A69CE /* LotExpandableHeader.swift */; };
+		560A86921F3A4C62000A69CE /* LotExpandableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 560A86911F3A4C62000A69CE /* LotExpandableHeaderView.xib */; };
+		560A86941F3A4C85000A69CE /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A86931F3A4C85000A69CE /* Section.swift */; };
 		5613972F1F2A6BDC0040FF2E /* VaccineEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613972E1F2A6BDC0040FF2E /* VaccineEnum.swift */; };
 		564039651F21459A000FE160 /* SF-Pro-Display in Resources */ = {isa = PBXBuildFile; fileRef = 564039641F21459A000FE160 /* SF-Pro-Display */; };
 		564039681F216B49000FE160 /* Temperature.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564039661F216B49000FE160 /* Temperature.storyboard */; };
@@ -39,6 +42,9 @@
 
 /* Begin PBXFileReference section */
 		0641AFFF96EC336B5E6C6475 /* Pods-AccuVax Mobile Portal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuVax Mobile Portal.release.xcconfig"; path = "Pods/Target Support Files/Pods-AccuVax Mobile Portal/Pods-AccuVax Mobile Portal.release.xcconfig"; sourceTree = "<group>"; };
+		560A868F1F3A4BEA000A69CE /* LotExpandableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotExpandableHeader.swift; sourceTree = "<group>"; };
+		560A86911F3A4C62000A69CE /* LotExpandableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LotExpandableHeaderView.xib; sourceTree = "<group>"; };
+		560A86931F3A4C85000A69CE /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		5613972E1F2A6BDC0040FF2E /* VaccineEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaccineEnum.swift; sourceTree = "<group>"; };
 		564039641F21459A000FE160 /* SF-Pro-Display */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SF-Pro-Display"; path = "/Library/Fonts/SF-Pro-Display"; sourceTree = "<absolute>"; };
 		564039671F216B49000FE160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Temperature.storyboard; sourceTree = "<group>"; };
@@ -84,6 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		560A868E1F3A4BAB000A69CE /* Expandable Header View */ = {
+			isa = PBXGroup;
+			children = (
+				560A868F1F3A4BEA000A69CE /* LotExpandableHeader.swift */,
+				560A86911F3A4C62000A69CE /* LotExpandableHeaderView.xib */,
+				560A86931F3A4C85000A69CE /* Section.swift */,
+			);
+			name = "Expandable Header View";
+			sourceTree = "<group>";
+		};
 		56405C9B1F27E4F300788697 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +169,7 @@
 		D81AC9711F1E029E00938D7D /* AccuVax Mobile Portal */ = {
 			isa = PBXGroup;
 			children = (
+				560A868E1F3A4BAB000A69CE /* Expandable Header View */,
 				56405C9B1F27E4F300788697 /* Models */,
 				56AC94EC1F22AA7D00FFB3C7 /* PageViewControllers */,
 				D8FED0EB1F1E8B1A0085B00C /* ViewControllers */,
@@ -270,6 +287,7 @@
 				564039681F216B49000FE160 /* Temperature.storyboard in Resources */,
 				D81AC97D1F1E029E00938D7D /* LaunchScreen.storyboard in Resources */,
 				D81AC97A1F1E029E00938D7D /* Assets.xcassets in Resources */,
+				560A86921F3A4C62000A69CE /* LotExpandableHeaderView.xib in Resources */,
 				56AC94F11F22AC6E00FFB3C7 /* Inventory.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +353,7 @@
 				D88BA3D61F1FF80C00E29526 /* UIViewCustomization.swift in Sources */,
 				D81AC9751F1E029E00938D7D /* LoginViewController.swift in Sources */,
 				5643129C1F310ED0001FA62F /* Location.swift in Sources */,
+				560A86901F3A4BEA000A69CE /* LotExpandableHeader.swift in Sources */,
 				569493AE1F32840600BCEE28 /* InventoryTableViewController.swift in Sources */,
 				D8FED0EA1F1E8AE50085B00C /* SelectMachineTableViewController.swift in Sources */,
 				5643129E1F3111CB001FA62F /* Accuvax.swift in Sources */,
@@ -343,6 +362,7 @@
 				56AC94F51F22AD3B00FFB3C7 /* VaccineViewController.swift in Sources */,
 				564039701F2285BB000FE160 /* TempPageViewController.swift in Sources */,
 				5643129A1F2F9FEF001FA62F /* Temperature.swift in Sources */,
+				560A86941F3A4C85000A69CE /* Section.swift in Sources */,
 				5613972F1F2A6BDC0040FF2E /* VaccineEnum.swift in Sources */,
 				D8FED0F31F1E923F0085B00C /* KioskTableViewCell.swift in Sources */,
 				5640396C1F217528000FE160 /* TempViewController.swift in Sources */,

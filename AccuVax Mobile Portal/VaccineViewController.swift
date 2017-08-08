@@ -11,14 +11,25 @@ import Alamofire
 import SwiftyJSON
 
 class VaccineViewController: UIViewController {
+    @IBOutlet weak var lotTableView: UITableView!
     @IBOutlet weak var lotCountLabel: UILabel!
     @IBOutlet weak var totalCountLabel: UILabel!
     @IBOutlet weak var vaccineBrandNameLabel: UILabel!
     var vaccine: Vaccine?
     var tag = -1
+    var sections: [Section] = []
+    var selectedIndexPath: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectedIndexPath = IndexPath(row: -1, section: -1)
+        if let vac = vaccine {
+            for lot in vac.lots {
+                sections.append(Section(lot: lot, expanded: false))
+            }
+        }
+        let nib = UINib(nibName: "LotExpandableHeader", bundle: nil)
+        lotTableView.register(nib, forCellReuseIdentifier: "lotExpandableHeader")
 //        insertInfo()
         // Do any additional setup after loading the view.
     }
@@ -33,11 +44,9 @@ class VaccineViewController: UIViewController {
     func insertInfo() {
         if let vac = self.vaccine {
             self.totalCountLabel.text = "Doses Remaining: " + String(describing: vac.totalDosesRemaining)
-            self.vaccineBrandNameLabel.text = vac.name
+//            self.vaccineBrandNameLabel.text = vac.name
             self.parent?.navigationItem.title = vac.brandName
-            if let lots = vac.lots {
-                self.lotCountLabel.text = "Lot Count: " + String(describing: lots.count)
-            }
+            self.lotCountLabel.text = "Lot Count: " + String(describing: vaccine?.lots.count)
         }
     }
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -55,3 +64,65 @@ class VaccineViewController: UIViewController {
     */
 
 }
+
+extension VaccineViewController: UITableViewDataSource, UITableViewDelegate, LotExpandableHeaderDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if let vac = vaccine {
+            return vac.lots.count
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 58
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if sections[indexPath.section].expanded {
+            return 100
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let vaccine = vaccine {
+            let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "lotExpandableHeader") as? LotExpandableHeader
+            headerView?.customInit(lot: vaccine.lots[section], delegate: self, section: section)
+            return headerView
+        } else {
+            return nil
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailedLot")
+        cell?.textLabel?.text = sections[indexPath.section].lot.lotCode
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if vaccine != nil {
+            self.selectedIndexPath = indexPath
+            
+        }
+    }
+    
+    func toggleSection(header: LotExpandableHeader, section: Int) {
+        sections[section].expanded = !sections[section].expanded
+        lotTableView.beginUpdates()
+        lotTableView.reloadSections([section], with: .automatic)
+        lotTableView.endUpdates()
+    }
+}
+

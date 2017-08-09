@@ -76,61 +76,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vaccine Braind Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-GZ-Z9D">
-                                <rect key="frame" x="105" y="113" width="164" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="M0v-Ac-SV1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCd-6L-CLX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lot Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgN-gt-xgY">
+                                                <rect key="frame" x="83" y="54" width="75" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIJ-Wf-gqf">
+                                                <rect key="frame" x="30" y="18" width="181" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-Dn-tnS">
+                                                <rect key="frame" x="103" y="90" width="34" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="back"/>
+                                                <connections>
+                                                    <action selector="backButtonTapped:" destination="ZEJ-2t-Kue" eventType="touchUpInside" id="6tP-9Z-I5R"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vaccine Brand Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU4-wc-qhK">
+                                                <rect key="frame" x="17" y="26" width="160" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.11500445170513418" blue="0.19633938609735413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SFU-d3-Z3S">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Tx9-Cc-G1R">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tx9-Cc-G1R" id="TG2-hl-uYn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailedLot" rowHeight="100" id="S6C-C5-1pi">
+                                                <rect key="frame" x="0.0" y="72" width="375" height="100"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S6C-C5-1pi" id="09u-Vh-Bqa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="ZEJ-2t-Kue" id="IAf-Jg-10t"/>
+                                            <outlet property="delegate" destination="ZEJ-2t-Kue" id="Jcp-M8-3Tr"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="164" id="IGz-Zk-9PS"/>
+                                    <constraint firstItem="SFU-d3-Z3S" firstAttribute="height" secondItem="CCd-6L-CLX" secondAttribute="height" id="p0A-CI-nZT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lot Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgN-gt-xgY">
-                                <rect key="frame" x="149.5" y="323" width="75" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIJ-Wf-gqf">
-                                <rect key="frame" x="97" y="212" width="181" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="181" id="JA7-Qc-8lb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-Dn-tnS">
-                                <rect key="frame" x="170" y="428" width="34" height="30"/>
-                                <state key="normal" title="back"/>
-                                <connections>
-                                    <action selector="backButtonTapped:" destination="ZEJ-2t-Kue" eventType="touchUpInside" id="6tP-9Z-I5R"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.99991601705551147" green="1" blue="0.99987190961837769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qPT-fK-xOo" firstAttribute="top" secondItem="GiF-Dn-tnS" secondAttribute="bottom" constant="209" id="0wd-sB-3yb"/>
-                            <constraint firstItem="HIJ-Wf-gqf" firstAttribute="top" secondItem="YO5-LO-66G" secondAttribute="topMargin" constant="212" id="BCr-qH-DfX"/>
-                            <constraint firstItem="HIJ-Wf-gqf" firstAttribute="top" secondItem="Ld1-GZ-Z9D" secondAttribute="bottom" constant="78" id="GEp-WW-6B0"/>
-                            <constraint firstItem="GiF-Dn-tnS" firstAttribute="top" secondItem="hgN-gt-xgY" secondAttribute="bottom" constant="84" id="KjI-N9-ycW"/>
-                            <constraint firstItem="HIJ-Wf-gqf" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="L78-ht-k6w"/>
-                            <constraint firstItem="GiF-Dn-tnS" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="VLA-S1-wLO"/>
-                            <constraint firstItem="hgN-gt-xgY" firstAttribute="centerY" secondItem="YO5-LO-66G" secondAttribute="centerY" id="iOJ-9f-i0Q"/>
-                            <constraint firstItem="hgN-gt-xgY" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="o0c-e7-l6a"/>
-                            <constraint firstItem="Ld1-GZ-Z9D" firstAttribute="centerX" secondItem="YO5-LO-66G" secondAttribute="centerX" id="xeF-dY-X45"/>
+                            <constraint firstItem="M0v-Ac-SV1" firstAttribute="top" secondItem="YO5-LO-66G" secondAttribute="top" id="Brr-5B-aGc"/>
+                            <constraint firstItem="M0v-Ac-SV1" firstAttribute="leading" secondItem="YO5-LO-66G" secondAttribute="leading" id="k0d-px-U4h"/>
+                            <constraint firstAttribute="bottom" secondItem="M0v-Ac-SV1" secondAttribute="bottom" id="rjZ-ug-UOm"/>
+                            <constraint firstAttribute="trailing" secondItem="M0v-Ac-SV1" secondAttribute="trailing" id="vPU-dC-ffb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="vXu-IY-7UQ"/>
                     <connections>
                         <outlet property="lotCountLabel" destination="hgN-gt-xgY" id="fVg-T6-UTd"/>
+                        <outlet property="lotTableView" destination="SFU-d3-Z3S" id="i7D-go-f5G"/>
                         <outlet property="totalCountLabel" destination="HIJ-Wf-gqf" id="612-nK-CP2"/>
-                        <outlet property="vaccineBrandNameLabel" destination="Ld1-GZ-Z9D" id="xt5-Wy-Hjw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izg-bs-yeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716" y="130.88455772113943"/>
+            <point key="canvasLocation" x="1678" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LV7-Vh-d4G">

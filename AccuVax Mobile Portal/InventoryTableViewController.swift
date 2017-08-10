@@ -99,6 +99,9 @@ class InventoryTableViewController: UITableViewController {
         return cell
     }
 
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pageVC = UIStoryboard(name: "Inventory", bundle: .main).instantiateViewController(withIdentifier: "inventoryPageVC") as? InventoryPageViewController

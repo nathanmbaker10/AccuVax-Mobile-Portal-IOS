@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let textField = UITextField.appearance()
         textField.tintColor = UIColor.white
         let pageControl = UIPageControl.appearance()
-        pageControl.currentPageIndicatorTintColor = UIColor(red: 255, green: 221, blue: 0, alpha: 1)
+        pageControl.cornerRadius = 20
+        pageControl.currentPageIndicatorTintColor = UIColor.yellow
+        pageControl.tintColor = UIColor.darkGray
+        
         return true
     }
 

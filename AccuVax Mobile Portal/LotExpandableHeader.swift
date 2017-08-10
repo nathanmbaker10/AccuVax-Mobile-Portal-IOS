@@ -38,8 +38,8 @@ class LotExpandableHeader: UITableViewHeaderFooterView {
     
     func customInit(lot: Lot, delegate: LotExpandableHeaderDelegate, section: Int) {
         self.section = section
-        self.lotCodeLabel.text = lot.lotCode
-        self.expirationDateLabel.text = lot.expirationDate
+        self.lotCodeLabel.text = "Code: " + lot.lotCode
+        self.expirationDateLabel.text = "Exp Date: " + lot.expirationDate
         self.delegate = delegate
     }
     

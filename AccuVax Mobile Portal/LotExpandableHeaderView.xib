@@ -18,22 +18,32 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJX-Q4-Hje">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lot Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80H-1c-Oh6">
-                            <rect key="frame" x="8" y="19" width="78" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lot Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80H-1c-Oh6">
+                            <rect key="frame" x="8" y="19" width="183" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="183" id="Bf6-xY-u9i"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exp. Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFG-p9-YjU">
-                            <rect key="frame" x="293" y="19" width="74" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exp. Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFG-p9-YjU">
+                            <rect key="frame" x="217" y="19" width="150" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="UZx-Y4-ygp"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.054901960784313725" green="0.67450980392156867" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="vFG-p9-YjU" secondAttribute="trailing" constant="8" id="6YG-eE-9AW"/>
+                        <constraint firstItem="80H-1c-Oh6" firstAttribute="leading" secondItem="GJX-Q4-Hje" secondAttribute="leading" constant="8" id="KAz-Kv-zAF"/>
+                        <constraint firstItem="vFG-p9-YjU" firstAttribute="centerY" secondItem="GJX-Q4-Hje" secondAttribute="centerY" id="mH6-ov-m1l"/>
+                        <constraint firstItem="80H-1c-Oh6" firstAttribute="centerY" secondItem="GJX-Q4-Hje" secondAttribute="centerY" id="rhH-5d-V3T"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -233,10 +233,10 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="823-pS-I3g">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="40"/>
-                                        <color key="backgroundColor" red="0.72107755829015541" green="0.10462637363243545" blue="0.11062239878731973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.023529411764705882" green="0.49019607843137253" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
                                         <state key="normal" title="Sign Out">
-                                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.97647058823529409" green="1" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -249,10 +249,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75a-Om-iri">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="40"/>
-                                        <color key="backgroundColor" red="1" green="0.81568627450980391" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.97647058823529409" green="1" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
                                         <state key="normal" title="Change">
-                                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.023529411764705882" green="0.49019607843137253" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -260,7 +260,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="signOutButtonTapped:" destination="VGB-KO-yEf" eventType="touchUpInside" id="0Yh-zs-DkF"/>
+                                            <action selector="changeButtonTapped:" destination="VGB-KO-yEf" eventType="touchUpInside" id="5MX-8P-kJo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -348,8 +348,6 @@
                         <outlet property="currentMachineLocation" destination="lJf-PM-Iy8" id="ZMU-Yk-oKt"/>
                         <outlet property="inventoryButton" destination="aBG-qH-egw" id="H9r-Gj-7qJ"/>
                         <outlet property="temperatureButton" destination="flQ-Xs-0Zc" id="2nX-cb-4gl"/>
-                        <segue destination="chc-jP-g4Y" kind="presentation" identifier="goToUserManagement" id="DDw-v8-4jK"/>
-                        <segue destination="6Gl-rf-fWR" kind="presentation" identifier="goToInventory" id="S84-fe-X0f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Js-tM-eJT" userLabel="First Responder" sceneMemberID="firstResponder"/>

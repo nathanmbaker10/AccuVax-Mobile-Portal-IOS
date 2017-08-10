@@ -35,6 +35,15 @@ class ChooseActionViewController: UIViewController {
             self.formerViewController.navigationController?.dismiss(animated: true, completion: nil)
         }
     }
+    
+    @IBAction func changeButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true) {
+            if let navController = self.formerViewController.navigationController {
+                navController.popToViewController(navController.childViewControllers[0], animated: true)
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

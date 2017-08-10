@@ -11,9 +11,10 @@ import Alamofire
 import SwiftyJSON
 
 class VaccineViewController: UIViewController {
+    @IBOutlet weak var totalDosesRemainingLabel: UILabel!
+    @IBOutlet weak var vaccineNameLabel: UILabel!
     @IBOutlet weak var lotTableView: UITableView!
-    @IBOutlet weak var lotCountLabel: UILabel!
-    @IBOutlet weak var totalCountLabel: UILabel!
+    @IBOutlet weak var totalVialsLabel: UILabel!
     @IBOutlet weak var vaccineBrandNameLabel: UILabel!
     var vaccine: Vaccine?
     var tag = -1
@@ -28,8 +29,8 @@ class VaccineViewController: UIViewController {
                 sections.append(Section(lot: lot, expanded: false))
             }
         }
-        let nib = UINib(nibName: "LotExpandableHeader", bundle: nil)
-        lotTableView.register(nib, forCellReuseIdentifier: "lotExpandableHeader")
+        let nib = UINib(nibName: "LotExpandableHeaderView", bundle: nil)
+        lotTableView.register(nib, forHeaderFooterViewReuseIdentifier: "lotExpandableHeader")
 //        insertInfo()
         // Do any additional setup after loading the view.
     }
@@ -43,16 +44,16 @@ class VaccineViewController: UIViewController {
     }
     func insertInfo() {
         if let vac = self.vaccine {
-            self.totalCountLabel.text = "Doses Remaining: " + String(describing: vac.totalDosesRemaining)
-//            self.vaccineBrandNameLabel.text = vac.name
+            self.totalVialsLabel.text = "Total Vials: " + String(describing: vac.totalCount)
+            self.totalDosesRemainingLabel.text = "Total Doses Remaining: " + String(describing: vac.totalDosesRemaining)
+            self.vaccineBrandNameLabel.text = "Brand Name: " + vac.brandName
+            self.vaccineNameLabel.text = "Name: " + vac.name
             self.parent?.navigationItem.title = vac.brandName
-            self.lotCountLabel.text = "Lot Count: " + String(describing: vaccine?.lots.count)
+//            self.parent?.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+//            self.parent?.navigationController?.navigationBar.backgroundColor = UIColor(red: 8, green: 150, blue: 172, alpha: 1)
+
         }
     }
-    @IBAction func backButtonTapped(_ sender: Any) {
-        self.parent?.dismiss(animated: true, completion: nil)
-    }
-
     /*
     // MARK: - Navigation
 
@@ -67,11 +68,7 @@ class VaccineViewController: UIViewController {
 
 extension VaccineViewController: UITableViewDataSource, UITableViewDelegate, LotExpandableHeaderDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        if let vac = vaccine {
-            return vac.lots.count
-        } else {
-            return 0
-        }
+        return sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,14 +81,18 @@ extension VaccineViewController: UITableViewDataSource, UITableViewDelegate, Lot
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if sections[indexPath.section].expanded {
-            return 100
+            return 150
         } else {
             return 0
         }
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 2
+        if section != sections.count - 1 {
+            return 1
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -106,9 +107,18 @@ extension VaccineViewController: UITableViewDataSource, UITableViewDelegate, Lot
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "detailedLot")
-        cell?.textLabel?.text = sections[indexPath.section].lot.lotCode
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailedLot") as! ExpandedLotTableViewCell
+        
+        let currentLot = sections[indexPath.section].lot
+        
+        cell.vialCountLabel.text = "Vials: " + String(describing: currentLot.count)
+        cell.dosesRemainingLabel.text = "Doses: " + String(describing: currentLot.dosesRemaining)
+        cell.ownerLable.text = "Owner: " + currentLot.owner
+        cell.productNDCLabel.text = "Product-NDC: " + currentLot.productNDC
+        cell.packageNDCLabel.text = "Package-NDC: " + currentLot.packageNDC
+        cell.programLabel.text = "Program: " + currentLot.program
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -121,7 +131,7 @@ extension VaccineViewController: UITableViewDataSource, UITableViewDelegate, Lot
     func toggleSection(header: LotExpandableHeader, section: Int) {
         sections[section].expanded = !sections[section].expanded
         lotTableView.beginUpdates()
-        lotTableView.reloadSections([section], with: .automatic)
+        lotTableView.reloadSections([section], with: .fade)
         lotTableView.endUpdates()
     }
 }

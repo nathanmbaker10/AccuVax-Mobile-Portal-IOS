@@ -24,6 +24,7 @@
 		564312A31F312364001FA62F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564312A11F312364001FA62F /* Main.storyboard */; };
 		569493AE1F32840600BCEE28 /* InventoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569493AD1F32840600BCEE28 /* InventoryTableViewController.swift */; };
 		569493B01F32865800BCEE28 /* VaccineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569493AF1F32865800BCEE28 /* VaccineTableViewCell.swift */; };
+		569AF2591F3BADF100945794 /* ExpandedLotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569AF2581F3BADF100945794 /* ExpandedLotTableViewCell.swift */; };
 		56AC94EF1F22AB4300FFB3C7 /* InventoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC94EE1F22AB4300FFB3C7 /* InventoryPageViewController.swift */; };
 		56AC94F11F22AC6E00FFB3C7 /* Inventory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AC94F01F22AC6E00FFB3C7 /* Inventory.storyboard */; };
 		56AC94F51F22AD3B00FFB3C7 /* VaccineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC94F41F22AD3B00FFB3C7 /* VaccineViewController.swift */; };
@@ -59,6 +60,7 @@
 		564312A21F312364001FA62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		569493AD1F32840600BCEE28 /* InventoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTableViewController.swift; sourceTree = "<group>"; };
 		569493AF1F32865800BCEE28 /* VaccineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaccineTableViewCell.swift; sourceTree = "<group>"; };
+		569AF2581F3BADF100945794 /* ExpandedLotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedLotTableViewCell.swift; sourceTree = "<group>"; };
 		56AC94EE1F22AB4300FFB3C7 /* InventoryPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPageViewController.swift; sourceTree = "<group>"; };
 		56AC94F01F22AC6E00FFB3C7 /* Inventory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Inventory.storyboard; sourceTree = "<group>"; };
 		56AC94F41F22AD3B00FFB3C7 /* VaccineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaccineViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +171,6 @@
 		D81AC9711F1E029E00938D7D /* AccuVax Mobile Portal */ = {
 			isa = PBXGroup;
 			children = (
-				560A868E1F3A4BAB000A69CE /* Expandable Header View */,
 				56405C9B1F27E4F300788697 /* Models */,
 				56AC94EC1F22AA7D00FFB3C7 /* PageViewControllers */,
 				D8FED0EB1F1E8B1A0085B00C /* ViewControllers */,
@@ -200,10 +201,12 @@
 		D8FED0EC1F1E8F740085B00C /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				560A868E1F3A4BAB000A69CE /* Expandable Header View */,
 				D8FED0EE1F1E90730085B00C /* LocationTableViewCell.swift */,
 				D8FED0F01F1E920C0085B00C /* KioskGroupTableViewCell.swift */,
 				D8FED0F21F1E923F0085B00C /* KioskTableViewCell.swift */,
 				569493AF1F32865800BCEE28 /* VaccineTableViewCell.swift */,
+				569AF2581F3BADF100945794 /* ExpandedLotTableViewCell.swift */,
 			);
 			name = "Table View Cells";
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				5643129E1F3111CB001FA62F /* Accuvax.swift in Sources */,
 				D8FED0EF1F1E90730085B00C /* LocationTableViewCell.swift in Sources */,
 				D88BA3D41F1FF3F100E29526 /* ChooseActionViewController.swift in Sources */,
+				569AF2591F3BADF100945794 /* ExpandedLotTableViewCell.swift in Sources */,
 				56AC94F51F22AD3B00FFB3C7 /* VaccineViewController.swift in Sources */,
 				564039701F2285BB000FE160 /* TempPageViewController.swift in Sources */,
 				5643129A1F2F9FEF001FA62F /* Temperature.swift in Sources */,

@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageControl.currentPageIndicatorTintColor = UIColor.yellow
         pageControl.tintColor = UIColor.darkGray
         
+        
         return true
     }
 

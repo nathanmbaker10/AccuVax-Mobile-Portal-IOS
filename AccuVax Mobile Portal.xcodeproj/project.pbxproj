@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56074BDD1F3E87C200478E31 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56074BDC1F3E87C200478E31 /* LaunchScreenViewController.swift */; };
 		560A86901F3A4BEA000A69CE /* LotExpandableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A868F1F3A4BEA000A69CE /* LotExpandableHeader.swift */; };
 		560A86921F3A4C62000A69CE /* LotExpandableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 560A86911F3A4C62000A69CE /* LotExpandableHeaderView.xib */; };
 		560A86941F3A4C85000A69CE /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A86931F3A4C85000A69CE /* Section.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		0641AFFF96EC336B5E6C6475 /* Pods-AccuVax Mobile Portal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuVax Mobile Portal.release.xcconfig"; path = "Pods/Target Support Files/Pods-AccuVax Mobile Portal/Pods-AccuVax Mobile Portal.release.xcconfig"; sourceTree = "<group>"; };
+		56074BDC1F3E87C200478E31 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		560A868F1F3A4BEA000A69CE /* LotExpandableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotExpandableHeader.swift; sourceTree = "<group>"; };
 		560A86911F3A4C62000A69CE /* LotExpandableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LotExpandableHeaderView.xib; sourceTree = "<group>"; };
 		560A86931F3A4C85000A69CE /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				5640396B1F217528000FE160 /* TempViewController.swift */,
 				56AC94F41F22AD3B00FFB3C7 /* VaccineViewController.swift */,
 				569493AD1F32840600BCEE28 /* InventoryTableViewController.swift */,
+				56074BDC1F3E87C200478E31 /* LaunchScreenViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				5643129A1F2F9FEF001FA62F /* Temperature.swift in Sources */,
 				560A86941F3A4C85000A69CE /* Section.swift in Sources */,
 				5613972F1F2A6BDC0040FF2E /* VaccineEnum.swift in Sources */,
+				56074BDD1F3E87C200478E31 /* LaunchScreenViewController.swift in Sources */,
 				D8FED0F31F1E923F0085B00C /* KioskTableViewCell.swift in Sources */,
 				5640396C1F217528000FE160 /* TempViewController.swift in Sources */,
 				564312A01F311543001FA62F /* AccuvaxGroup.swift in Sources */,

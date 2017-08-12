@@ -11,6 +11,9 @@ import SwiftyJSON
 import Alamofire
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var logoView: UIView!
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
@@ -26,6 +29,14 @@ class LoginViewController: UIViewController {
         passwordTextField.text = ""
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.isMotionEnabled = true
+        logoImageView.motionIdentifier = "logo"
+        logoView.motionIdentifier = "image"
+        logoImageView.transition([.forceAnimate])
+        logoView.transition([.forceAnimate])
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

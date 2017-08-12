@@ -11,12 +11,33 @@ import Alamofire
 import SwiftyJSON
 
 class InventoryPageViewController: UIPageViewController {
+    var previousVC: InventoryTableViewController! = nil
     var index = 0
-    var vaccineDict = [VaccineBrandName : Vaccine]()
-    var childArray: [VaccineViewController] {
+    var vaccineDict = [VaccineBrandName : Vaccine]() {
+        didSet {
+            for vc in getChildArray() {
+                var didSet = false
+                for i in vaccineDict.keys {
+                    if vc.vaccine?.name == vaccineDict[i]?.name {
+                        vc.vaccine = vaccineDict[i]
+                        didSet = true
+                    }
+                }
+                if !didSet {
+                    vc.vaccine = nil
+                }
+            }
+        }
+    }
+    var count = 0
+    var childArray: [VaccineViewController]?
+    func getChildArray() -> [VaccineViewController] {
+        if let childArray = self.childArray {
+            return childArray
+        }
         var result = [VaccineViewController]()
         var currentTag = 0
-        
+
         for vaccine in vaccineDict.values {
             let newVC = newChild()
             newVC.vaccine = vaccine
@@ -24,14 +45,19 @@ class InventoryPageViewController: UIPageViewController {
             result.append(newVC)
             currentTag += 1
         }
+        self.childArray = result
         return result
     }
+//    {
+//
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clear
         dataSource = self
-        self.setViewControllers([childArray[index]], direction: .forward, animated: true, completion: nil)
+        
+        self.setViewControllers([getChildArray()[index]], direction: .forward, animated: true, completion: nil)
 //        loadVaccines()
         // Do any additional setup after loading the view.
     }
@@ -118,7 +144,7 @@ extension InventoryPageViewController: UIPageViewControllerDataSource {
         if currentVaccineVC.tag == 0 {
             return nil
         } else {
-            return childArray[currentVaccineVC.tag - 1]
+            return getChildArray()[currentVaccineVC.tag - 1]
         }
     }
     
@@ -127,15 +153,15 @@ extension InventoryPageViewController: UIPageViewControllerDataSource {
             print("Failed the force downcast")
             return nil
         }
-        if currentVaccineVC.tag == self.childArray.count - 1 {
+        if currentVaccineVC.tag == self.getChildArray().count - 1 {
             return nil
         } else {
-            return childArray[currentVaccineVC.tag + 1]
+            return getChildArray()[currentVaccineVC.tag + 1]
         }
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return childArray.count
+        return getChildArray().count
     }
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return index

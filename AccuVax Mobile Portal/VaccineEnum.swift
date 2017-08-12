@@ -22,7 +22,7 @@ enum VaccineBrandName: String {
     case Vaqta
     case EngerixB = "Engerix-B"
     case RecombivaxHB = "Recombivax HB"
-    case Zostavax
+    case Zostavax = "Zostavax®"
     case Gardasil9 = "Gardasil 9"
     case Afluria
     case Fluad
@@ -52,7 +52,7 @@ enum VaccineBrandName: String {
     case Rotarix
     case Tenivac
     case Boostrix
-    case Adacel
+    case Adacel = "Adacel®"
     case TyphimVI
     case Vivotif
     case ACAM2000

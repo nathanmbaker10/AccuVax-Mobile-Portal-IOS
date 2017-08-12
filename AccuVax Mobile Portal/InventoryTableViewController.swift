@@ -12,7 +12,7 @@ import SwiftyJSON
 
 
 class InventoryTableViewController: UITableViewController {
-    var vaccineDict = [VaccineBrandName: Vaccine]() {
+ var vaccineDict = [VaccineBrandName: Vaccine]() {
         didSet {
             self.tableView.reloadData()
         }
@@ -21,7 +21,6 @@ class InventoryTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
-        loadVaccines(sendingFacility: Accuvax.current!.sendingFacility!)
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,7 +29,7 @@ class InventoryTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    func loadVaccines(sendingFacility: String) {
+    func loadVaccines(sendingFacility: String, firstPage: Int?, completion: (([VaccineBrandName: Vaccine])->(Void))?) {
         var json: JSON?
         let user: String = Accuvax.email!
         let password: String = Accuvax.password!
@@ -55,16 +54,21 @@ class InventoryTableViewController: UITableViewController {
             if let dict = responseData.result.value as? [String: Any] {
                 json = JSON(dict)
                 let lotsJSON = json?["inventories"].arrayValue
+                var vacDict = [VaccineBrandName: Vaccine]()
                 for lotJSON in lotsJSON! {
                     let lot = Lot(inventoryJSON: lotJSON)
                     let currentVacName = VaccineBrandName(rawValue: lot.brand_name)
-                    if let vaccine = self.vaccineDict[currentVacName!] {
+                    if let vaccine = vacDict[currentVacName!] {
                         vaccine.lots.append(lot)
                         vaccine.totalDosesRemaining += lot.dosesRemaining
                         vaccine.totalCount += lot.count
                     } else {
-                        self.vaccineDict[currentVacName!] = Vaccine(brandName: currentVacName!, initialLot: lot)
+                        vacDict[currentVacName!] = Vaccine(brandName: currentVacName!, initialLot: lot)
                     }
+                }
+                self.vaccineDict = vacDict
+                if let completion = completion {
+                    completion(self.vaccineDict)
                 }
             }
         }
@@ -87,6 +91,10 @@ class InventoryTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return vaccineDict.count
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "vaccineTableViewCell", for: indexPath) as! VaccineTableViewCell
@@ -103,11 +111,23 @@ class InventoryTableViewController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func refreshButtonTapped(_ sender: Any) {
+        let activityIndictor = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityIndictor)
+        activityIndictor.startAnimating()
+        self.loadVaccines(sendingFacility: Accuvax.current!.sendingFacility!, firstPage: nil) { vaccineDict in
+            let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(self.refreshButtonTapped(_:)))
+            activityIndictor.stopAnimating()
+            self.navigationItem.rightBarButtonItem = refreshButton
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pageVC = UIStoryboard(name: "Inventory", bundle: .main).instantiateViewController(withIdentifier: "inventoryPageVC") as? InventoryPageViewController
         if let pageVC = pageVC {
             pageVC.vaccineDict = self.vaccineDict
             pageVC.index = indexPath.row
+            pageVC.previousVC = self
             self.show(pageVC, sender: self)
         }
     }

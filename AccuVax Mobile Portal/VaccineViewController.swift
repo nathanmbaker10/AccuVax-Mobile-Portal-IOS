@@ -1,3 +1,4 @@
+
 //
 //  VaccineViewController.swift
 //  AccuVax Mobile Portal
@@ -23,19 +24,14 @@ class VaccineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        selectedIndexPath = IndexPath(row: -1, section: -1)
-        if let vac = vaccine {
-            for lot in vac.lots {
-                sections.append(Section(lot: lot, expanded: false))
-            }
-        }
-        let nib = UINib(nibName: "LotExpandableHeaderView", bundle: nil)
-        lotTableView.register(nib, forHeaderFooterViewReuseIdentifier: "lotExpandableHeader")
+        
+
 //        insertInfo()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         insertInfo()
+        self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,9 +45,20 @@ class VaccineViewController: UIViewController {
             self.vaccineBrandNameLabel.text = "Brand Name: " + vac.brandName
             self.vaccineNameLabel.text = "Name: " + vac.name
             self.parent?.navigationItem.title = vac.brandName
+            selectedIndexPath = IndexPath(row: -1, section: -1)
+            sections = []
+            if let vac = vaccine {
+                for lot in vac.lots {
+                    sections.append(Section(lot: lot, expanded: false))
+                }
+            }
+        let nib = UINib(nibName: "LotExpandableHeaderView", bundle: nil)
+        lotTableView.register(nib, forHeaderFooterViewReuseIdentifier: "lotExpandableHeader")
 //            self.parent?.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
 //            self.parent?.navigationController?.navigationBar.backgroundColor = UIColor(red: 8, green: 150, blue: 172, alpha: 1)
 
+        } else {
+            self.navigationController?.popViewController(animated: true)
         }
     }
     /*
@@ -98,7 +105,7 @@ extension VaccineViewController: UITableViewDataSource, UITableViewDelegate, Lot
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let vaccine = vaccine {
             let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "lotExpandableHeader") as? LotExpandableHeader
-            headerView?.customInit(lot: vaccine.lots[section], delegate: self, section: section)
+            headerView?.customInit(lot: sections[section].lot, delegate: self, section: section)
             return headerView
         } else {
             return nil
@@ -133,6 +140,21 @@ extension VaccineViewController: UITableViewDataSource, UITableViewDelegate, Lot
         lotTableView.beginUpdates()
         lotTableView.reloadSections([section], with: .fade)
         lotTableView.endUpdates()
+    }
+    
+    func refresh() {
+        let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityIndicator)
+        activityIndicator.startAnimating()
+        if let parent = self.parent as? InventoryPageViewController {
+            parent.previousVC.loadVaccines(sendingFacility: Accuvax.current!.sendingFacility!, firstPage: self.tag) { vaccineDict in
+                parent.vaccineDict = vaccineDict
+                activityIndicator.stopAnimating()
+                self.insertInfo()
+                self.lotTableView.reloadData()
+                self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(self.refresh))
+            }
+        }
     }
 }
 

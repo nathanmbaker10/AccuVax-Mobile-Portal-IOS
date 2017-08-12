@@ -10,13 +10,13 @@ import UIKit
 import Charts
 
 class TempViewController: UIViewController, ChartViewDelegate {
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var lineChart: LineChartView!
-    @IBOutlet weak var storageSystemLable: UILabel!
     @IBOutlet weak var currentTempLabel: UILabel!
     @IBOutlet weak var minTempLabel: UILabel!
     @IBOutlet weak var maxTempLabel: UILabel!
     var tag: Int!
-    var parentVC: UIPageViewController?
+    var parentVC: TempPageViewController?
     var min: Temperature! = nil
     var max: Temperature! = nil
     var current: Temperature! = nil
@@ -65,22 +65,21 @@ class TempViewController: UIViewController, ChartViewDelegate {
         lineChart.chartDescription?.text = ""
         switch self.tag {
         case 0:
-            storageSystemLable.text = "Refrigerator"
+            self.navigationBar.topItem?.title = "Refrigerator"
             chartDataSet.label = "Fridge Temp"
             lineChart.leftAxis.axisMinimum = 0
             lineChart.leftAxis.axisMaximum = 10
             lineChart.rightAxis.axisMinimum = 0
             lineChart.rightAxis.axisMaximum = 10
         case 1:
-            storageSystemLable.text = "Freezer"
+            self.navigationBar.topItem?.title = "Freezer"
             chartDataSet.label = "Freezer Temp"
             lineChart.leftAxis.axisMinimum = -24
             lineChart.leftAxis.axisMaximum = -18
             lineChart.rightAxis.axisMinimum = -24
             lineChart.rightAxis.axisMaximum = -18
             
-        default:
-            storageSystemLable.text = "nada"
+        default: break
         }
         currentTempLabel.text = String(describing: current.temp) + " °C"
         minTempLabel.text = String(describing: min.temp) + " °C"
@@ -91,7 +90,7 @@ class TempViewController: UIViewController, ChartViewDelegate {
         
         let chartData = LineChartData(dataSet: chartDataSet)
         lineChart.data = chartData
-        lineChart.legend.entries[0].formColor = UIColor.blue
+        lineChart.legend.entries[0].formColor = NSUIColor(red: 0.05490196, green: 0.6745098, blue: 0.78039216, alpha: 1)
         lineChart.drawGridBackgroundEnabled = false
         lineChart.xAxis.labelTextColor = UIColor(red: 51, green: 51, blue: 51, alpha: 0)
         lineChart.xAxis.labelPosition = .bottom
@@ -116,6 +115,24 @@ class TempViewController: UIViewController, ChartViewDelegate {
         self.parent?.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func refreshButtonTapped(_ sender: Any) {
+        let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        self.navigationBar.topItem?.rightBarButtonItem?.customView = activityIndicator
+        activityIndicator.startAnimating()
+        
+        if let sendingFacility = Accuvax.current?.sendingFacility {
+            self.parentVC?.loadTemperatures(sendingFacility: sendingFacility, tagForFirst: self.tag, completion: {
+                self.loadInfo()
+                let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(self.refreshButtonTapped(_:)))
+                self.navigationBar.topItem?.rightBarButtonItem = refreshButton
+                activityIndicator.stopAnimating()
+            })
+            
+        }
+        
+    }
+    
+    
 
     /*
     // MARK: - Navigation

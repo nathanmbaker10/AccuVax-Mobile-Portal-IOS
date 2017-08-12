@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QKo-Rk-57s">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Login View Controller" customClass="LoginViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="BYZ-38-t0r" userLabel="Login View Controller" customClass="LoginViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -36,7 +36,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S6-gH-zFA" userLabel="Login Button">
                                 <rect key="frame" x="40" y="316" width="295" height="35"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.052929207682609558" green="0.53883057832717896" blue="0.61818093061447144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,14 +55,14 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" alpha="0.5" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gb5-fX-gLd" userLabel="Username Text Field">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
-                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" alpha="0.5" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kez-d5-zoj" userLabel="Password Text Field">
                                         <rect key="frame" x="0.0" y="60" width="343" height="30"/>
-                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" red="0.9999160171" green="1" blue="0.99987190960000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
@@ -72,15 +72,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0B-vS-u36" userLabel="Logo View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="155"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Accuvax-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="CF1-cQ-Wwe">
-                                        <rect key="frame" x="99" y="56" width="176" height="43"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="accuvax_email_logo" translatesAutoresizingMaskIntoConstraints="NO" id="CF1-cQ-Wwe">
+                                        <rect key="frame" x="37.5" y="41" width="300" height="73"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="176" id="2Ss-lm-NWt"/>
+                                            <constraint firstAttribute="width" constant="300" id="2Ss-lm-NWt"/>
                                             <constraint firstAttribute="width" secondItem="CF1-cQ-Wwe" secondAttribute="height" multiplier="176:43" id="6nC-fW-wx4"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="CF1-cQ-Wwe" firstAttribute="centerY" secondItem="F0B-vS-u36" secondAttribute="centerY" id="Xku-bw-wfl"/>
                                     <constraint firstItem="CF1-cQ-Wwe" firstAttribute="centerX" secondItem="F0B-vS-u36" secondAttribute="centerX" id="oNR-D6-tVc"/>
@@ -109,6 +109,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logoImageView" destination="CF1-cQ-Wwe" id="RuI-yV-Zje"/>
+                        <outlet property="logoView" destination="F0B-vS-u36" id="LyF-Tr-N1j"/>
                         <outlet property="passwordTextField" destination="kez-d5-zoj" id="flu-E4-edl"/>
                         <outlet property="usernameTextField" destination="Gb5-fX-gLd" id="DJb-6G-ruC"/>
                     </connections>
@@ -121,79 +123,112 @@
         <scene sceneID="342-ml-O78">
             <objects>
                 <viewController storyboardIdentifier="tableView" id="RaC-1M-fX7" customClass="SelectMachineTableViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FyA-tV-9Nl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FyA-tV-9Nl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.50588235290000005" green="0.79215686269999996" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="locationCell" id="5pi-QO-sZf" userLabel="Location Cell" customClass="LocationTableViewCell" customModule="AccuVax_Mobile_Portal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="locationCell" rowHeight="60" id="5pi-QO-sZf" userLabel="Location Cell" customClass="LocationTableViewCell" customModule="AccuVax_Mobile_Portal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pi-QO-sZf" id="FwA-Vh-AKC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvF-En-cCH">
-                                            <rect key="frame" x="8" y="15" width="42" height="21"/>
+                                            <rect key="frame" x="8" y="15" width="42" height="36.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHC-th-1t8">
+                                            <rect key="frame" x="0.0" y="58.5" width="375" height="1"/>
+                                            <color key="backgroundColor" red="0.50588235290000005" green="0.79215686269999996" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="28J-lt-Qee"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="kvF-En-cCH" firstAttribute="leading" secondItem="FwA-Vh-AKC" secondAttribute="leadingMargin" id="GTZ-V8-Y1g"/>
                                         <constraint firstItem="kvF-En-cCH" firstAttribute="top" secondItem="FwA-Vh-AKC" secondAttribute="topMargin" constant="7" id="Gf8-1U-hzK"/>
+                                        <constraint firstItem="ZHC-th-1t8" firstAttribute="leading" secondItem="FwA-Vh-AKC" secondAttribute="leading" id="MnN-uI-Z7D"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZHC-th-1t8" secondAttribute="trailing" id="mb9-S9-biB"/>
                                         <constraint firstItem="kvF-En-cCH" firstAttribute="bottom" secondItem="FwA-Vh-AKC" secondAttribute="bottomMargin" id="woS-ua-JcK"/>
+                                        <constraint firstAttribute="bottom" secondItem="ZHC-th-1t8" secondAttribute="bottom" id="z8j-gR-s2B"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.67450980390000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="locationLabel" destination="kvF-En-cCH" id="b13-kV-eE1"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kioskGroupCell" rowHeight="61" id="CHI-vz-vvY" userLabel="Kiosk Group Cell" customClass="KioskGroupTableViewCell" customModule="AccuVax_Mobile_Portal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="61"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kioskGroupCell" rowHeight="60" id="CHI-vz-vvY" userLabel="Kiosk Group Cell" customClass="KioskGroupTableViewCell" customModule="AccuVax_Mobile_Portal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CHI-vz-vvY" id="hPw-a5-X1j">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o75-lY-F54">
-                                            <rect key="frame" x="8" y="15" width="42" height="38"/>
+                                            <rect key="frame" x="8" y="15" width="42" height="36.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CoR-Qx-Ed9">
+                                            <rect key="frame" x="0.0" y="58.5" width="375" height="1"/>
+                                            <color key="backgroundColor" red="0.50588235290000005" green="0.79215686269999996" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="j0V-52-XBV"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="o75-lY-F54" firstAttribute="top" secondItem="hPw-a5-X1j" secondAttribute="topMargin" constant="7" id="4ST-Rt-hYi"/>
                                         <constraint firstItem="o75-lY-F54" firstAttribute="leading" secondItem="hPw-a5-X1j" secondAttribute="leadingMargin" id="6M5-6d-Zt6"/>
+                                        <constraint firstAttribute="trailing" secondItem="CoR-Qx-Ed9" secondAttribute="trailing" id="E6v-oO-rvI"/>
+                                        <constraint firstItem="CoR-Qx-Ed9" firstAttribute="leading" secondItem="hPw-a5-X1j" secondAttribute="leading" id="JqL-QX-OoM"/>
+                                        <constraint firstAttribute="bottom" secondItem="CoR-Qx-Ed9" secondAttribute="bottom" id="K0r-kX-1hn"/>
                                         <constraint firstItem="o75-lY-F54" firstAttribute="bottom" secondItem="hPw-a5-X1j" secondAttribute="bottomMargin" id="Y4C-rz-hBP"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.67450980390000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="kioskGroupLabel" destination="o75-lY-F54" id="Nzp-iy-ZeV"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kioskCell" rowHeight="56" id="rSx-r7-wpV" userLabel="Kiosk Cell" customClass="KioskTableViewCell" customModule="AccuVax_Mobile_Portal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="133" width="375" height="56"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kioskCell" rowHeight="60" id="rSx-r7-wpV" userLabel="Kiosk Cell" customClass="KioskTableViewCell" customModule="AccuVax_Mobile_Portal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="148" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rSx-r7-wpV" id="Fxg-0b-F34">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyL-cj-Goe">
-                                            <rect key="frame" x="8" y="15" width="42" height="33"/>
+                                            <rect key="frame" x="8" y="15" width="42" height="36.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3g-Nc-rFJ">
+                                            <rect key="frame" x="0.0" y="58.5" width="375" height="1"/>
+                                            <color key="backgroundColor" red="0.50588235290000005" green="0.79215686269999996" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="ngh-og-gmD"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="i3g-Nc-rFJ" firstAttribute="leading" secondItem="Fxg-0b-F34" secondAttribute="leading" id="61o-ga-MAN"/>
                                         <constraint firstItem="zyL-cj-Goe" firstAttribute="leading" secondItem="Fxg-0b-F34" secondAttribute="leadingMargin" id="Hp6-UW-HNc"/>
                                         <constraint firstItem="zyL-cj-Goe" firstAttribute="top" secondItem="Fxg-0b-F34" secondAttribute="topMargin" constant="7" id="Oe0-FO-KT9"/>
+                                        <constraint firstAttribute="bottom" secondItem="i3g-Nc-rFJ" secondAttribute="bottom" id="pta-Mc-UcC"/>
+                                        <constraint firstAttribute="trailing" secondItem="i3g-Nc-rFJ" secondAttribute="trailing" id="qaP-XD-tXz"/>
                                         <constraint firstItem="zyL-cj-Goe" firstAttribute="bottom" secondItem="Fxg-0b-F34" secondAttribute="bottomMargin" id="y6B-M9-76Z"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.67450980390000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="kioskLabel" destination="zyL-cj-Goe" id="L9Y-e7-9cq"/>
                                 </connections>
@@ -309,7 +344,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="temperatureButtonPressed:" destination="VGB-KO-yEf" eventType="touchUpInside" id="WQe-vg-iV3"/>
+                                            <action selector="temperatureButtonPressed:" destination="VGB-KO-yEf" eventType="touchDown" id="FoE-Fi-nkA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -320,19 +355,19 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Machine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF3-P6-9Ga">
                                         <rect key="frame" x="5.5" y="0.0" width="189" height="27.5"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Black" family="SF Pro Display" pointSize="23"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machine Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJf-PM-Iy8">
                                         <rect key="frame" x="0.0" y="33.5" width="199.5" height="27.5"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Black" family="SF Pro Display" pointSize="23"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.50588235290000005" green="0.79215686269999996" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LZq-jI-8tE" firstAttribute="top" secondItem="OGI-LS-M7i" secondAttribute="bottom" constant="8" id="3CZ-Ki-ppn"/>
                             <constraint firstItem="hWh-wq-I1d" firstAttribute="leading" secondItem="T4D-cY-pQM" secondAttribute="leading" id="COz-fU-HLF"/>
@@ -362,6 +397,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8HR-bg-xOK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.031372549020000001" green="0.58823529409999997" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="0.81568627449999997" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -388,11 +428,48 @@
             </objects>
             <point key="canvasLocation" x="4186" y="307"/>
         </scene>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="m1F-P2-VFN">
+            <objects>
+                <viewController id="QKo-Rk-57s" customClass="LaunchScreenViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hhp-i1-0l7"/>
+                        <viewControllerLayoutGuide type="bottom" id="2W3-Qd-iSO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="56G-zc-QRK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="accuvax_email_logo" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nqi-XI-tUZ">
+                                <rect key="frame" x="37" y="297" width="300" height="73"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="57C-MB-1Yi"/>
+                                    <constraint firstAttribute="width" secondItem="Nqi-XI-tUZ" secondAttribute="height" multiplier="176:43" id="ith-T7-apn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nqi-XI-tUZ" firstAttribute="centerY" secondItem="56G-zc-QRK" secondAttribute="centerY" id="89v-b3-vbz"/>
+                            <constraint firstItem="Nqi-XI-tUZ" firstAttribute="centerX" secondItem="56G-zc-QRK" secondAttribute="centerX" id="lzk-Ui-JNG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="56G-zc-QRK" id="zZM-fx-4au"/>
+                        <outlet property="logoImageView" destination="Nqi-XI-tUZ" id="cvL-ah-Q1b"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="custom" id="z2b-ae-doM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9v-oh-trA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="144"/>
+        </scene>
     </scenes>
     <resources>
         <image name="001-updated-security-for-protection-on-internet" width="512" height="512"/>
         <image name="003-thermometer" width="512" height="512"/>
-        <image name="Accuvax-Logo" width="176" height="43"/>
+        <image name="accuvax_email_logo" width="1207" height="294"/>
         <image name="login-bg" width="1200" height="928"/>
     </resources>
 </document>

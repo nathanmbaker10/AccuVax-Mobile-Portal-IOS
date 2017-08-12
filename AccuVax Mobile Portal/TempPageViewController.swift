@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class TempPageViewController: UIPageViewController {
-    var index = 0
+    var index: Int?
 //    var childOne: TempViewController?
 //    var childTwo: TempViewController?
     lazy var childArray: [TempViewController] = { [unowned self] in
@@ -42,8 +42,14 @@ class TempPageViewController: UIPageViewController {
     func newChild() -> TempViewController {
         return UIStoryboard(name: "Temperature", bundle: .main).instantiateViewController(withIdentifier: "tempVC") as! TempViewController
     }
+    func setChildHistoriesNil() {
+        for child in childArray {
+            child.weekHistory = []
+            child.dayHistory = []
+        }
+    }
     
-    func loadTemperatures(sendingFacility: String) {
+    func loadTemperatures(sendingFacility: String, tagForFirst: Int?, completion: ((Void) -> Void)?) {
         var json: JSON?
         let user: String = Accuvax.email!
         let password: String = Accuvax.password!
@@ -55,6 +61,7 @@ class TempPageViewController: UIPageViewController {
             headers[authorizationHeader.key] = authorizationHeader.value
         }
         var scopeLoopCount = 0
+        setChildHistoriesNil()
         for scope in ["day", "week"] {
             Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/temperatures.json?scope=\(scope)&accuvax_name=\(Accuvax.current!.name)", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
                 if responseData.error != nil {
@@ -69,6 +76,7 @@ class TempPageViewController: UIPageViewController {
                     json = JSON(dict)
                     let current = json?["accuvaxes"][0]
                     let historyArray = current?["history"].arrayValue
+                    
                     for index in self.childArray.indices {
                         switch self.childArray[index].tag {
                         case 0:
@@ -107,9 +115,18 @@ class TempPageViewController: UIPageViewController {
                     scopeLoopCount += 1
                     if let first = self.childArray.first {
                         if scopeLoopCount == 2 {
-                            self.setViewControllers([first], direction: .forward, animated: false, completion: nil)
+                            if let tag = tagForFirst {
+                                self.index = tag
+                                self.setViewControllers([self.childArray[tag]], direction: .forward, animated: true, completion: nil)
+                            } else {
+                                self.setViewControllers([first], direction: .forward, animated: false, completion: nil)
+                            }
+                            if let completion = completion {
+                                completion()
+                            }
                         }
                     }
+                   
                 }
             }
         }
@@ -148,7 +165,11 @@ extension TempPageViewController: UIPageViewControllerDataSource, UIPageViewCont
         return childArray.count
     }
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 0
+        if let index = index {
+            return index
+        } else {
+            return 0
+        }
     }
     
 }

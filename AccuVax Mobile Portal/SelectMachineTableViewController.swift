@@ -76,9 +76,13 @@ class SelectMachineTableViewController: UITableViewController {
             cell?.locationLabel.text = "Random"
             return cell!
         }
+        
 
 
         // Configure the cell..
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 58
     }
     func newSelf() {
         let storyBoard = UIStoryboard(name: "Main", bundle: .main)

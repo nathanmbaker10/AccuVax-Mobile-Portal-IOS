@@ -55,7 +55,10 @@ class ChooseActionViewController: UIViewController {
         let navVC = UIStoryboard(name: "Inventory", bundle: .main).instantiateViewController(withIdentifier: "inventoryNavController") as! UINavigationController
         
         if let sendingFacility = Accuvax.current?.sendingFacility {
-            self.present(navVC, animated: true, completion: nil)
+            let first = navVC.childViewControllers[0] as! InventoryTableViewController
+            first.loadVaccines(sendingFacility: sendingFacility, firstPage: nil) { vaccineDict in
+                self.present(navVC, animated: true, completion: nil)
+            }
         } else {
             let errorAlert = UIAlertController(title: "Machine Monitoring not Enabled", message: "Your machine isn't confiugured to be monitored on this mobile platform. If you would like to be able to view Accuvax information on your IOS device, ask your administrator to configure a sending facility.", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default)
@@ -68,8 +71,9 @@ class ChooseActionViewController: UIViewController {
         let pageVC = UIStoryboard(name: "Temperature", bundle: .main).instantiateViewController(withIdentifier: "temperaturePageVC") as! TempPageViewController
         
         if let sendingFacility = Accuvax.current?.sendingFacility {
-            pageVC.loadTemperatures(sendingFacility: sendingFacility)
-            self.present(pageVC, animated: true, completion: nil)
+            pageVC.loadTemperatures(sendingFacility: sendingFacility, tagForFirst: nil) {
+                self.present(pageVC, animated: true, completion: nil)
+            }
         } else {
             let errorAlert = UIAlertController(title: "Machine Monitoring not Enabled", message: "Your machine isn't confiugured to be monitored on this mobile platform. If you would like to be able to view Accuvax information on your IOS device, ask your administrator to configure a sending facility.", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default)

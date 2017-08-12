@@ -3,18 +3,23 @@ PODS:
   - Charts (3.0.2):
     - Charts/Core (= 3.0.2)
   - Charts/Core (3.0.2)
+  - Motion (1.1.0):
+    - Motion/Core (= 1.1.0)
+  - Motion/Core (1.1.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - Charts (~> 3.0)
+  - Motion (~> 1.1)
   - SwiftyJSON (~> 3.1)
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  Motion: 1a6a8d593aa583e4ebe15cfbb4a9070311d1c25d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 15d97eb9fcc232b8f8505167caea957aee0fe756
+PODFILE CHECKSUM: be7105bd719f3fdddcc0d04cb90b3de4d6a3a4ce
 
 COCOAPODS: 1.2.1

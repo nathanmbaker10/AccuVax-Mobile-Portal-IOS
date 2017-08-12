@@ -14,30 +14,43 @@
         <scene sceneID="UBK-K5-D4F">
             <objects>
                 <tableViewController id="nHj-fO-Ims" customClass="InventoryTableViewController" customModule="AccuVax_Mobile_Portal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eli-r2-0Rc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eli-r2-0Rc">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.50588235290000005" green="0.79215686269999996" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="vaccineTableViewCell" id="mvg-u1-w8m" customClass="VaccineTableViewCell" customModule="AccuVax_Mobile_Portal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="vaccineTableViewCell" rowHeight="60" id="mvg-u1-w8m" customClass="VaccineTableViewCell" customModule="AccuVax_Mobile_Portal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mvg-u1-w8m" id="aKW-Ge-8tF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vaccine Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3p-hk-hvR">
-                                            <rect key="frame" x="8" y="11.5" width="110" height="21"/>
+                                            <rect key="frame" x="8" y="19.5" width="110" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCp-eE-49g">
+                                            <rect key="frame" x="0.0" y="58.5" width="375" height="1"/>
+                                            <color key="backgroundColor" red="0.50588235290000005" green="0.79215686269999996" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="irY-6s-Rdd"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="KCp-eE-49g" secondAttribute="trailing" id="2KY-lS-o8I"/>
+                                        <constraint firstAttribute="bottom" secondItem="KCp-eE-49g" secondAttribute="bottom" id="EmW-hf-ybt"/>
+                                        <constraint firstItem="KCp-eE-49g" firstAttribute="leading" secondItem="aKW-Ge-8tF" secondAttribute="leading" id="Fhe-Gc-BUh"/>
                                         <constraint firstItem="j3p-hk-hvR" firstAttribute="centerY" secondItem="aKW-Ge-8tF" secondAttribute="centerY" id="GVa-5k-cnV"/>
                                         <constraint firstItem="j3p-hk-hvR" firstAttribute="leading" secondItem="aKW-Ge-8tF" secondAttribute="leadingMargin" id="lqd-Uz-yrE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.67450980390000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="vaccineNameLabel" destination="j3p-hk-hvR" id="Twu-G2-utx"/>
                                 </connections>
@@ -49,9 +62,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Vaccines" id="hU8-b3-7VV">
-                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="Zki-Gd-y72">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="Zki-Gd-y72">
                             <connections>
                                 <action selector="backButtonTapped:" destination="nHj-fO-Ims" id="dfl-2F-bEh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="jrM-09-aRw">
+                            <connections>
+                                <action selector="refreshButtonTapped:" destination="nHj-fO-Ims" id="mTD-6d-dhF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -158,7 +176,7 @@
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SFU-d3-Z3S">
                                         <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
-                                        <color key="backgroundColor" red="0.031372549019607843" green="0.58823529411764708" blue="0.67450980392156867" alpha="0.29807898116438358" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.50588235294117645" green="0.792156862745098" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lotExpandableHeader" id="Tx9-Cc-G1R" customClass="LotExpandableHeader" customModule="AccuVax_Mobile_Portal" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>

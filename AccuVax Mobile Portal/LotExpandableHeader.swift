@@ -30,7 +30,7 @@ class LotExpandableHeader: UITableViewHeaderFooterView {
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectHeaderView)))
     }
     
-    func selectHeaderView(gesture: UITapGestureRecognizer) {
+    @objc func selectHeaderView(gesture: UITapGestureRecognizer) {
         let cell = gesture.view as! LotExpandableHeader
         delegate?.toggleSection(header: self, section: cell.section)
         

@@ -17,12 +17,14 @@ class VaccineViewController: UIViewController {
     @IBOutlet weak var lotTableView: UITableView!
     @IBOutlet weak var totalVialsLabel: UILabel!
     @IBOutlet weak var vaccineBrandNameLabel: UILabel!
+    var visited = false
     var vaccine: Vaccine?
     var tag = -1
     var sections: [Section] = []
     var selectedIndexPath: IndexPath!
     
     override func viewDidLoad() {
+    
         super.viewDidLoad()
         
 
@@ -31,6 +33,7 @@ class VaccineViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         insertInfo()
+        visited = true
         self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
     }
 
@@ -46,10 +49,12 @@ class VaccineViewController: UIViewController {
             self.vaccineNameLabel.text = "Name: " + vac.name
             self.parent?.navigationItem.title = vac.brandName
             selectedIndexPath = IndexPath(row: -1, section: -1)
-            sections = []
             if let vac = vaccine {
-                for lot in vac.lots {
-                    sections.append(Section(lot: lot, expanded: false))
+                if !visited {
+                    sections = []
+                    for lot in vac.lots {
+                        sections.append(Section(lot: lot, expanded: false))
+                    }
                 }
             }
         let nib = UINib(nibName: "LotExpandableHeaderView", bundle: nil)
@@ -142,7 +147,7 @@ extension VaccineViewController: UITableViewDataSource, UITableViewDelegate, Lot
         lotTableView.endUpdates()
     }
     
-    func refresh() {
+    @objc func refresh() {
         let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         self.parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityIndicator)
         activityIndicator.startAnimating()

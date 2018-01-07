@@ -49,7 +49,7 @@ class TempPageViewController: UIPageViewController {
         }
     }
     
-    func loadTemperatures(sendingFacility: String, tagForFirst: Int?, completion: ((Void) -> Void)?) {
+    func loadTemperatures(sendingFacility: String, tagForFirst: Int?, completion: @escaping () -> Void) {
         var json: JSON?
         let user: String = Accuvax.email!
         let password: String = Accuvax.password!
@@ -62,8 +62,9 @@ class TempPageViewController: UIPageViewController {
         }
         var scopeLoopCount = 0
         setChildHistoriesNil()
+        let nameForRequest = Accuvax.current!.name.replacingOccurrences(of: " ", with: "&")
         for scope in ["day", "week"] {
-            Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/temperatures.json?scope=\(scope)&accuvax_name=\(Accuvax.current!.name)", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
+            Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/temperatures.json?scope=\(scope)&accuvax_name=\(nameForRequest)", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
                 if responseData.error != nil {
                     let errorAlert = UIAlertController(title: "Server Connection Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
                     let ok = UIAlertAction(title: "OK", style: .default) {_ in
@@ -121,9 +122,7 @@ class TempPageViewController: UIPageViewController {
                             } else {
                                 self.setViewControllers([first], direction: .forward, animated: false, completion: nil)
                             }
-                            if let completion = completion {
-                                completion()
-                            }
+                            completion()
                         }
                     }
                    

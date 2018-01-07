@@ -16,54 +16,68 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var rememberMeOption: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
                // Do any additional setup after loading the view, typically from a nib.
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
-        usernameTextField.attributedPlaceholder = NSAttributedString(string: "Enter Email", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Enter Password", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+        usernameTextField.attributedPlaceholder = NSAttributedString(string: "Enter Email", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Enter Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         usernameTextField.text = ""
         passwordTextField.text = ""
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.isMotionEnabled = true
-        logoImageView.motionIdentifier = "logo"
-        logoView.motionIdentifier = "image"
-        logoImageView.transition([.forceAnimate])
-        logoView.transition([.forceAnimate])
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
+    
+    func configurClearButtons(_ textField: UITextField) {
+        if let clearButton = textField.value(forKey: "_clearButton") as? UIButton {
+            // Create a template copy of the original button image
+            let templateImage =  clearButton.imageView?.image?.withRenderingMode(.alwaysTemplate)
+            
+            // Set the template image copy as the button image
+            clearButton.setImage(templateImage, for: .highlighted)
+            
+            // Finally, set the image color
+            clearButton.tintColor = .white
+            clearButton.isHighlighted = true
+        }
+    }
+    
+    @IBAction func loginButtonTapped(_ sender: Any) {
         if usernameTextField.text?.characters.count == 0 || passwordTextField.text?.characters.count == 0 {
             let noEntryAlert = UIAlertController(title: "Empty Field", message: "You must enter an email and password", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default)
             noEntryAlert.addAction(ok)
             self.present(noEntryAlert, animated: true, completion: nil)
         } else {
-            loadShit(user: usernameTextField.text!, password: passwordTextField.text!)
+            if rememberMeOption.isOn {
+                UserDefaults.standard.set(usernameTextField.text!, forKey: "rememberedUser")
+                UserDefaults.standard.set(passwordTextField.text!, forKey: "rememberedPassword")
+                
+            }
+            loadShit(user: usernameTextField.text!, password: passwordTextField.text!, sender: self)
         }
     }
-    func nextViewController(initialArray: [Any]) {
+    func nextViewController(initialArray: [Any], sender: UIViewController) {
         let storyBoard = UIStoryboard(name: "Main", bundle: .main)
         let newVC = storyBoard.instantiateViewController(withIdentifier: "selectKioskNavController") as! UINavigationController
         let childOne = newVC.childViewControllers[0] as! SelectMachineTableViewController
         childOne.currentArray = initialArray
-        present(newVC, animated: true) {
+        sender.present(newVC, animated: true) {
             self.passwordTextField.text = nil
+            self.rememberMeOption.isOn = false
         }
     }
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         self.view.endEditing(true)
     }
-    func loadShit(user: String, password: String) {
+    func loadShit(user: String, password: String, sender: UIViewController){
         dismissKeyboard()
         Accuvax.email = user
         Accuvax.password = password
@@ -76,9 +90,11 @@ class LoginViewController: UIViewController {
         }
         Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/locations.json", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
             if responseData.error != nil {
-                let errorAlert = UIAlertController(title: "Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "OK", style: .default) {_ in
-                    self.dismiss(animated: true, completion: nil)
+                UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+                let errorAlert = UIAlertController(title: "Server Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default) { _ in
+                    self.passwordTextField.text = ""
+                    self.passwordTextField.becomeFirstResponder()
                 }
                 errorAlert.addAction(ok)
                 self.present(errorAlert, animated: true, completion: nil)
@@ -86,6 +102,8 @@ class LoginViewController: UIViewController {
             if let dict = responseData.result.value as? [String: Any] {
                 json = JSON(dict)
                 if json["error"][0].stringValue == "Unauthorized session" {
+                    UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+
                     let errorAlert = UIAlertController(title: "Error", message: "Incorrect Email Password Combination.", preferredStyle: .alert)
                     let ok = UIAlertAction(title: "OK", style: .default)
                     errorAlert.addAction(ok)
@@ -96,11 +114,10 @@ class LoginViewController: UIViewController {
                     for locationJSON in locationsJSON {
                         vcTableViewArray.append(Location(locationJSON: locationJSON))
                     }
-                    self.nextViewController(initialArray: vcTableViewArray)
+                    self.nextViewController(initialArray: vcTableViewArray, sender: sender)
                 }
             }
         }
-        print("Hello World")
     }
 
 }
@@ -117,7 +134,12 @@ extension LoginViewController: UITextFieldDelegate {
                 noEntryAlert.addAction(ok)
                 self.present(noEntryAlert, animated: true, completion: nil)
             } else {
-                loadShit(user: usernameTextField.text!, password: passwordTextField.text!)
+                if rememberMeOption.isOn {
+                    UserDefaults.standard.set(usernameTextField.text!, forKey: "rememberedUser")
+                    UserDefaults.standard.set(passwordTextField.text!, forKey: "rememberedPassword")
+                    
+                }
+                loadShit(user: usernameTextField.text!, password: passwordTextField.text!, sender: self)
             }
             return false
         default:
@@ -126,27 +148,12 @@ extension LoginViewController: UITextFieldDelegate {
             
         }
     }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        configurClearButtons(textField)
+    }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        var tf: UITextField! = nil
-        switch textField.tag {
-        case 1:
-            tf = self.usernameTextField
-        case 2:
-            tf = self.passwordTextField
-        default:
-            return true
-        }
-        
-        
-        for sv in tf.subviews {
-            if sv is UIButton {
-                let b = sv as! UIButton
-                if let im = b.image(for: .highlighted) {
-                    b.isHighlighted = true
-                }
-            }
-        }
-    return true
+        configurClearButtons(textField)
+        return true
     }
     
 }

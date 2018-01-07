@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Motion
 
 class LaunchScreenViewController: UIViewController {
 
@@ -18,22 +17,22 @@ class LaunchScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.isMotionEnabled = true
 
 
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.performSegue(withIdentifier: "custom", sender: self)
-//        contentView.motionIdentifier = "logo"
-//        
-//        logoImageView.isMotionEnabled = true
-//        logoImageView.motionIdentifier = "image"
-//        let loginVC = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
-//        self.present(loginVC, animated: true, completion: nil)
-        //        logoImageView.transition([.forceAnimate])
-//        contentView.transition([.forceAnimate])
+        if let savedUsername = UserDefaults.standard.object(forKey: "rememberedUser") as? String{
+            let savedPassword = UserDefaults.standard.object(forKey: "rememberedPassword") as! String
+            let storyBoard = UIStoryboard(name: "Main", bundle: .main)
+            let nextVC = storyBoard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+            nextVC.loadShit(user: savedUsername, password: savedPassword, sender: self)
+            
+        } else {
+            self.performSegue(withIdentifier: "custom", sender: self)
+        }
+
     }
     
     override func didReceiveMemoryWarning() {

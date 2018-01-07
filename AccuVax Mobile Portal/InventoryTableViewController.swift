@@ -40,9 +40,12 @@ class InventoryTableViewController: UITableViewController {
         if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
             headers[authorizationHeader.key] = authorizationHeader.value
         }
+        guard var nameForRequest = Accuvax.current?.name else {
+            return
+        }
+        nameForRequest = nameForRequest.replacingOccurrences(of: " ", with: "&")
         
-        
-        Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/inventories.json?accuvax_name=\(Accuvax.current!.name)", headers: headers).authenticate(user: user, password: password).responseJSON { responseData in
+        Alamofire.request("https://accuvax-dev01.accuvax.com/api/connect/inventories.json?accuvax_name=\(nameForRequest)", headers: headers).responseJSON { responseData in
             if responseData.error != nil {
                 let errorAlert = UIAlertController(title: "Server Connection Error", message: "There was an error connecting to the server or machine. Maybe check your internet connection.", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "OK", style: .default) {_ in

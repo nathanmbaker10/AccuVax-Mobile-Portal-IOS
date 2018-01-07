@@ -31,6 +31,8 @@ class ChooseActionViewController: UIViewController {
         inventoryButton.imageEdgeInsets = inventoryInsets
     }
     @IBAction func signOutButtonTapped(_ sender: UIButton) {
+        UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+        UserDefaults.standard.synchronize()
         self.dismiss(animated: true) {
             self.formerViewController.navigationController?.dismiss(animated: true, completion: nil)
         }

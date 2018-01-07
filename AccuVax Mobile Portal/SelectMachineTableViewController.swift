@@ -125,6 +125,8 @@ class SelectMachineTableViewController: UITableViewController {
     @IBAction func backButtonTapped(_ sender: Any) {
         if tag == 1 {
             self.dismiss(animated: true, completion: nil)
+            UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+            UserDefaults.standard.synchronize()
         } else {
         self.navigationController?.popViewController(animated: true)
         }

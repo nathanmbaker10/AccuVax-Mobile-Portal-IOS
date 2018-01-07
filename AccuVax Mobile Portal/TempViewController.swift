@@ -28,6 +28,8 @@ class TempViewController: UIViewController, ChartViewDelegate {
         lineChart.delegate = self
         findMinMax()
         loadInfo()
+        lineChart.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        
         // Do any additional setup after loading the view.
     }
     func findMinMax() {
